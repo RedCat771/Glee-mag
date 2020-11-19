@@ -1,31 +1,20 @@
 .header {
-  padding: 63px 0 66px;
+  padding: 63px 0 47px;
   color: $accent-color;
-  &__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
   @extend %rubik-medium;
 }
 
-.logo {
+.menu {
   display: flex;
   align-items: center;
-  font-size: 36px;
-  line-height: 1.61;
-  color: $accent-color;
-  &__text {
-    margin-left: 10px;
-  }
-}
+  justify-content: space-between;
 
-.menu {
   &__list {
     display: flex;
+    margin-left: 140px;
   }
   &__item + .menu__item {
-    padding-left: 30px;
+    padding-left: 35px;
   }
   &__link {
     color: $accent-color;
@@ -41,12 +30,12 @@
   align-items: center;
   &__link {
     display: flex;
-    transition: transform 1s;
+    transition: transform 0.5s;
   }
 
   &__link:hover,
   &__logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   &__accent {
@@ -79,6 +68,11 @@
   &__link--inside {
     position: relative;
     padding: 20px 30px 15px 40px;
+  }
+
+  &__pic {
+    width: 16px;
+    height: 16px;
   }
 
   &__num {

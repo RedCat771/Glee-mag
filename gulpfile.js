@@ -37,15 +37,18 @@ function browsersync() {
 }
 
 function html() {
-  return src(["./app/html/pages/*.html", "!./app/html/components/_*.html"])
-    .pipe(
-      fileinclude({
-        prefix: "@@",
-        basepath: "./app",
-      })
-    )
-    .pipe(htmlmin({ collapseWhitespace: false }))
-    .pipe(dest("./app"));
+  return (
+    src(["./app/html/pages/*.html", "!./app/html/components/_*.html"])
+      .pipe(
+        fileinclude({
+          prefix: "@@",
+          basepath: "./app",
+        })
+      )
+      // .pipe(htmlmin({ collapseWhitespace: false }))
+      .pipe(dest("./app"))
+      .pipe(browserSync.stream())
+  );
 }
 
 function scripts() {
@@ -144,13 +147,11 @@ function buildcopy() {
 }
 
 function startwatch() {
-  watch("app/**/*.html", html);
+  watch("app/html/**/*", html);
 
   watch("app/scss/**/*", styles);
 
   watch(["app/**/*.js", "!app/**/*.min.js"], scripts);
-
-  watch("app/**/*.html").on("change", browserSync.reload);
 
   watch("app/images/src/**/*", images);
 }
@@ -169,4 +170,4 @@ exports.cleandist = cleandist;
 
 exports.build = series(cleandist, styles, scripts, images, buildcopy);
 
-exports.default = parallel(html, styles, scripts, browsersync, startwatch);
+exports.default = parallel(styles, scripts, browsersync, startwatch);

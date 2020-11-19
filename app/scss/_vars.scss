@@ -48,14 +48,14 @@ $bg-color: #fcd7b6;
 
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
   content: $content;
-  display: $display;
   position: $pos;
+  display: $display;
 }
 
 @mixin bg($bg-repeat: no-repeat, $bg-size: cover, $bg-position: center bottom) {
-  background-repeat: $bg-repeat;
-  background-size: $bg-size;
   background-position: $bg-position;
+  background-size: $bg-size;
+  background-repeat: $bg-repeat;
 }
 
 @mixin centering($dir) {

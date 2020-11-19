@@ -1,54 +1,61 @@
 .footer {
-  background-color: #fff;
+  font-size: 14px;
+  @extend %rubik-regular;
+
   &__inner {
     display: flex;
+    justify-content: space-between;
     padding: 75px 0 65px;
   }
 
-  &__item + .footer__item {
-    margin-left: auto;
+  &__item--contact {
+    max-width: 200px;
   }
 
-  .logo,
-  &__title {
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    &__text {
-      text-transform: none;
-      @extend %rubik-medium;
-    }
+  &__address {
+    margin-top: 23px;
   }
 
-  &__title {
-    margin-top: 28px;
-  }
-
-  &__contact {
-    max-width: 195px;
-  }
-
-  &__address,
-  &__desc,
-  &__mail,
-  &__phone,
-  &__link,
-  &__text,
-  &__menu-link {
+  &__address-row {
     display: inline-block;
-    margin-bottom: 10px;
-    font-size: 14px;
-    line-height: 24px;
-    color: #7b7b7b;
-    @extend %rubik-regular;
+    margin-top: 10px;
+    text-transform: uppercase;
   }
 
-  &__desc {
+  &__middle {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 210px 0 100px;
+    width: 100%;
+    max-width: 390px;
+  }
+
+  &__title {
+    margin: 15px 0;
+    font-size: 16px;
     text-transform: uppercase;
+    color: #1f2044;
+    @extend %dms-bold;
+  }
+
+  &__list-item {
+    margin-bottom: 8px;
   }
 
   &__text {
     margin-bottom: 35px;
     width: 270px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__address,
+  &__address-link,
+  &__link,
+  &__text {
+    color: #7b7b7b;
   }
 
   &__input {
@@ -58,6 +65,7 @@
     max-width: 170px;
     background-color: $bg-color;
     opacity: 0.2;
+
     &::placeholder {
       font-size: 12px;
       color: $title-color;
@@ -83,18 +91,18 @@
     height: 90px;
   }
 
-  &__menu-link + .footer__menu-link {
+  &__menu {
+    display: flex;
+    margin-right: 10px;
+  }
+
+  &__menu-item + .footer__menu-item {
     margin-left: 15px;
     border-left: 1px solid #7b7b7b;
     padding-left: 15px;
   }
 
-  &__menu-link {
-    line-height: 17px;
-  }
-
-  &__mail,
-  &__phone,
+  &__address-link,
   &__link,
   &__menu-link {
     transition: color 1s;
