@@ -55,7 +55,7 @@
   &__address-link,
   &__link,
   &__text {
-    color: #7b7b7b;
+    color: $footer-color;
   }
 
   &__input {
@@ -96,9 +96,13 @@
     margin-right: 10px;
   }
 
+  &__menu-link {
+    color: $footer-color;
+  }
+
   &__menu-item + .footer__menu-item {
     margin-left: 15px;
-    border-left: 1px solid #7b7b7b;
+    border-left: 1px solid $footer-color;
     padding-left: 15px;
   }
 
