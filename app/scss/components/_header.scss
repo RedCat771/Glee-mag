@@ -1,0 +1,91 @@
+.header {
+  padding: 63px 0 47px;
+  color: $accent-color;
+  @extend %rubik-medium;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__list {
+    display: flex;
+    margin-left: 140px;
+  }
+  &__item + .menu__item {
+    padding-left: 35px;
+  }
+  &__link {
+    color: $accent-color;
+    transition: color 0.4s;
+    &:hover {
+      color: $bg-color;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  &__link {
+    display: flex;
+    transition: transform 0.5s;
+  }
+
+  &__link:hover,
+  &__logo:hover {
+    transform: scale(1.05);
+  }
+
+  &__accent {
+    position: relative;
+    display: flex;
+    margin: 0 20px;
+    border-radius: 40px;
+  }
+
+  &__accent::after {
+    @include pseudo($content: url("../images/src/vector.svg"));
+    left: 50%;
+    bottom: 6px;
+  }
+
+  &__link--search + &__link--menu {
+    padding-left: 20px;
+  }
+
+  &__link--search,
+  &__link--menu {
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: $btn-color;
+  }
+
+  &__link--inside {
+    position: relative;
+    padding: 20px 30px 15px 40px;
+  }
+
+  &__pic {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__num {
+    @include pseudo();
+    right: 22px;
+    top: 12px;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    color: $title-color;
+    background-color: #fff;
+  }
+}

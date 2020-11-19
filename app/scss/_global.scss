@@ -1,20 +1,39 @@
 // Global styles
 
-body {
-  color: $default-color;
-  @extend %dms-regular;
+html {
+  box-sizing: border-box;
 }
 
-.main {
-  min-height: calc(100vh - 450px);
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.5em;
+  color: $default-color;
+  background-color: #fff;
+  @extend %dms-regular;
 }
 
 .wrapper {
   overflow-x: hidden;
 }
 
-.container {
+.main {
+  min-height: calc(100vh - 450px);
+}
+
+.container-box {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1800px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
 }
