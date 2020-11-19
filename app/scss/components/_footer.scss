@@ -1,0 +1,105 @@
+.footer {
+  background-color: #fff;
+  &__inner {
+    display: flex;
+    padding: 75px 0 65px;
+  }
+
+  &__item + .footer__item {
+    margin-left: auto;
+  }
+
+  .logo,
+  &__title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    &__text {
+      text-transform: none;
+      @extend %rubik-medium;
+    }
+  }
+
+  &__title {
+    margin-top: 28px;
+  }
+
+  &__contact {
+    max-width: 195px;
+  }
+
+  &__address,
+  &__desc,
+  &__mail,
+  &__phone,
+  &__link,
+  &__text,
+  &__menu-link {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #7b7b7b;
+    @extend %rubik-regular;
+  }
+
+  &__desc {
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+    width: 270px;
+  }
+
+  &__input {
+    border: none;
+    padding: 15px 75px 15px 15px;
+    width: 100%;
+    max-width: 170px;
+    background-color: $bg-color;
+    opacity: 0.2;
+    &::placeholder {
+      font-size: 12px;
+      color: $title-color;
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+    margin-left: -5px;
+    border: none;
+    padding: 15px 17px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $btn-color;
+    cursor: pointer;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $btn-color;
+    height: 90px;
+  }
+
+  &__menu-link + .footer__menu-link {
+    margin-left: 15px;
+    border-left: 1px solid #7b7b7b;
+    padding-left: 15px;
+  }
+
+  &__menu-link {
+    line-height: 17px;
+  }
+
+  &__mail,
+  &__phone,
+  &__link,
+  &__menu-link {
+    transition: color 1s;
+    &:hover {
+      color: $bg-color;
+    }
+  }
+}

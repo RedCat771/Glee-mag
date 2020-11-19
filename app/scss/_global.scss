@@ -1,5 +1,16 @@
 // Global styles
 
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
   color: $default-color;
   @extend %dms-regular;

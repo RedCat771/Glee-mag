@@ -25,27 +25,33 @@ const del = require("del");
 const gcmq = require("gulp-group-css-media-queries");
 //fileinclude подключает файлы
 const fileinclude = require("gulp-file-include");
-//минифицируем html
+// минифицирует html
 const htmlmin = require("gulp-htmlmin");
 
 function browsersync() {
   browserSync.init({
-    server: { baseDir: "app/" }, // Папка сервера (Исходные файлы)
+    server: { baseDir: "app/", index: "home.html" }, // Папка сервера (Исходные файлы)
     notify: false,
     online: true,
   });
 }
 
 function html() {
-  return src(["app/**/*.html", "!app/**/_*.html"])
-    .pipe(fileinclude())
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(dest("dist/"));
+  return src(["./app/html/pages/*.html", "!./app/html/components/_*.html"])
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "./app",
+      })
+    )
+    .pipe(htmlmin({ collapseWhitespace: false }))
+    .pipe(dest("./app"));
 }
 
 function scripts() {
   return src([
     "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/slick-carousel/slick/slick.min.js",
     "!app/js/main.min.js",
     "app/js/main.js",
   ])
@@ -58,8 +64,9 @@ function scripts() {
 function styles() {
   return src([
     "node_modules/normalize.css/normalize.css",
-    "app/css/plug/*.css",
-    "app/scss/style.scss",
+    "node_modules/slick-carousel/slick/slick.css",
+    "!app/scss/_*.scss",
+    "app/scss/*.scss",
   ])
     .pipe(
       sass({
@@ -71,7 +78,6 @@ function styles() {
       autoprefixer({
         overrideBrowserslist: ["last 10 versions"],
         cascade: true,
-        grid: true,
         browsers: [
           "Android >= 4",
           "Chrome >= 20",
@@ -138,6 +144,8 @@ function buildcopy() {
 }
 
 function startwatch() {
+  watch("app/**/*.html", html);
+
   watch("app/scss/**/*", styles);
 
   watch(["app/**/*.js", "!app/**/*.min.js"], scripts);
@@ -161,4 +169,4 @@ exports.cleandist = cleandist;
 
 exports.build = series(cleandist, styles, scripts, images, buildcopy);
 
-exports.default = parallel(styles, scripts, html, browsersync, startwatch);
+exports.default = parallel(html, styles, scripts, browsersync, startwatch);

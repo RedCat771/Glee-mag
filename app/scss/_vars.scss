@@ -25,26 +25,26 @@ $bg-color: #fcd7b6;
   font-weight: 500;
 }
 
-@mixin font-source-sans(
-  $size: false,
-  $colour: false,
-  $weight: false,
-  $lh: false
-) {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  @if $size {
-    font-size: $size;
-  }
-  @if $colour {
-    color: $colour;
-  }
-  @if $weight {
-    font-weight: $weight;
-  }
-  @if $lh {
-    line-height: $lh;
-  }
-}
+// @mixin font-source-sans(
+//   $size: false,
+//   $colour: false,
+//   $weight: false,
+//   $lh: false
+// ) {
+//   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+//   @if $size {
+//     font-size: $size;
+//   }
+//   @if $colour {
+//     color: $colour;
+//   }
+//   @if $weight {
+//     font-weight: $weight;
+//   }
+//   @if $lh {
+//     line-height: $lh;
+//   }
+// }
 
 @mixin pseudo($display: block, $pos: absolute, $content: "") {
   content: $content;
@@ -74,23 +74,23 @@ $bg-color: #fcd7b6;
   }
 }
 
-@mixin btn_anim {
-  transform-origin: center center;
-  transition: all ease-out 240ms;
+// @mixin btn_anim {
+//   transform-origin: center center;
+//   transition: all ease-out 240ms;
 
-  &:hover {
-    transform: scale(1.05);
-  }
+//   &:hover {
+//     transform: scale(1.05);
+//   }
 
-  &:focus {
-    outline: transparent;
-    transform: scale(1.05) trahslateY(-5%);
-  }
+//   &:focus {
+//     outline: transparent;
+//     transform: scale(1.05) trahslateY(-5%);
+//   }
 
-  &:active {
-    transform: scale(0.95);
-  }
-}
+//   &:active {
+//     transform: scale(0.95);
+//   }
+// }
 
 $breakpoints: (
   "400": 400px,
