@@ -4,7 +4,7 @@
   @extend %rubik-medium;
 }
 
-.menu {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,7 +13,7 @@
     display: flex;
     margin-left: 140px;
   }
-  &__item + .menu__item {
+  &__item + .nav__item {
     padding-left: 35px;
   }
   &__link {
@@ -25,7 +25,7 @@
   }
 }
 
-.user-nav {
+.add-menu {
   display: flex;
   align-items: center;
   &__link {

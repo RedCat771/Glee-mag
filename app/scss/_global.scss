@@ -37,3 +37,33 @@ body {
   padding: 0 15px;
   max-width: 1200px;
 }
+
+.product-bar {
+  margin-bottom: 70px;
+  text-align: center;
+  @extend %dms-bold;
+
+  &__title {
+    margin-bottom: 37px;
+    font-size: 36px;
+    color: $product-title;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item + .product-bar__item {
+    margin-left: 30px;
+  }
+
+  &__btn {
+    color: #8b8b8b;
+    cursor: pointer;
+  }
+
+  .mixitup-control-active {
+    color: $product-title;
+  }
+}

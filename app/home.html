@@ -16,62 +16,62 @@
     <header class="header">
   <div class="container-box">
     <div class="header__inner">
-      <nav class="menu">
+      <nav class="nav">
         <a class="logo" href="#">
           <img class="logo__pic" src="images/src/logo.svg" alt="Логотип">
         </a>
 
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a class="menu__link" href="#">Home +</a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Home +</a>
           </li>
 
-          <li class="menu__item">
-            <a class="menu__link" href="#">About</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#">About</a>
           </li>
 
-          <li class="menu__item">
-            <a class="menu__link" href="#">Services</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Services</a>
           </li>
 
-          <li class="menu__item">
-            <a class="menu__link" href="#">Pages +</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Pages +</a>
           </li>
 
-          <li class="menu__item">
-            <a class="menu__link" href="#">News</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#">News</a>
           </li>
 
-          <li class="menu__item">
-            <a class="menu__link" href="#">Comtact</a>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Comtact</a>
           </li>
         </ul>
 
-        <div class="user-nav">
-          <a class="user-nav__link user-nav__link--search" href="#">
-            <svg class="user-nav__pic">
+        <div class="add-menu">
+          <a class="add-menu__link add-menu__link--search" href="#">
+            <svg class="add-menu__pic">
               <use xlink:href="images/src/sprite.svg#search"></use>
             </svg>
           </a>
 
-          <div class="user-nav__accent" style="background-color: #fcd7b6;">
-            <a class=" user-nav__link user-nav__link--inside" href="#">
-              <svg class="user-nav__pic">
+          <div class="add-menu__accent" style="background-color: #fcd7b6;">
+            <a class=" add-menu__link add-menu__link--inside" href="#">
+              <svg class="add-menu__pic">
                 <use xlink:href="images/src/sprite.svg#heart"></use>
               </svg>
-              <span class="user-nav__num">0</span>
+              <span class="add-menu__num">0</span>
             </a>
 
-            <a class="user-nav__link user-nav__link--inside" href="#">
-              <svg class="user-nav__pic">
+            <a class="add-menu__link add-menu__link--inside" href="#">
+              <svg class="add-menu__pic">
                 <use xlink:href="images/src/sprite.svg#cart"></use>
               </svg>
-              <span class="user-nav__num">0</span>
+              <span class="add-menu__num">0</span>
             </a>
           </div>
 
-          <a class="user-nav__link user-nav__link--menu" href="#">
-            <svg class="user-nav__pic">
+          <a class="add-menu__link add-menu__link--menu" href="#">
+            <svg class="add-menu__pic">
               <use xlink:href="images/src/sprite.svg#menu"></use>
             </svg>
           </a>
@@ -179,6 +179,101 @@
         </div>
       </section>
 
+      <section class="products">
+        <div class="container">
+
+          <div class="product-bar">
+            <p class="product-bar__title">Products of the week</p>
+            <ul class="product-bar__list">
+              <li class="product-bar__item">
+                <button class="product-bar__btn" data-filter="all">All</button>
+              </li>
+
+              <li class="product-bar__item">
+                <button class="product-bar__btn" data-filter=".category-a">Furnitures</button>
+              </li>
+
+              <li class="product-bar__item">
+                <button class="product-bar__btn" data-filter=".category-b">Chairs</button>
+              </li>
+
+              <li class="product-bar__item">
+                <button class="product-bar__btn" data-filter=".category-c">Lighting</button>
+              </li>
+
+              <li class="product-bar__item">
+                <button class="product-bar__btn" data-filter=".category-d">Decor</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="products__body">
+            <div class="products__item mix category-a">
+              <img class="products__pic" src="images/src/products/prod-1.jpg" alt="продукт">
+              <div class="products__info">
+                <p class="products__name">Wooden radio</p>
+                <span class="products__price">$29.00</span>
+              </div>
+            </div>
+
+            <div class="products__item mix category-c">
+              <img class="products__pic" src="images/src/products/prod-2.jpg" alt="продукт">
+              <div class="products__info">
+                <p class="products__name">Wooden chair</p>
+                <span class="products__price">$29.00</span>
+              </div>
+            </div>
+
+            <div class="products__item mix category-a">
+              <img class="products__pic" src="images/src/products/prod-3.jpg" alt="продукт">
+              <div class="products__info">
+                <p class="products__name">White chair</p>
+                <span class="products__price">$29.00</span>
+              </div>
+            </div>
+
+            <div class="products__item mix category-b">
+              <img class="products__pic" src="images/src/products/prod-4.jpg" alt="продукт">
+              <div class="products__info">
+                <p class="products__name">Retro table</p>
+                <span class="products__price">$29.00</span>
+              </div>
+            </div>
+
+            <div class="products__row">
+              <div class="products__item mix category-b">
+                <img class="products__pic" src="images/src/products/prod-5.jpg" alt="продукт">
+                <div class="products__info">
+                  <p class="products__name">Wooden radio</p>
+                  <span class="products__price">$29.00</span>
+                </div>
+              </div>
+              <div class="products__item mix category-c">
+                <img class="products__pic" src="images/src/products/prod-6.jpg" alt="продукт">
+                <div class="products__info">
+                  <p class="products__name">Wooden chair</p>
+                  <span class="products__price">$29.00</span>
+                </div>
+              </div>
+              <div class="products__item mix category-d">
+                <img class="products__pic" src="images/src/products/prod-7.jpg" alt="продукт">
+                <div class="products__info">
+                  <p class="products__name">White chair</p>
+                  <span class="products__price">$29.00</span>
+                </div>
+              </div>
+              <div class="products__item mix category-d">
+                <img class="products__pic" src="images/src/products/prod-8.jpg" alt="продукт">
+                <div class="products__info">
+                  <p class="products__name">Retro table</p>
+                  <span class="products__price">$29.00</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
     </main>
 
@@ -269,21 +364,21 @@
         ©2020 CopyRight Example. All rights reserved.
       </p>
 
-      <ul class="footer__menu">
-        <li class="footer__menu-item">
-          <a class="footer__menu-link" href="#">Home</a>
+      <ul class="footer__nav">
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Home</a>
         </li>
 
-        <li class="footer__menu-item">
-          <a class="footer__menu-link" href="#">About</a>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">About</a>
         </li>
 
-        <li class="footer__menu-item">
-          <a class="footer__menu-link" href="#">Blog</a>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Blog</a>
         </li>
 
-        <li class="footer__menu-item">
-          <a class="footer__menu-link" href="#">Contact</a>
+        <li class="footer__nav-item">
+          <a class="footer__nav-link" href="#">Contact</a>
         </li>
       </ul>
     </div>
