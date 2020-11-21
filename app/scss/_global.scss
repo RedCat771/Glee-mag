@@ -38,7 +38,7 @@ body {
   max-width: 1200px;
 }
 
-.product-bar {
+.bar {
   margin-bottom: 70px;
   text-align: center;
   @extend %dms-bold;
@@ -54,7 +54,7 @@ body {
     justify-content: center;
   }
 
-  &__item + .product-bar__item {
+  &__item + .bar__item {
     margin-left: 30px;
   }
 

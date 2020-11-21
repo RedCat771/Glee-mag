@@ -56,6 +56,7 @@ function scripts() {
     "node_modules/jquery/dist/jquery.min.js",
     "node_modules/slick-carousel/slick/slick.min.js",
     "node_modules/mixitup/dist/mixitup.min.js",
+    "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
     "!app/js/main.min.js",
     "app/js/main.js",
   ])
@@ -69,6 +70,7 @@ function styles() {
   return src([
     "node_modules/normalize.css/normalize.css",
     "node_modules/slick-carousel/slick/slick.css",
+    "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css",
     "!app/scss/_*.scss",
     "app/scss/*.scss",
   ])

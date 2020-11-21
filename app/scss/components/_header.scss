@@ -48,7 +48,7 @@
   &__accent::after {
     @include pseudo($content: url("../images/src/vector.svg"));
     left: 50%;
-    bottom: 6px;
+    bottom: 3px;
   }
 
   &__link--search + &__link--menu {
