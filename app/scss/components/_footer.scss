@@ -60,16 +60,14 @@
 
   &__input {
     border: none;
-    padding: 15px 75px 15px 15px;
+    padding: 15px 70px 15px 15px;
     width: 100%;
     max-width: 170px;
-    background-color: $bg-color;
-    opacity: 0.2;
+    background-color: $bg-op;
 
     &::placeholder {
       font-size: 12px;
       color: $title-color;
-      opacity: 1;
     }
   }
 
@@ -91,16 +89,16 @@
     height: 90px;
   }
 
-  &__menu {
+  &__nav {
     display: flex;
     margin-right: 10px;
   }
 
-  &__menu-link {
+  &__nav-link {
     color: $footer-color;
   }
 
-  &__menu-item + .footer__menu-item {
+  &__nav-item + .footer__nav-item {
     margin-left: 15px;
     border-left: 1px solid $footer-color;
     padding-left: 15px;
@@ -108,7 +106,7 @@
 
   &__address-link,
   &__link,
-  &__menu-link {
+  &__nav-link {
     transition: color 1s;
     &:hover {
       color: $bg-color;
