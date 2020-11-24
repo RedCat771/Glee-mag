@@ -122,13 +122,14 @@
   margin-bottom: 100px;
 
   &__body {
-    margin-bottom: 180px;
+    margin-bottom: 150px;
   }
 
   &__body,
   &__row {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   &__item {
@@ -139,7 +140,7 @@
     padding: 30px 15px;
     width: 100%;
     height: 380px;
-    max-width: 260px;
+    max-width: 270px;
     box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
     text-align: center;
   }
@@ -148,12 +149,24 @@
     margin-left: 30px;
   }
 
+  &__item:hover {
+    .products__menu {
+      transform: translateY(0);
+    }
+  }
+
+  &__picture-wrapper {
+    overflow-y: hidden;
+  }
+
   &__pic {
     display: inline-block;
     margin: auto 0;
+    object-fit: contain;
   }
 
   &__name {
+    margin-bottom: 5px;
     font-weight: 500;
     color: $title-color;
   }
@@ -161,6 +174,44 @@
   &__price {
     color: $btn-color;
     @extend %dms-bold;
+  }
+
+  &__menu {
+    position: relative;
+    bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 170px;
+    transform: translateY(500%);
+    transition: 1s;
+  }
+
+  &__menu-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    box-shadow: 2px -1px 13px 5px rgba(0, 0, 0, 0.41);
+    background-color: #fff;
+    transition: background-color 1s;
+  }
+
+  &__menu-link:hover {
+    background-color: $btn-color;
+
+    .products__menu-pic {
+      fill: #fff;
+    }
+  }
+
+  &__menu-pic {
+    max-width: 21px;
+    max-height: 22px;
+    fill: $btn-color;
   }
 }
 
@@ -182,11 +233,11 @@
 
   &-item::before {
     @include pseudo();
-    @include bg();
-    left: 13%;
+    @include bg($bg-size: contain);
+    left: 16%;
     bottom: 80px;
-    width: 250px;
-    height: 450px;
+    width: 230px;
+    height: 405px;
   }
 
   &-item--left::before {
@@ -205,6 +256,10 @@
     display: block;
     margin-left: auto;
     max-width: 345px;
+  }
+
+  &-inner--right {
+    max-width: 300px;
   }
 
   &-title {
@@ -246,7 +301,7 @@
   &__body {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 120px;
+    margin-bottom: 90px;
   }
 
   &__item {
@@ -268,12 +323,12 @@
 
   &__link,
   &__name {
-    margin-left: 25px;
+    margin-left: 35px;
     @extend %dms-bold;
   }
 
   &__name {
-    margin: 40px 25px 15px;
+    margin: 40px 35px 15px;
     max-width: 170px;
     font-size: 20px;
     color: $product-title;
@@ -313,7 +368,7 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 45px;
+    margin-bottom: 54px;
   }
 
   &__title {
@@ -380,7 +435,7 @@
 
   &__text {
     flex-grow: 1;
-    margin: 0 0 17px 30px;
+    margin: 0 45px 17px 30px;
     font-weight: 500;
     font-size: 18px;
     color: $our-title;
@@ -390,7 +445,7 @@
     display: inline-block;
     margin-left: 30px;
     border-top: 1px solid #e0e0e0;
-    padding: 23px 0 25px;
+    padding-bottom: 25px;
     font-size: 12px;
     text-transform: uppercase;
     color: $date-color;
@@ -408,14 +463,21 @@
     background-color: $bg-op;
   }
 
+  &__partners-wrapper {
+    display: flex;
+    align-items: flex-end;
+    min-height: 435px;
+  }
+
   &__partners-inner {
     display: flex;
+    align-items: center;
     justify-content: space-around;
-    height: 435px;
+    margin: auto 0 80px;
+    width: 100%;
   }
 
   &__partners-pic {
-    margin: auto 0 90px;
     max-height: 90px;
   }
 }
