@@ -27,10 +27,12 @@ const gcmq = require("gulp-group-css-media-queries");
 const fileinclude = require("gulp-file-include");
 // минифицирует html
 const htmlmin = require("gulp-htmlmin");
+//переименование файлов
+const rename = require("gulp-rename");
 
 function browsersync() {
   browserSync.init({
-    server: { baseDir: "app/", index: "home.html" }, // Папка сервера (Исходные файлы)
+    server: { baseDir: "./app", index: "home.html" }, // Папка сервера (Исходные файлы)
     notify: false,
     online: true,
   });
@@ -38,7 +40,7 @@ function browsersync() {
 
 function html() {
   return (
-    src(["./app/html/pages/*.html", "!./app/html/components/_*.html"])
+    src(["app/html/pages/*.html", "!app/html/components/_*.html"])
       .pipe(
         fileinclude({
           prefix: "@@",
@@ -46,7 +48,7 @@ function html() {
         })
       )
       // .pipe(htmlmin({ collapseWhitespace: false }))
-      .pipe(dest("./app"))
+      .pipe(dest("app"))
       .pipe(browserSync.stream())
   );
 }
@@ -67,44 +69,49 @@ function scripts() {
 }
 
 function styles() {
-  return src([
-    "node_modules/normalize.css/normalize.css",
-    "node_modules/slick-carousel/slick/slick.css",
-    "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css",
-    "!app/scss/_*.scss",
-    "app/scss/*.scss",
-  ])
-    .pipe(
-      sass({
-        outputStyle: "expanded", // "compressed"
-      })
-    ) // Преобразовываем scss в css
-    .pipe(concat("style.css")) //в один файл "style.css"
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 10 versions"],
-        cascade: true,
-        browsers: [
-          "Android >= 4",
-          "Chrome >= 20",
-          "Firefox >= 24",
-          "Explorer >= 11",
-          "iOS >= 6",
-          "Opera >= 12",
-          "Safari >= 6",
-        ],
-      })
-    ) // Добавляет вендорные префиксы
-    .pipe(gcmq()) //Группирует медиа
-    .pipe(dest("app/css/")) // Выгружаем результат в папку "app/css/style.css"
-    .pipe(concat("style.min.css")) // Объединяет в один файл "style.min.css"
-    .pipe(
-      cleancss({
-        level: { 1: { specialComments: 0 } },
-      })
-    ) // Минифицирует стили. format: "beautify",
-    .pipe(dest("app/css/")) // Выгружаем результат в папку "app/css/style.min.css"
-    .pipe(browserSync.stream());
+  return (
+    src([
+      "node_modules/normalize.css/normalize.css",
+      "!app/scss/_*.scss",
+      "app/scss/*.scss",
+    ])
+      .pipe(
+        sass({
+          outputStyle: "expanded", // "compressed"
+        })
+      ) // Преобразовываем scss в css
+      // .pipe(concat("style.css")) //в один файл "style.css"
+      .pipe(
+        autoprefixer({
+          overrideBrowserslist: ["last 10 versions"],
+          cascade: true,
+          browsers: [
+            "Android >= 4",
+            "Chrome >= 20",
+            "Firefox >= 24",
+            "Explorer >= 11",
+            "iOS >= 6",
+            "Opera >= 12",
+            "Safari >= 6",
+          ],
+        })
+      ) // Добавляет вендорные префиксы
+      .pipe(gcmq()) //Группирует медиа
+      .pipe(dest("app/css/")) // Выгружаем результат в папку "app/css/style.css"
+      // .pipe(concat("style.min.css")) // Объединяет в один файл "style.min.css"
+      .pipe(
+        rename(function (path) {
+          path.basename += ".min";
+        })
+      )
+      .pipe(
+        cleancss({
+          level: { 1: { specialComments: 0 } },
+        })
+      ) // Минифицирует стили. format: "beautify",
+      .pipe(dest("app/css/")) // Выгружаем результат в папку "app/css/style.min.css"
+      .pipe(browserSync.stream())
+  );
 }
 
 function images() {
@@ -138,11 +145,10 @@ function cleandist() {
 function buildcopy() {
   return src(
     [
-      "app/css/**/style.min.css",
+      "app/css/**/*.min.css",
       "app/js/**/main.min.js",
       "app/images/dest/**/*",
-      "app/**/*.html",
-      "!app/**/_*.html",
+      "app/html/*.html",
     ],
     { base: "app" }
   ) // Сохраняем структуру app при копировании
@@ -150,7 +156,7 @@ function buildcopy() {
 }
 
 function startwatch() {
-  watch("app/html/**/*", html);
+  watch("app/html/pages/*", html);
 
   watch("app/scss/**/*", styles);
 
