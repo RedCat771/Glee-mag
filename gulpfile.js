@@ -29,6 +29,9 @@ const fileinclude = require("gulp-file-include");
 const htmlmin = require("gulp-htmlmin");
 //переименование файлов
 const rename = require("gulp-rename");
+//обработка svg
+const svgmin = require("gulp-svgmin");
+const svgsprite = require("gulp-svg-sprite");
 
 function browsersync() {
   browserSync.init({
@@ -134,6 +137,48 @@ function images() {
     .pipe(dest("app/images/dest"));
 }
 
+function svg2sprite() {
+  return (
+    src("app/images/src/*.svg")
+      .pipe(
+        svgmin({
+          plugins: [
+            {
+              removeComments: true,
+            },
+            {
+              removeEmptyContainers: true,
+            },
+          ],
+        })
+      )
+      //FIXME что0то не понятно что оно делает , нужно поправить или удалить
+      .pipe(
+        svgsprite({
+          shape: {
+            dimension: {
+              maxWidth: 32,
+              maxHeight: 32,
+            },
+            spacing: {
+              padding: 10,
+            },
+          },
+          mode: {
+            view: {
+              bust: false,
+              render: {
+                scss: true,
+              },
+            },
+            symbol: true,
+          },
+        })
+      )
+      .pipe(dest("app/images/dest/"))
+  );
+}
+
 function cleanimg() {
   return del("app/images/dest/**/*", { force: true }); // Удаляем всё содержимое папки "app/images/#dest/"
 }
@@ -174,6 +219,8 @@ exports.scripts = scripts;
 exports.styles = styles;
 
 exports.images = images;
+
+exports.svg2sprite = svg2sprite;
 
 exports.cleandist = cleandist;
 
