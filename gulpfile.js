@@ -42,18 +42,16 @@ function browsersync() {
 }
 
 function html() {
-  return (
-    src(["app/html/pages/*.html", "!app/html/components/_*.html"])
-      .pipe(
-        fileinclude({
-          prefix: "@@",
-          basepath: "./app",
-        })
-      )
-      // .pipe(htmlmin({ collapseWhitespace: false }))
-      .pipe(dest("app"))
-      .pipe(browserSync.stream())
-  );
+  return src(["app/html/pages/*.html", "!app/html/components/_*.html"])
+    .pipe(
+      fileinclude({
+        prefix: "@@",
+        basepath: "./app",
+      })
+    )
+    .pipe(htmlmin({ collapseWhitespace: false }))
+    .pipe(dest("app/"))
+    .pipe(browserSync.stream());
 }
 
 function scripts() {
@@ -83,7 +81,7 @@ function styles() {
           outputStyle: "expanded", // "compressed"
         })
       ) // Преобразовываем scss в css
-      // .pipe(concat("style.css")) //в один файл "style.css"
+      .pipe(concat("style.css")) //в один файл "style.css"
       .pipe(
         autoprefixer({
           overrideBrowserslist: ["last 10 versions"],
@@ -152,7 +150,7 @@ function svg2sprite() {
           ],
         })
       )
-      //FIXME что0то не понятно что оно делает , нужно поправить или удалить
+      //FIXME что-то не понятно что оно делает , нужно поправить или удалить
       .pipe(
         svgsprite({
           shape: {
@@ -201,7 +199,7 @@ function buildcopy() {
 }
 
 function startwatch() {
-  watch("app/html/pages/*", html);
+  watch("app/html/**/*", html);
 
   watch("app/scss/**/*", styles);
 
@@ -226,4 +224,4 @@ exports.cleandist = cleandist;
 
 exports.build = series(cleandist, styles, scripts, images, buildcopy);
 
-exports.default = parallel(styles, scripts, browsersync, startwatch);
+exports.default = parallel(html, styles, scripts, browsersync, startwatch);

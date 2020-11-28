@@ -4,10 +4,10 @@
 <head>
   <title>Glee</title>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <link rel="stylesheet" href="css/home.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
 
 </head>
 
@@ -23,11 +23,11 @@
 
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="/home.html" target="_blank">Home +</a>
+            <a class="nav__link" href="/home.html">Home +</a>
           </li>
 
           <li class="nav__item">
-            <a class="nav__link" href="/about.html" target="_blank">About</a>
+            <a class="nav__link" href="/about.html">About</a>
           </li>
 
           <li class="nav__item">
@@ -48,14 +48,17 @@
         </ul>
 
         <div class="add-menu">
-          <a class="add-menu__link add-menu__link--search" href="#">
-            <svg class="add-menu__pic">
-              <use xlink:href="images/src/sprite.svg#search"></use>
-            </svg>
-          </a>
+          <form class="add-menu__form" action="" method="get">
+            <input class="add-menu__form-input" name="search" placeholder="Поиск" type="search">
+            <button class="add-menu__form-btn" type="submit">
+              <svg class="add-menu__form-pic">
+                <use xlink:href="images/src/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </form>
 
           <div class="add-menu__accent" style="background-color: #fcd7b6;">
-            <a class=" add-menu__link add-menu__link--inside" href="#">
+            <a class="add-menu__link add-menu__link--inside" href="#">
               <svg class="add-menu__pic">
                 <use xlink:href="images/src/sprite.svg#heart"></use>
               </svg>
@@ -85,97 +88,107 @@
       <section class="presentaition">
         <div class="container-box">
           <div class="slider">
-            <div class="slider__item" style="background-image: url(images/src/slide-1.png); background-color: #fcd7b6;">
+            <div class="slider__item">
               <div class="container">
-                <div class="slider__inner">
-                  <span class="slider__title">
-                    SMART AND TRENDY
-                  </span>
-                  <p class="slider__text">
-                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  </p>
-                  <a class="slider__link" href="#">Shop Now</a>
+                <div class="slider__wrapper">
+                  <div class="slider__inner">
+                    <span class="slider__title">
+                      SMART AND TRENDY
+                    </span>
+                    <p class="slider__text">
+                      Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                    </p>
+                    <a class="slider__link" href="#">Shop Now</a>
+                  </div>
+                  <img class="slider__picture" src="/images/src/slide-1.png" alt="слайд">
                 </div>
               </div>
             </div>
 
-            <div class="slider__item" style="background-image: url(images/src/slide-1.png); background-color: #fcd7b6;">
+            <div class="slider__item">
               <div class="container">
-                <div class="slider__inner">
-                  <span class="slider__title">
-                    SMART AND TRENDY
-                  </span>
-                  <p class="slider__text">
-                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  </p>
-                  <a class="slider__link" href="#">Shop Now</a>
+                <div class="slider__wrapper">
+                  <div class="slider__inner">
+                    <span class="slider__title">
+                      SMART AND TRENDY
+                    </span>
+                    <p class="slider__text">
+                      Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                    </p>
+                    <a class="slider__link" href="#">Shop Now</a>
+                  </div>
+                  <img class="slider__picture" src="/images/src/slide-1.png" alt="слайд">
                 </div>
               </div>
             </div>
 
-            <div class="slider__item" style="background-image: url(images/src/slide-1.png); background-color: #fcd7b6;">
+            <div class="slider__item">
               <div class="container">
-                <div class="slider__inner">
-                  <span class="slider__title">
-                    SMART AND TRENDY
-                  </span>
-                  <p class="slider__text">
-                    Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  </p>
-                  <a class="slider__link" href="#">Shop Now</a>
+                <div class="slider__wrapper">
+                  <div class="slider__inner">
+                    <span class="slider__title">
+                      SMART AND TRENDY
+                    </span>
+                    <p class="slider__text">
+                      Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                    </p>
+                    <a class="slider__link" href="#">Shop Now</a>
+                  </div>
+                  <img class="slider__picture" src="/images/src/slide-1.png" alt="слайд">
                 </div>
               </div>
             </div>
+
           </div>
 
-          <div class="about">
-            <div class="about__item">
+          <ul class="about">
+            <li class="about__item">
               <svg class="about__img">
                 <use xlink:href="images/src/sprite.svg#twfo"></use>
               </svg>
 
-              <div class="about__info">
-                <span class="about__title">
+              <ul class="about__info">
+                <li class="about__title">
                   Support 24/7.
-                </span>
-                <p class="about__text">
+                </li>
+                <li class="about__text">
                   Contact us 24 hours a day,
                   7 days a week.
-                </p>
-              </div>
+                </li>
+              </ul>
+            </li>
 
-            </div>
-            <div class="about__item">
+            <li class="about__item">
               <svg class="about__img">
                 <use xlink:href="images/src/sprite.svg#track"></use>
               </svg>
 
-              <div class="about__info">
-                <span class="about__title">
+              <ul class="about__info">
+                <li class="about__title">
                   Delivery.
-                </span>
-                <p class="about__text">
+                </li>
+                <li class="about__text">
                   Free shipping on all US order.
-                </p>
-              </div>
-            </div>
+                </li>
+              </ul>
+            </li>
 
-            <div class="about__item">
+            <li class="about__item">
               <svg class="about__img">
                 <use xlink:href="images/src/sprite.svg#card"></use>
               </svg>
 
-              <div class="about__info">
-                <span class="about__title">
+              <ul class="about__info">
+                <li class="about__title">
                   100% Payment secure
-                </span>
-                <p class="about__text">
+                </li>
+                <li class="about__text">
                   We ensure secure payment
                   with PEV.
-                </p>
-              </div>
-            </div>
-          </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -220,7 +233,8 @@
                   <a class="products__menu-link" href="#">
                     <svg class="products__menu-pic">
                       <use xlink:href="images/src/sprite.svg#cart">
-                        </umenu </svg>
+                      </use>
+                    </svg>
                   </a>
                   <a class="products__menu-link" href="#">
                     <svg class="products__menu-pic">
@@ -247,7 +261,8 @@
                   <a class="products__menu-link" href="#">
                     <svg class="products__menu-pic">
                       <use xlink:href="images/src/sprite.svg#cart">
-                        </umenu </svg>
+                      </use>
+                    </svg>
                   </a>
                   <a class="products__menu-link" href="#">
                     <svg class="products__menu-pic">
@@ -274,7 +289,8 @@
                   <a class="products__menu-link" href="#">
                     <svg class="products__menu-pic">
                       <use xlink:href="images/src/sprite.svg#cart">
-                        </umenu </svg>
+                      </use>
+                    </svg>
                   </a>
                   <a class="products__menu-link" href="#">
                     <svg class="products__menu-pic">
@@ -301,7 +317,8 @@
                   <a class="products__menu-link" href="#">
                     <svg class="products__menu-pic">
                       <use xlink:href="images/src/sprite.svg#cart">
-                        </umenu </svg>
+                      </use>
+                    </svg>
                   </a>
                   <a class="products__menu-link" href="#">
                     <svg class="products__menu-pic">
@@ -329,7 +346,8 @@
                     <a class="products__menu-link" href="#">
                       <svg class="products__menu-pic">
                         <use xlink:href="images/src/sprite.svg#cart">
-                          </umenu </svg>
+                        </use>
+                      </svg>
                     </a>
                     <a class="products__menu-link" href="#">
                       <svg class="products__menu-pic">
@@ -355,7 +373,8 @@
                     <a class="products__menu-link" href="#">
                       <svg class="products__menu-pic">
                         <use xlink:href="images/src/sprite.svg#cart">
-                          </umenu </svg>
+                        </use>
+                      </svg>
                     </a>
                     <a class="products__menu-link" href="#">
                       <svg class="products__menu-pic">
@@ -381,7 +400,8 @@
                     <a class="products__menu-link" href="#">
                       <svg class="products__menu-pic">
                         <use xlink:href="images/src/sprite.svg#cart">
-                          </umenu </svg>
+                        </use>
+                      </svg>
                     </a>
                     <a class="products__menu-link" href="#">
                       <svg class="products__menu-pic">
@@ -407,7 +427,8 @@
                     <a class="products__menu-link" href="#">
                       <svg class="products__menu-pic">
                         <use xlink:href="images/src/sprite.svg#cart">
-                          </umenu </svg>
+                        </use>
+                      </svg>
                     </a>
                     <a class="products__menu-link" href="#">
                       <svg class="products__menu-pic">
@@ -485,14 +506,14 @@
 
         <div class="container">
           <div class="design__body">
-            <div class="design__item mix category-e" style=" background-image: url(images/src/design/des-1.jpg)">
+            <div class="design__item mix category-e" style="background-image: url(images/src/design/des-1.jpg);">
               <p class="design__name">
                 Beat Flat Pendant Black
               </p>
               <a class="design__link" href="#">Classic</a>
             </div>
 
-            <div class="design__item mix category-e" style=" background-image: url(images/src/design/des-2.jpg)">
+            <div class="design__item mix category-e" style="background-image: url(images/src/design/des-2.jpg);">
               <p class="design__name">
                 Lampe Sur Pieds
                 Bamboo
@@ -500,7 +521,7 @@
               <a class="design__link" href="#">Classic</a>
             </div>
 
-            <div class="design__item mix category-f" style=" background-image: url(images/src/design/des-3.jpg)">
+            <div class="design__item mix category-f" style="background-image: url(images/src/design/des-3.jpg);">
               <p class="design__name">
                 Rattan Rocking
                 Chair
@@ -509,7 +530,7 @@
             </div>
 
             <div class="design__row">
-              <div class="design__item mix category-g" style="background-image: url(images/src/design/des-4.jpg)">
+              <div class="design__item mix category-g" style="background-image: url(images/src/design/des-4.jpg);">
                 <p class="design__name">
                   Rattan Rocking
                   Chair
@@ -517,7 +538,7 @@
                 <a class="design__link" href="#">Classic</a>
               </div>
 
-              <div class="design__item mix category-h" style="background-image: url(images/src/design/des-5.jpg)">
+              <div class="design__item mix category-h" style="background-image: url(images/src/design/des-5.jpg);">
                 <p class="design__name">
                   Rattan Rocking
                   Chair
@@ -525,7 +546,7 @@
                 <a class="design__link" href="#">Classic</a>
               </div>
 
-              <div class="design__item mix category-h" style="background-image: url(images/src/design/des-6.jpg)">
+              <div class="design__item mix category-h" style="background-image: url(images/src/design/des-6.jpg);">
                 <p class="design__name">
                   Lampe Sur Pieds
                   Bamboo
