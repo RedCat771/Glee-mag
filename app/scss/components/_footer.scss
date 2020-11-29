@@ -11,11 +11,11 @@
   &__item--contact {
     display: flex;
     flex-direction: column;
-    max-width: 200px;
+    min-width: 200px;
   }
 
   &__address {
-    margin-top: 23px;
+    margin-top: 15px;
   }
 
   &__address-row {
@@ -41,7 +41,8 @@
   }
 
   &__list-item {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    line-height: 1.6;
   }
 
   &__text {
@@ -53,6 +54,10 @@
     display: flex;
   }
 
+  &__info {
+    display: none;
+  }
+
   &__address,
   &__address-link,
   &__link,
@@ -61,10 +66,12 @@
   }
 
   &__input {
+    outline: $accent-color;
     border: none;
     padding: 15px 70px 15px 15px;
     width: 100%;
-    max-width: 170px;
+    min-width: 170px;
+    max-height: 40px;
     background-color: $bg-op;
 
     &::placeholder {
@@ -74,10 +81,12 @@
   }
 
   &__btn {
-    margin-left: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
-    padding: 15px 17px;
-    text-transform: uppercase;
+    min-width: 100px;
+    max-height: 40px;
     color: #fff;
     background-color: $btn-color;
     transition: background-color 0.6s;
@@ -93,7 +102,7 @@
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid $btn-color;
-    height: 90px;
+    min-height: 90px;
   }
 
   &__nav {
@@ -105,10 +114,12 @@
     color: $footer-color;
   }
 
-  &__nav-item + .footer__nav-item {
-    margin-left: 15px;
-    border-left: 1px solid $footer-color;
-    padding-left: 15px;
+  &__nav-item {
+    & + & {
+      margin-left: 15px;
+      border-left: 1px solid $footer-color;
+      padding-left: 15px;
+    }
   }
 
   &__address-link,

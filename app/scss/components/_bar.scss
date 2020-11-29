@@ -1,0 +1,30 @@
+.bar {
+  margin-bottom: 72px;
+  text-align: center;
+  @extend %dms-bold;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    & + & {
+      margin-left: 30px;
+    }
+  }
+
+  &__btn {
+    color: #8b8b8b;
+    transition: color 0.6s;
+    cursor: pointer;
+
+    &:hover {
+      color: $btn-color;
+    }
+  }
+
+  .mixitup-control-active {
+    color: $product-title;
+  }
+}

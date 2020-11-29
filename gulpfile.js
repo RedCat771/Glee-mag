@@ -46,7 +46,7 @@ function html() {
     .pipe(
       fileinclude({
         prefix: "@@",
-        basepath: "./app",
+        basepath: "app/",
       })
     )
     .pipe(htmlmin({ collapseWhitespace: false }))
@@ -74,7 +74,7 @@ function styles() {
     src([
       "node_modules/normalize.css/normalize.css",
       "!app/scss/_*.scss",
-      "app/scss/*.scss",
+      "app/scss/style.scss",
     ])
       .pipe(
         sass({
@@ -191,7 +191,7 @@ function buildcopy() {
       "app/css/**/*.min.css",
       "app/js/**/main.min.js",
       "app/images/dest/**/*",
-      "app/html/*.html",
+      "app/html/pages/*.html",
     ],
     { base: "app" }
   ) // Сохраняем структуру app при копировании

@@ -4,7 +4,5 @@
 @import "global";
 @import "libs";
 
-@import "components/header";
-
-@import "components/our";
-@import "components/footer";
+@import "pages/home.scss";
+@import "pages/about.scss";
