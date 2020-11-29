@@ -3,10 +3,14 @@
     <div class="footer__inner">
       <div class="footer__item footer__item--contact">
         <a class="logo" href="#">
-          <img class="logo__pic" src="images/src/logo.svg" alt="Логотип">
+          <svg class="logo__pic">
+            <use xlink:href="images/src/sprite.svg#logo"></use>
+          </svg>
         </a>
 
-        <address class="footer__address" href="#">Address:4772 Wines Lane
+        <address class="footer__address" href="#">
+          <span class="footer__address-row">Address:</span>
+          4772 Wines Lane
           Houston, TX 77032<br>
 
           <span class="footer__address-row">Telephone:</span>
@@ -73,7 +77,8 @@
         </p>
         <form class="footer__form" action="">
           <label>
-            <input class="footer__input" name="footer[email]" type="email" placeholder="Email address" required>
+            <span class="footer__info">email address</span>
+            <input class="footer__input" name="subscribe[email]" type="email" placeholder="Email address" required>
           </label>
           <button class="footer__btn" type="submit">Subscribe</button>
         </form>

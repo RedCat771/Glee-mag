@@ -12,7 +12,7 @@ html {
 
 body {
   font-size: 16px;
-  line-height: 1.5em;
+  line-height: 1.5;
   color: $default-color;
   background-color: #fff;
   @extend %dms-regular;
@@ -26,44 +26,33 @@ body {
   min-height: calc(100vh - 450px);
 }
 
+.container,
 .container-box {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1800px;
-}
-
-.container {
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1200px;
 }
 
-.bar {
-  margin-bottom: 70px;
-  text-align: center;
-  @extend %dms-bold;
+.container-box {
+  max-width: 1800px;
+}
 
-  &__title {
-    margin-bottom: 37px;
-    font-size: 36px;
-    color: $product-title;
+.logo {
+  font-weight: 500;
+  transition: transform 0.6s;
+
+  &__pic {
+    max-width: 146px;
+    max-height: 39px;
   }
 
-  &__list {
-    display: flex;
-    justify-content: center;
+  &:hover {
+    transform: scale(1.05);
   }
+}
 
-  &__item + .bar__item {
-    margin-left: 30px;
-  }
-
-  &__btn {
-    color: #8b8b8b;
-    cursor: pointer;
-  }
-
-  .mixitup-control-active {
-    color: $product-title;
-  }
+.title {
+  margin-bottom: 17px;
+  font-size: 36px;
+  color: $product-title;
 }

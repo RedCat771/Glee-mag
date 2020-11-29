@@ -3,16 +3,18 @@
     <div class="header__inner">
       <nav class="nav">
         <a class="logo" href="#">
-          <img class="logo__pic" src="images/src/logo.svg" alt="Логотип">
+          <svg class="logo__pic">
+            <use xlink:href="images/src/sprite.svg#logo"></use>
+          </svg>
         </a>
 
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="#">Home +</a>
+            <a class="nav__link" href="/home.html">Home +</a>
           </li>
 
           <li class="nav__item">
-            <a class="nav__link" href="#">About</a>
+            <a class="nav__link" href="/about.html">About</a>
           </li>
 
           <li class="nav__item">
@@ -33,21 +35,24 @@
         </ul>
 
         <div class="add-menu">
-          <a class="add-menu__link add-menu__link--search" href="#">
-            <svg class="add-menu__pic">
-              <use xlink:href="images/src/sprite.svg#search"></use>
-            </svg>
-          </a>
+          <form class="add-menu__form" action="" method="get">
+            <input class="add-menu__form-input" name="search" placeholder="Поиск" type="search">
+            <button class="add-menu__form-btn" type="submit">
+              <svg class="add-menu__form-pic">
+                <use xlink:href="images/src/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </form>
 
-          <div class="add-menu__accent" style="background-color: #fcd7b6;">
-            <a class=" add-menu__link add-menu__link--inside" href="#">
+          <div class="add-menu__accent">
+            <a class=" add-menu__link" href="#">
               <svg class="add-menu__pic">
                 <use xlink:href="images/src/sprite.svg#heart"></use>
               </svg>
               <span class="add-menu__num">0</span>
             </a>
 
-            <a class="add-menu__link add-menu__link--inside" href="#">
+            <a class="add-menu__link" href="#">
               <svg class="add-menu__pic">
                 <use xlink:href="images/src/sprite.svg#cart"></use>
               </svg>
@@ -55,11 +60,11 @@
             </a>
           </div>
 
-          <a class="add-menu__link add-menu__link--menu" href="#">
+          <button class="add-menu__btn">
             <svg class="add-menu__pic">
               <use xlink:href="images/src/sprite.svg#menu"></use>
             </svg>
-          </a>
+          </button>
         </div>
       </nav>
     </div>

@@ -1,0 +1,51 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 69px;
+  padding: 45px 0;
+  background-color: $bg-op;
+
+  &__item {
+    display: flex;
+    min-height: 71px;
+    max-width: 290px;
+    transition: transform 0.6s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__img-wrapper {
+    position: relative;
+
+    &::after {
+      @include pseudo();
+      @include bg();
+      right: 0;
+      bottom: 18px;
+      min-width: 20px;
+      min-height: 20px;
+      background-image: url("../images/src/ellipse.svg");
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 50px;
+    max-height: 50px;
+    fill: $btn-color;
+  }
+
+  &__info {
+    display: block;
+    margin-left: 25px;
+    cursor: default;
+  }
+
+  &__title {
+    font-size: 18px;
+    @extend %dms-bold;
+  }
+}
