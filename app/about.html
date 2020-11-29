@@ -16,7 +16,9 @@
     <div class="header__inner">
       <nav class="nav">
         <a class="logo" href="#">
-          <img class="logo__pic" src="images/src/logo.svg" alt="Логотип">
+          <svg class="logo__pic">
+            <use xlink:href="images/src/sprite.svg#logo"></use>
+          </svg>
         </a>
 
         <ul class="nav__list">
@@ -55,15 +57,15 @@
             </button>
           </form>
 
-          <div class="add-menu__accent" style="background-color: #fcd7b6;">
-            <a class="add-menu__link add-menu__link--inside" href="#">
+          <div class="add-menu__accent">
+            <a class="add-menu__link" href="#">
               <svg class="add-menu__pic">
                 <use xlink:href="images/src/sprite.svg#heart"></use>
               </svg>
               <span class="add-menu__num">0</span>
             </a>
 
-            <a class="add-menu__link add-menu__link--inside" href="#">
+            <a class="add-menu__link" href="#">
               <svg class="add-menu__pic">
                 <use xlink:href="images/src/sprite.svg#cart"></use>
               </svg>
@@ -71,11 +73,11 @@
             </a>
           </div>
 
-          <a class="add-menu__link add-menu__link--menu" href="#">
+          <button class="add-menu__btn">
             <svg class="add-menu__pic">
               <use xlink:href="images/src/sprite.svg#menu"></use>
             </svg>
-          </a>
+          </button>
         </div>
       </nav>
     </div>
@@ -97,11 +99,22 @@
         <p class="our__text">
           Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         </p>
+        <a class="our__item-link" href="#"></a>
         <div class="our__item-bottom">
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#calendar">
+
+            </use>
+          </svg>
           <time class="our__date" datetime="2020-01-28">
-             28 JANUARY, 2020
+            28 JANUARY, 2020
           </time>
-          <span class="our__author"> BY ADMIN</span>
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#user-icon">
+
+            </use>
+          </svg>
+          <span class="our__author">BY ADMIN</span>
         </div>
       </div>
 
@@ -111,11 +124,22 @@
         <p class="our__text">
           Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         </p>
+        <a class="our__item-link" href="#"></a>
         <div class="our__item-bottom">
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#calendar">
+
+            </use>
+          </svg>
           <time class="our__date" datetime="2020-01-28">
-             28 JANUARY, 2020
+            28 JANUARY, 2020
           </time>
-          <span class="our__author"> BY ADMIN</span>
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#user-icon">
+
+            </use>
+          </svg>
+          <span class="our__author">BY ADMIN</span>
         </div>
       </div>
 
@@ -125,11 +149,22 @@
         <p class="our__text">
           Rncididunt ut labore et dolore magna aliqua. Ut enim
         </p>
+        <a class="our__item-link" href="#"></a>
         <div class="our__item-bottom">
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#calendar">
+
+            </use>
+          </svg>
           <time class="our__date" datetime="2020-01-28">
-             28 JANUARY, 2020
+            28 JANUARY, 2020
           </time>
-          <span class="our__author"> BY ADMIN</span>
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#user-icon">
+
+            </use>
+          </svg>
+          <span class="our__author">BY ADMIN</span>
         </div>
       </div>
     </div>
@@ -155,7 +190,9 @@
     <div class="footer__inner">
       <div class="footer__item footer__item--contact">
         <a class="logo" href="#">
-          <img class="logo__pic" src="images/src/logo.svg" alt="Логотип">
+          <svg class="logo__pic">
+            <use xlink:href="images/src/sprite.svg#logo"></use>
+          </svg>
         </a>
 
         <address class="footer__address" href="#">Address:4772 Wines Lane

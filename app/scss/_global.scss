@@ -38,6 +38,20 @@ body {
   max-width: 1200px;
 }
 
+.logo {
+  font-weight: 500;
+  transition: transform 0.6s;
+
+  &__pic {
+    max-width: 146px;
+    max-height: 39px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
 .bar {
   margin-bottom: 70px;
   text-align: center;

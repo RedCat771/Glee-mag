@@ -18,7 +18,9 @@
     <div class="header__inner">
       <nav class="nav">
         <a class="logo" href="#">
-          <img class="logo__pic" src="images/src/logo.svg" alt="Логотип">
+          <svg class="logo__pic">
+            <use xlink:href="images/src/sprite.svg#logo"></use>
+          </svg>
         </a>
 
         <ul class="nav__list">
@@ -57,15 +59,15 @@
             </button>
           </form>
 
-          <div class="add-menu__accent" style="background-color: #fcd7b6;">
-            <a class="add-menu__link add-menu__link--inside" href="#">
+          <div class="add-menu__accent">
+            <a class="add-menu__link" href="#">
               <svg class="add-menu__pic">
                 <use xlink:href="images/src/sprite.svg#heart"></use>
               </svg>
               <span class="add-menu__num">0</span>
             </a>
 
-            <a class="add-menu__link add-menu__link--inside" href="#">
+            <a class="add-menu__link" href="#">
               <svg class="add-menu__pic">
                 <use xlink:href="images/src/sprite.svg#cart"></use>
               </svg>
@@ -73,11 +75,11 @@
             </a>
           </div>
 
-          <a class="add-menu__link add-menu__link--menu" href="#">
+          <button class="add-menu__btn">
             <svg class="add-menu__pic">
               <use xlink:href="images/src/sprite.svg#menu"></use>
             </svg>
-          </a>
+          </button>
         </div>
       </nav>
     </div>
@@ -143,51 +145,57 @@
 
           <ul class="about">
             <li class="about__item">
+            </li><li class="about__img-wrapper">
               <svg class="about__img">
                 <use xlink:href="images/src/sprite.svg#twfo"></use>
               </svg>
-
-              <ul class="about__info">
-                <li class="about__title">
-                  Support 24/7.
-                </li>
-                <li class="about__text">
-                  Contact us 24 hours a day,
-                  7 days a week.
-                </li>
-              </ul>
             </li>
 
+            <ul class="about__info">
+              <li class="about__title">
+                Support 24/7.
+              </li>
+              <li class="about__text">
+                Contact us 24 hours a day,
+                7 days a week.
+              </li>
+            </ul>
+            
+
             <li class="about__item">
+            </li><li class="about__img-wrapper">
               <svg class="about__img">
                 <use xlink:href="images/src/sprite.svg#track"></use>
               </svg>
-
-              <ul class="about__info">
-                <li class="about__title">
-                  Delivery.
-                </li>
-                <li class="about__text">
-                  Free shipping on all US order.
-                </li>
-              </ul>
             </li>
 
+            <ul class="about__info">
+              <li class="about__title">
+                Delivery.
+              </li>
+              <li class="about__text">
+                Free shipping on all US order.
+              </li>
+            </ul>
+            
+
             <li class="about__item">
+            </li><li class="about__img-wrapper">
               <svg class="about__img">
                 <use xlink:href="images/src/sprite.svg#card"></use>
               </svg>
-
-              <ul class="about__info">
-                <li class="about__title">
-                  100% Payment secure
-                </li>
-                <li class="about__text">
-                  We ensure secure payment
-                  with PEV.
-                </li>
-              </ul>
             </li>
+
+            <ul class="about__info">
+              <li class="about__title">
+                100% Payment secure
+              </li>
+              <li class="about__text">
+                We ensure secure payment
+                with PEV.
+              </li>
+            </ul>
+            
           </ul>
         </div>
       </section>
@@ -247,6 +255,7 @@
                 <p class="products__name">Wooden radio</p>
                 <span class="products__price">$29.00</span>
               </div>
+              <a class="products__item-link" href="#"></a>
             </div>
 
             <div class="products__item mix category-c">
@@ -275,6 +284,7 @@
                 <p class="products__name">Wooden chair</p>
                 <span class="products__price">$29.00</span>
               </div>
+              <a class="products__item-link" href="#"></a>
             </div>
 
             <div class="products__item mix category-a">
@@ -303,6 +313,7 @@
                 <p class="products__name">White chair</p>
                 <span class="products__price">$29.00</span>
               </div>
+              <a class="products__item-link" href="#"></a>
             </div>
 
             <div class="products__item mix category-b">
@@ -331,117 +342,123 @@
                 <p class="products__name">Retro table</p>
                 <span class="products__price">$29.00</span>
               </div>
+              <a class="products__item-link" href="#"></a>
             </div>
 
-            <div class="products__row">
-              <div class="products__item mix category-b">
-                <div class="products__picture-wrapper">
-                  <img class="products__pic" src="images/src/products/prod-5.jpg" alt="продукт">
-                  <div class="products__menu">
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#search"></use>
-                      </svg>
-                    </a>
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#cart">
-                        </use>
-                      </svg>
-                    </a>
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#heart"></use>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div class="products__info">
-                  <p class="products__name">Wooden radio</p>
-                  <span class="products__price">$29.00</span>
+            <div class="products__item mix category-b">
+              <div class="products__picture-wrapper">
+                <img class="products__pic" src="images/src/products/prod-5.jpg" alt="продукт">
+                <div class="products__menu">
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#search"></use>
+                    </svg>
+                  </a>
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#cart">
+                      </use>
+                    </svg>
+                  </a>
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#heart"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
-              <div class="products__item mix category-c">
-                <div class="products__picture-wrapper">
-                  <img class="products__pic" src="images/src/products/prod-6.jpg" alt="продукт">
-                  <div class="products__menu">
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#search"></use>
-                      </svg>
-                    </a>
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#cart">
-                        </use>
-                      </svg>
-                    </a>
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#heart"></use>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div class="products__info">
-                  <p class="products__name">Wooden chair</p>
-                  <span class="products__price">$29.00</span>
+              <div class="products__info">
+                <p class="products__name">Wooden radio</p>
+                <span class="products__price">$29.00</span>
+              </div>
+              <a class="products__item-link" href="#"></a>
+            </div>
+
+            <div class="products__item mix category-c">
+              <div class="products__picture-wrapper">
+                <img class="products__pic" src="images/src/products/prod-6.jpg" alt="продукт">
+                <div class="products__menu">
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#search"></use>
+                    </svg>
+                  </a>
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#cart">
+                      </use>
+                    </svg>
+                  </a>
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#heart"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
-              <div class="products__item mix category-d">
-                <div class="products__picture-wrapper">
-                  <img class="products__pic" src="images/src/products/prod-7.jpg" alt="продукт">
-                  <div class="products__menu">
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#search"></use>
-                      </svg>
-                    </a>
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#cart">
-                        </use>
-                      </svg>
-                    </a>
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#heart"></use>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div class="products__info">
-                  <p class="products__name">White chair</p>
-                  <span class="products__price">$29.00</span>
+              <div class="products__info">
+                <p class="products__name">Wooden chair</p>
+                <span class="products__price">$29.00</span>
+              </div>
+              <a class="products__item-link" href="#"></a>
+            </div>
+
+            <div class="products__item mix category-d">
+              <div class="products__picture-wrapper">
+                <img class="products__pic" src="images/src/products/prod-7.jpg" alt="продукт">
+                <div class="products__menu">
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#search"></use>
+                    </svg>
+                  </a>
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#cart">
+                      </use>
+                    </svg>
+                  </a>
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#heart"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
-              <div class="products__item mix category-d">
-                <div class="products__picture-wrapper">
-                  <img class="products__pic" src="images/src/products/prod-8.jpg" alt="продукт">
-                  <div class="products__menu">
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#search"></use>
-                      </svg>
-                    </a>
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#cart">
-                        </use>
-                      </svg>
-                    </a>
-                    <a class="products__menu-link" href="#">
-                      <svg class="products__menu-pic">
-                        <use xlink:href="images/src/sprite.svg#heart"></use>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <div class="products__info">
-                  <p class="products__name">Retro table</p>
-                  <span class="products__price">$29.00</span>
+              <div class="products__info">
+                <p class="products__name">White chair</p>
+                <span class="products__price">$29.00</span>
+              </div>
+              <a class="products__item-link" href="#"></a>
+            </div>
+
+            <div class="products__item mix category-d">
+              <div class="products__picture-wrapper">
+                <img class="products__pic" src="images/src/products/prod-8.jpg" alt="продукт">
+                <div class="products__menu">
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#search"></use>
+                    </svg>
+                  </a>
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#cart">
+                      </use>
+                    </svg>
+                  </a>
+                  <a class="products__menu-link" href="#">
+                    <svg class="products__menu-pic">
+                      <use xlink:href="images/src/sprite.svg#heart"></use>
+                    </svg>
+                  </a>
                 </div>
               </div>
+              <div class="products__info">
+                <p class="products__name">Retro table</p>
+                <span class="products__price">$29.00</span>
+              </div>
+              <a class="products__item-link" href="#"></a>
             </div>
           </div>
 
@@ -510,7 +527,8 @@
               <p class="design__name">
                 Beat Flat Pendant Black
               </p>
-              <a class="design__link" href="#">Classic</a>
+              <span class="design__text" href="#">Classic</span>
+              <a class="design__link" href="#"></a>
             </div>
 
             <div class="design__item mix category-e" style="background-image: url(images/src/design/des-2.jpg);">
@@ -518,7 +536,8 @@
                 Lampe Sur Pieds
                 Bamboo
               </p>
-              <a class="design__link" href="#">Classic</a>
+              <span class="design__text" href="#">Classic</span>
+              <a class="design__link" href="#"></a>
             </div>
 
             <div class="design__item mix category-f" style="background-image: url(images/src/design/des-3.jpg);">
@@ -526,33 +545,35 @@
                 Rattan Rocking
                 Chair
               </p>
-              <a class="design__link" href="#">Classic</a>
+              <span class="design__text" href="#">Classic</span>
+              <a class="design__link" href="#"></a>
             </div>
 
-            <div class="design__row">
-              <div class="design__item mix category-g" style="background-image: url(images/src/design/des-4.jpg);">
-                <p class="design__name">
-                  Rattan Rocking
-                  Chair
-                </p>
-                <a class="design__link" href="#">Classic</a>
-              </div>
+            <div class="design__item mix category-g" style="background-image: url(images/src/design/des-4.jpg);">
+              <p class="design__name">
+                Rattan Rocking
+                Chair
+              </p>
+              <span class="design__text" href="#">Classic</span>
+              <a class="design__link" href="#"></a>
+            </div>
 
-              <div class="design__item mix category-h" style="background-image: url(images/src/design/des-5.jpg);">
-                <p class="design__name">
-                  Rattan Rocking
-                  Chair
-                </p>
-                <a class="design__link" href="#">Classic</a>
-              </div>
+            <div class="design__item mix category-h" style="background-image: url(images/src/design/des-5.jpg);">
+              <p class="design__name">
+                Rattan Rocking
+                Chair
+              </p>
+              <span class="design__text" href="#">Classic</span>
+              <a class="design__link" href="#"></a>
+            </div>
 
-              <div class="design__item mix category-h" style="background-image: url(images/src/design/des-6.jpg);">
-                <p class="design__name">
-                  Lampe Sur Pieds
-                  Bamboo
-                </p>
-                <a class="design__link" href="#">Classic</a>
-              </div>
+            <div class="design__item mix category-h" style="background-image: url(images/src/design/des-6.jpg);">
+              <p class="design__name">
+                Lampe Sur Pieds
+                Bamboo
+              </p>
+              <span class="design__text" href="#">Classic</span>
+              <a class="design__link" href="#"></a>
             </div>
 
           </div>
@@ -560,7 +581,10 @@
 
         <div class="design__video" style="background-image: url(images/src/video-bg.jpg);">
           <a class="design__video-link" data-fancybox href="https://youtu.be/1La4QzGeaaQ">
-            <img class="design__video-play" src="images/src/video-play.png" alt="play">
+            <svg class="design__video-play">
+              <use xlink:href="images/src/sprite.svg#play-video">
+              </use>
+            </svg>
           </a>
         </div>
       </section>
@@ -578,11 +602,22 @@
         <p class="our__text">
           Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         </p>
+        <a class="our__item-link" href="#"></a>
         <div class="our__item-bottom">
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#calendar">
+
+            </use>
+          </svg>
           <time class="our__date" datetime="2020-01-28">
-             28 JANUARY, 2020
+            28 JANUARY, 2020
           </time>
-          <span class="our__author"> BY ADMIN</span>
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#user-icon">
+
+            </use>
+          </svg>
+          <span class="our__author">BY ADMIN</span>
         </div>
       </div>
 
@@ -592,11 +627,22 @@
         <p class="our__text">
           Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
         </p>
+        <a class="our__item-link" href="#"></a>
         <div class="our__item-bottom">
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#calendar">
+
+            </use>
+          </svg>
           <time class="our__date" datetime="2020-01-28">
-             28 JANUARY, 2020
+            28 JANUARY, 2020
           </time>
-          <span class="our__author"> BY ADMIN</span>
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#user-icon">
+
+            </use>
+          </svg>
+          <span class="our__author">BY ADMIN</span>
         </div>
       </div>
 
@@ -606,11 +652,22 @@
         <p class="our__text">
           Rncididunt ut labore et dolore magna aliqua. Ut enim
         </p>
+        <a class="our__item-link" href="#"></a>
         <div class="our__item-bottom">
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#calendar">
+
+            </use>
+          </svg>
           <time class="our__date" datetime="2020-01-28">
-             28 JANUARY, 2020
+            28 JANUARY, 2020
           </time>
-          <span class="our__author"> BY ADMIN</span>
+          <svg class="our__icon">
+            <use xlink:href="images/src/sprite.svg#user-icon">
+
+            </use>
+          </svg>
+          <span class="our__author">BY ADMIN</span>
         </div>
       </div>
     </div>
@@ -637,7 +694,9 @@
     <div class="footer__inner">
       <div class="footer__item footer__item--contact">
         <a class="logo" href="#">
-          <img class="logo__pic" src="images/src/logo.svg" alt="Логотип">
+          <svg class="logo__pic">
+            <use xlink:href="images/src/sprite.svg#logo"></use>
+          </svg>
         </a>
 
         <address class="footer__address" href="#">Address:4772 Wines Lane
