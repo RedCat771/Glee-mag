@@ -7,6 +7,8 @@ html {
 *,
 *::after,
 *::before {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 
@@ -49,6 +51,14 @@ body {
   &:hover {
     transform: scale(1.05);
   }
+}
+
+.title-h1 {
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 1;
+  @extend %rubik-regular;
 }
 
 .title {

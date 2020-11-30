@@ -1,0 +1,107 @@
+.info {
+  margin: 120px 0;
+
+  &__inner {
+    @include bg($bg-size: auto, $bg-position: left);
+    display: flex;
+    justify-content: flex-end;
+    min-height: 675px;
+    background-image: url("../images/src/info-bg.jpg");
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin: 67px 0 55px 45px;
+    max-width: 600px;
+    @extend %rubik-regular;
+  }
+
+  &__top-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__years {
+    padding-right: 30px;
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 1;
+    color: $btn-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: -14px;
+  }
+
+  &__item {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    margin-bottom: 60px;
+    max-width: 555px;
+    line-height: 1.8;
+    color: $title-color;
+  }
+
+  &__bottom-area {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e6eaf0;
+    padding-top: 30px;
+    max-width: 515px;
+    @extend %dms-bold;
+  }
+
+  &__bottom-list {
+    display: flex;
+    justify-content: space-between;
+    border-left: 1px solid #e6eaf0;
+    padding-left: 25px;
+
+    &:first-child {
+      border: none;
+      padding-left: 0;
+    }
+  }
+
+  &__bottom-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    margin-right: 15px;
+    max-width: 44px;
+    max-height: 42px;
+  }
+
+  &__numbers {
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: $title-color;
+  }
+
+  &__descript {
+    line-height: 1;
+    color: #4c4c4c;
+  }
+}
+
+.about-title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: $title-color;
+  @extend %dms-regular;
+}
