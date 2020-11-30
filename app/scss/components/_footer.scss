@@ -106,6 +106,10 @@
     min-height: 90px;
   }
 
+  &__copy {
+    cursor: default;
+  }
+
   &__nav {
     display: flex;
     margin-right: 10px;
