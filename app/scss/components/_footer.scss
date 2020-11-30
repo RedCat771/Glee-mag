@@ -5,7 +5,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding: 75px 0 65px;
+    padding: 65px 0;
   }
 
   &__item--contact {
@@ -48,6 +48,7 @@
   &__text {
     margin-bottom: 35px;
     width: 270px;
+    line-height: 1.8;
   }
 
   &__form {
