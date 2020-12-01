@@ -1,0 +1,43 @@
+.terms {
+  margin: 110px 0 100px;
+  font-weight: 500;
+  color: $title-color;
+  @extend %rubik-regular;
+
+  &__wrapper {
+    margin: 0 auto 58px;
+    padding-left: 40px;
+    max-width: 1260px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__list {
+    list-style: decimal-leading-zero;
+    margin-bottom: 35px;
+  }
+
+  &__item {
+    margin: 0 0 22px 40px;
+  }
+
+  &__punkt,
+  &__text {
+    border-radius: 5px;
+    line-height: 1.8;
+    background-color: #fff;
+    transition: background-color 0.8s;
+
+    &:hover {
+      background-color: $btn-color;
+    }
+  }
+
+  &__content {
+    margin-bottom: 55px;
+  }
+}
