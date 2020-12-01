@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Glee-Login</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="main">
+      @@include("html/components/_header.html")
+
+      <div class="top">
+        <h1 class="title-h1">
+          Log in
+        </h1>
+        <div class="crumbs">
+          <ul class="crumbs__list">
+            <li class="crumbs__item">
+              <a class="crumbs__link" href="#">
+                Home
+              </a>
+            </li>
+            <li class="crumbs__item">
+              <a class="crumbs__link" href="#">
+                Log in
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="form">
+        <form class="form__holder" action="#">
+          <label class="form__label">
+            User name or email address *
+            <input class="form__input" name="login[email]" type="email" required>
+          </label>
+          <label class="form__label">
+            Password *
+            <input class="form__input" name="login[password]" type="password" required>
+          </label>
+          <button class="form__btn form__btn--first" type="submit">Login</button>
+          <div class="form__bottom">
+            <label class="form__label">
+              <input class="form__checkbox" type="checkbox">
+              Remember me
+            </label>
+            <a class="form__forget" href="#">Lost your password?</a>
+          </div>
+          <p class="form__text">Not registered? No problem</p>
+          <button class="form__btn form__btn--second" type="submit">Create an account</button>
+        </form>
+      </div>
+
+      @@include("html/components/_partners-min.html")
+    </main>
+    @@include("html/components/_footer.html")
+  </div>
+</body>
+
+</html>
