@@ -38,31 +38,7 @@
     display: flex;
   }
 }
-
-.partners {
-  position: absolute;
-  top: 318px;
-  width: 100%;
-  background-color: $bg-op;
-
-  &__wrapper {
-    display: flex;
-    align-items: flex-end;
-    min-height: 435px;
-  }
-
-  &__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin: auto 0 64px;
-    width: 100%;
-  }
-
-  &__pic {
-    max-height: 90px;
-  }
-}
+@import "../components/partners";
 
 .news {
   position: relative;
