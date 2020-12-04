@@ -77,21 +77,11 @@ select {
   background: transparent;
 }
 
-select::-ms-expand {
-  display: none;
-}
-
-select::-ms-value {
-  color: currentColor;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  font: inherit;
-  color: inherit;
-}
-
 img {
   display: block;
   max-width: 100%;
+}
+
+:focus {
+  outline: none;
 }

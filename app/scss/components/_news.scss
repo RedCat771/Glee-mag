@@ -17,6 +17,8 @@
 
   &__pic {
     margin-bottom: 35px;
+    max-height: 250px;
+    object-fit: cover;
   }
 
   &__tag {

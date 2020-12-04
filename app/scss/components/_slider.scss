@@ -15,8 +15,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-right: 15px;
     padding-bottom: 75px;
-    min-width: 45%;
+    min-width: 44%;
     min-height: 820px;
   }
 
@@ -67,5 +68,10 @@
     &:hover {
       background-color: $title-color;
     }
+  }
+
+  &__picture {
+    max-height: 600px;
+    object-fit: cover;
   }
 }

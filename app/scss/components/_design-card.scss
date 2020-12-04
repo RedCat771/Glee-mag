@@ -12,7 +12,7 @@
   }
 
   &__pic {
-    max-width: 370px;
+    min-width: 370px;
     max-height: 245px;
     object-fit: cover;
   }
@@ -29,13 +29,13 @@
 
   &__link,
   &__name {
-    margin-left: 50px;
+    margin-left: 40px;
     line-height: 1.2;
     @extend %dms-bold;
   }
 
   &__name {
-    margin: 40px 50px 15px;
+    margin: 40px 40px 15px;
     max-width: 170px;
     font-size: 20px;
     color: $product-title;
@@ -43,7 +43,7 @@
 
   &__link {
     z-index: 3;
-    padding-top: 120px;
+    padding-top: 100px;
     color: $btn-color;
   }
 }

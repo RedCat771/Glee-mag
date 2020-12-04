@@ -65,7 +65,7 @@ body {
     justify-content: center;
     width: 100%;
 
-    & li+li {
+    & li + li {
       margin-left: 10px;
     }
 
@@ -83,7 +83,6 @@ body {
       }
     }
   }
-
 
   &-active button {
     opacity: 1;

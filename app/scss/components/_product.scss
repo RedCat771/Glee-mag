@@ -5,10 +5,10 @@
   justify-content: space-between;
   margin: 0 15px 40px;
   padding: 30px 15px;
-  width: 100%;
-  max-width: 270px;
+  min-width: 270px;
   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
   text-align: center;
+  transform: translateX(15px);
   transition: transform 0.6s;
 
   &:hover {
@@ -20,21 +20,29 @@
   }
 
   &__wrapper {
+    position: relative;
     overflow-y: hidden;
-    min-height: 257px;
+    min-height: 237px;
   }
 
   &__pic {
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
     top: 50%;
     margin: 0 auto;
     object-fit: contain;
     transform: translateY(-50%);
   }
 
+  &__info {
+    margin-top: 30px;
+    line-height: 1;
+  }
+
   &__name {
     overflow: hidden;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     max-height: 55px;
     font-weight: 500;
     color: $title-color;
@@ -70,7 +78,7 @@
   }
 
   &__menu {
-    position: relative;
+    position: absolute;
     bottom: 60px;
     z-index: 2;
     display: flex;
