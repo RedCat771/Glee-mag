@@ -79,6 +79,8 @@
 
   &__menu {
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: 60px;
     z-index: 2;
     display: flex;
