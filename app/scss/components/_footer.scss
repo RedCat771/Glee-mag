@@ -8,11 +8,15 @@
     padding: 65px 0;
   }
 
-  &__item--contact {
-    display: flex;
-    flex-direction: column;
-    min-width: 200px;
+
+  &__item {
+    &--contact {
+      display: flex;
+      flex-direction: column;
+      min-width: 200px;
+    }
   }
+
 
   &__address {
     margin-top: 15px;
@@ -67,7 +71,7 @@
   }
 
   &__input {
-    outline: $accent-color;
+    outline: $accent-color; //FIXME не работает аутлайн выяснить почему
     border: none;
     padding: 15px 70px 15px 15px;
     width: 100%;
@@ -120,10 +124,10 @@
   }
 
   &__nav-item {
-    & + & {
-      margin-left: 15px;
-      border-left: 1px solid $footer-color;
-      padding-left: 15px;
+    &:not(:last-child) {
+      margin-right: 15px;
+      border-right: 1px solid $footer-color;
+      padding-right: 15px;
     }
   }
 
@@ -131,6 +135,7 @@
   &__link,
   &__nav-link {
     transition: color 0.6s;
+
     &:hover {
       color: $bg-color;
     }

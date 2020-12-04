@@ -14,68 +14,6 @@
         "hasBlock": false
       },
       "declarations",
-      {
-        "type": "rule",
-        "selector": "&::before"
-      },
-      {
-        "type": "rule",
-        "selector": "&::after"
-      },
-      "rules",
-      {
-        "type": "rule",
-        "selector": "&:link"
-      },
-      {
-        "type": "rule",
-        "selector": "&:visited"
-      },
-      {
-        "type": "rule",
-        "selector": "&:focus"
-      },
-      {
-        "type": "rule",
-        "selector": "&:hover"
-      },
-      {
-        "type": "rule",
-        "selector": "&:active"
-      },
-      {
-        "type": "rule",
-        "selector": "&:disabled"
-      },
-      {
-        "type": "rule",
-        "selector": "&:first-child"
-      },
-      {
-        "type": "rule",
-        "selector": "&:last-child"
-      },
-      {
-        "type": "rule",
-        "selector": "&:nth-child.+"
-      },
-      {
-        "type": "rule",
-        "selector": "&\\[[^\\[\\]]+\\]"
-      },
-      {
-        "type": "rule",
-        "selector": "&\\..+"
-      },
-      {
-        "type": "rule",
-        "selector": "&--.+"
-      },
-      {
-        "type": "at-rule",
-        "name": "include",
-        "hasBlock": true
-      },
       "at-rules"
     ],
     "order/properties-alphabetical-order": null,
@@ -454,7 +392,7 @@
     "at-rule-blacklist": [
       "all rules"
     ],
-    "at-rule-empty-line-before": never,
+    "at-rule-empty-line-before": "always",
     "at-rule-name-case": "lower",
     "at-rule-name-newline-after": null,
     "at-rule-name-space-after": "always-single-line",
@@ -674,15 +612,10 @@
     "value-list-comma-space-before": "never",
     "value-list-max-empty-lines": 0,
     "value-no-vendor-prefix": true,
-    "scss/at-else-closing-brace-newline-after": "always-last-in-chain",
-    "scss/at-else-closing-brace-space-after": "always-intermediate",
-    "scss/at-else-empty-line-before": "never",
     "scss/at-else-if-parentheses-space-before": "always",
     "scss/at-extend-no-missing-placeholder": null,
     "scss/at-function-parentheses-space-before": "never",
     "scss/at-function-pattern": null,
-    "scss/at-if-closing-brace-newline-after": "always-last-in-chain",
-    "scss/at-if-closing-brace-space-after": "always-intermediate",
     "scss/at-import-no-partial-leading-underscore": true,
     "scss/at-import-partial-extension-blacklist": null,
     "scss/at-mixin-argumentless-call-parentheses": "always",
@@ -726,7 +659,7 @@
     "scss/media-feature-value-dollar-variable": null,
     "scss/operator-no-newline-after": null,
     "scss/operator-no-newline-before": null,
-    "scss/operator-no-unspaced": true,
+    "scss/operator-no-unspaced": null,
     "scss/partial-no-import": null,
     "scss/percent-placeholder-pattern": null,
     "scss/selector-no-redundant-nesting-selector": true,

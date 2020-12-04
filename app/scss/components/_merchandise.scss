@@ -12,26 +12,15 @@
     min-height: 390px;
     background-color: $bg-op;
 
-    & + & {
-      margin-left: 30px;
+    &:not(:last-child) {
+      margin-right: 30px;
     }
+  }
 
-    &::before {
-      @include pseudo();
-      @include bg($bg-size: contain);
-      left: 16%;
-      bottom: 80px;
-      min-width: 230px;
-      min-height: 405px;
-    }
-
-    &--left::before {
-      background-image: url("../images/src/prod-card-1.png");
-    }
-
-    &--right::before {
-      background-image: url("../images/src/prod-card-2.png");
-    }
+  &__img {
+    position: absolute;
+    left: 140px;
+    bottom: 80px;
   }
 
   &__inner {
@@ -40,19 +29,19 @@
     max-width: 345px;
   }
 
-  &__inner--right {
-    max-width: 300px;
-  }
-
   &__title {
+    overflow: hidden;
     margin-bottom: 22px;
+    max-height: 50px;
     font-size: 26px;
     line-height: 1;
     @extend %dms-bold;
   }
 
   &__desc {
+    overflow: hidden;
     margin-bottom: 30px;
+    max-height: 140px;
     @extend %rubik-regular;
   }
 
@@ -64,7 +53,7 @@
     padding: 23px 85px 23px 19px;
     width: 180px;
     font-size: 15px;
-    line-height: 0.8;
+    line-height: 0.8; //FIXME лайн хайт меньше 1 не может быть
     color: $accent-color;
     transition: background-color 0.6s;
     @extend %rubik-medium;
@@ -76,7 +65,7 @@
       bottom: 25px;
       min-width: 22px;
       min-height: 10px;
-      background-image: url("../images/src/arrow-btn2.png");
+      background-image: url("../images/src/arrow-btn2.svg");
     }
 
     &:hover {

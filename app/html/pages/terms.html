@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../css/style.min.css">
   <title>Glee-Terms</title>
 </head>
 
@@ -12,19 +12,20 @@
   <div class="wrapper">
     <main class="main">
       @@include("html/components/_header.html")
+
       <div class="top">
         <h1 class="title-h1">
           Terms & Conditions
         </h1>
-        <div class="crumbs">
-          <ul class="crumbs__list">
-            <li class="crumbs__item">
-              <a class="crumbs__link" href="#">
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
                 Home
               </a>
             </li>
-            <li class="crumbs__item">
-              <a class="crumbs__link" href="#">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
                 Terms & Conditions
               </a>
             </li>
@@ -97,8 +98,111 @@
       </div>
 
 
-      @@include("html/components/_our.html")
+      <section class="our">
+        <div class="container">
+          <div class="our__top">
+            <h2 class="title">Our Insights & Articles</h2>
+            <a class="our__link" href="#">View All</a>
+          </div>
+
+          <div class="our__middle">
+            <article class="news">
+              <img class="news__pic" src="images/src/our/our-1.jpg" alt="новостное изображение">
+              <span class="news__tag">news</span>
+              <p class="news__text">
+                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </p>
+              <a class="news__item-link" href="#"></a>
+              <div class="news__item-bottom">
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#calendar">
+                  </use>
+                </svg>
+                <time class="news__date" datetime="2020-01-28">
+                  28 JANUARY, 2020
+                </time>
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#user-icon">
+                  </use>
+                </svg>
+                <span class="news__author">BY ADMIN</span>
+              </div>
+            </article>
+
+            <article class="news">
+              <img class="news__pic" src="images/src/our/our-2.jpg" alt="новостное изображение">
+              <span class="news__tag">news</span>
+              <p class="news__text">
+                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              </p>
+              <a class="news__item-link" href="#"></a>
+              <div class="news__item-bottom">
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#calendar">
+                  </use>
+                </svg>
+                <time class="news__date" datetime="2020-01-28">
+                  28 JANUARY, 2020
+                </time>
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#user-icon">
+                  </use>
+                </svg>
+                <span class="news__author">BY ADMIN</span>
+              </div>
+            </article>
+
+            <article class="news">
+              <img class="news__pic" src="images/src/our/our-3.jpg" alt="новостное изображение">
+              <span class="news__tag">news</span>
+              <p class="news__text">
+                Rncididunt ut labore et dolore magna aliqua. Ut enim
+              </p>
+              <a class="news__item-link" href="#"></a>
+              <div class="news__item-bottom">
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#calendar">
+                  </use>
+                </svg>
+                <time class="news__date" datetime="2020-01-28">
+                  28 JANUARY, 2020
+                </time>
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#user-icon">
+                  </use>
+                </svg>
+                <span class="news__author">BY ADMIN</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="partners partners--min">
+          <div class="container">
+            <div class="partners__wrapper partners__wrapper--min">
+              <ul class="partners__list partners__list--min">
+                <li class="partners__item">
+                  <img class="partners__pic" src="images/src/partners/partner-1.png" alt="партнер">
+                </li>
+                <li class="partners__item">
+                  <img class="partners__pic" src="images/src/partners/partner-2.png" alt="партнер">
+                </li>
+                <li class="partners__item">
+                  <img class="partners__pic" src="images/src/partners/partner-3.png" alt="партнер">
+                </li>
+                <li class="partners__item">
+                  <img class="partners__pic" src="images/src/partners/partner-4.png" alt="партнер">
+                </li>
+                <li class="partners__item">
+                  <img class="partners__pic" src="images/src/partners/partner-5.png" alt="партнер">
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
     @@include("html/components/_footer.html")
   </div>
 </body>

@@ -47,19 +47,20 @@ body {
   scroll-behavior: smooth;
 }
 
-ul,
+ul[class],
 ol {
   list-style: none;
 }
 
 a {
-  vertical-align: baseline;
-  margin: 0;
   outline: 0;
-  padding: 0;
   text-decoration: none;
   background: transparent;
   text-decoration-skip-ink: none;
+}
+
+address {
+  font-style: normal;
 }
 
 input,
@@ -74,29 +75,23 @@ select {
   font: inherit;
   color: inherit;
   background: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
+
 select::-ms-expand {
   display: none;
 }
+
 select::-ms-value {
   color: currentColor;
 }
+
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit;
   color: inherit;
 }
-:focus {
-  outline: transparent;
-}
 
 img {
   display: block;
   max-width: 100%;
-}
-
-del {
-  text-decoration: line-through;
 }

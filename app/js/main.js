@@ -1,5 +1,5 @@
 $(function () {
-  $(".slider").slick({
+  $(".trend-slider").slick({
     arrows: false,
     dots: true,
   });

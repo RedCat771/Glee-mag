@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../css/style.min.css">
   <title>Glee-Login</title>
 </head>
 
@@ -17,15 +17,15 @@
         <h1 class="title-h1">
           Log in
         </h1>
-        <div class="crumbs">
-          <ul class="crumbs__list">
-            <li class="crumbs__item">
-              <a class="crumbs__link" href="#">
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
                 Home
               </a>
             </li>
-            <li class="crumbs__item">
-              <a class="crumbs__link" href="#">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
                 Log in
               </a>
             </li>
@@ -57,8 +57,31 @@
         </form>
       </div>
 
-      @@include("html/components/_partners-min.html")
+      <div class="partners-min">
+        <div class="container">
+          <div class="partners-min__wrapper">
+            <ul class="partners-min__list">
+              <li class="partners-min__item">
+                <img class="partners-min__pic" src="images/src/partners/partner-1.png" alt="партнер">
+              </li>
+              <li class="partners-min__item">
+                <img class="partners-min__pic" src="images/src/partners/partner-2.png" alt="партнер">
+              </li>
+              <li class="partners-min__item">
+                <img class="partners-min__pic" src="images/src/partners/partner-3.png" alt="партнер">
+              </li>
+              <li class="partners-min__item">
+                <img class="partners-min__pic" src="images/src/partners/partner-4.png" alt="партнер">
+              </li>
+              <li class="partners-min__item">
+                <img class="partners-min__pic" src="images/src/partners/partner-5.png" alt="партнер">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
+
     @@include("html/components/_footer.html")
   </div>
 </body>

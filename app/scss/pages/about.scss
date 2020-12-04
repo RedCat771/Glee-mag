@@ -1,7 +1,15 @@
 @import "../components/header";
 @import "../components/top";
+@import "../components/breadcrumbs";
 @import "../components/info";
 @import "../components/advantages";
+
+.about-title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: $title-color;
+  @extend %dms-regular;
+}
 
 .team-title {
   margin-bottom: 15px;
@@ -117,7 +125,7 @@
     background-color: #f6f6f6;
     transition: background-color 0.8s;
 
-    & + & {
+    &+& {
       margin-left: 5px;
     }
 
@@ -131,5 +139,8 @@
     max-height: 17px;
   }
 }
+
 @import "../components/our";
+@import "../components/news";
+@import "../components/partners";
 @import "../components/footer";

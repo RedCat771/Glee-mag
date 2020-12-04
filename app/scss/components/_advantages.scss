@@ -17,13 +17,13 @@
     transition: transform 0.8s;
     cursor: default;
 
+    &--bus {
+      margin-bottom: -10px;
+    }
+
     &:hover {
       transform: translateY(-10px);
     }
-  }
-
-  &__item--bus {
-    margin-bottom: -10px;
   }
 
   &__img {

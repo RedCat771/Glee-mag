@@ -1,13 +1,21 @@
-.about {
+.service {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   margin-bottom: 69px;
-  padding: 45px 0;
   background-color: $bg-op;
 
   &__item {
+    margin: 0 auto;
+    padding: 45px 0;
+
+    &:not(:last-child) {
+      border-right: 2px solid #e8e4df;
+    }
+  }
+
+  &__inner {
     display: flex;
+    margin: 0 80px;
     min-height: 71px;
     max-width: 290px;
     transition: transform 0.6s;
@@ -19,12 +27,13 @@
 
   &__img-wrapper {
     position: relative;
+    max-height: 50px;
 
     &::after {
       @include pseudo();
       @include bg();
       right: 0;
-      bottom: 18px;
+      bottom: 0;
       min-width: 20px;
       min-height: 20px;
       background-image: url("../images/src/ellipse.svg");
@@ -47,5 +56,10 @@
   &__title {
     font-size: 18px;
     @extend %dms-bold;
+  }
+
+  &__text {
+    overflow: hidden;
+    max-height: 140px;
   }
 }

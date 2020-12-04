@@ -7,7 +7,7 @@
   &__wrapper {
     display: flex;
     align-items: flex-end;
-    min-height: 435px;
+    min-height: 435px; //FIXME не нужно здезь мин хайт
   }
 
   &__list {

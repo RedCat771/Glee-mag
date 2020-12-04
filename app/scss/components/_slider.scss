@@ -1,5 +1,6 @@
-.slider {
+.trend-slider {
   position: relative;
+
   &__item {
     max-height: 820px;
     background-color: $bg-color;
@@ -20,7 +21,9 @@
   }
 
   &__title {
+    overflow: hidden;
     margin-bottom: 35px;
+    max-height: 205px;
     font-weight: 600;
     font-size: 72px;
     line-height: 1;
@@ -30,8 +33,10 @@
   }
 
   &__text {
+    overflow: hidden;
     margin-bottom: 40px;
     max-width: 370px;
+    max-height: 370px;
     font-size: 18px;
     color: $accent-color;
     @extend %rubik-regular;
@@ -61,32 +66,6 @@
 
     &:hover {
       background-color: $title-color;
-    }
-  }
-
-  .slick-dots {
-    position: absolute;
-    bottom: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-
-    & li + li {
-      margin-left: 10px;
-    }
-
-    & button {
-      border-radius: 50%;
-      min-width: 30px;
-      min-height: 30px;
-      background-color: #fff;
-      opacity: 0.4;
-      cursor: pointer;
-    }
-
-    .slick-active button {
-      opacity: 1;
     }
   }
 }

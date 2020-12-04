@@ -6,7 +6,6 @@
   margin: 0 15px 40px;
   padding: 30px 15px;
   width: 100%;
-  min-height: 380px;
   max-width: 270px;
   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
   text-align: center;
@@ -20,18 +19,23 @@
     }
   }
 
-  &__picture-wrapper {
+  &__wrapper {
     overflow-y: hidden;
+    min-height: 257px;
   }
 
   &__pic {
-    display: inline-block;
-    margin: auto 0;
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
     object-fit: contain;
+    transform: translateY(-50%);
   }
 
   &__name {
+    overflow: hidden;
     margin-bottom: 5px;
+    max-height: 55px;
     font-weight: 500;
     color: $title-color;
   }
@@ -41,13 +45,28 @@
     @extend %dms-bold;
   }
 
-  &__link {
-    @include pseudo();
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
+  &__link,
+  &__btn {
+    &--circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      min-width: 45px;
+      min-height: 45px;
+      box-shadow: 0 0 1px 1px rgba(1, 0, 0, 0.41);
+      background-color: #fff;
+      transition: background-color 0.6s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $btn-color;
+
+        .product__icon {
+          fill: #fff;
+        }
+      }
+    }
   }
 
   &__menu {
@@ -63,27 +82,7 @@
     transition: 1s;
   }
 
-  &__menu-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    min-width: 45px;
-    min-height: 45px;
-    box-shadow: 0 0 1px 1px rgba(1, 0, 0, 0.41);
-    background-color: #fff;
-    transition: background-color 0.6s;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $btn-color;
-      .product__menu-pic {
-        fill: #fff;
-      }
-    }
-  }
-
-  &__menu-pic {
+  &__icon {
     max-width: 21px;
     max-height: 22px;
     fill: $btn-color;
