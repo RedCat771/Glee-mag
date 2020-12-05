@@ -5,6 +5,10 @@
     justify-content: center;
     margin-left: auto;
     max-width: 930px;
+
+    &--second {
+      margin-left: 0;
+    }
   }
 
   &__list {
