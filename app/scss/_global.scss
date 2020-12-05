@@ -52,6 +52,25 @@ body {
   color: $product-title;
 }
 
+.filter__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+  font-size: 18px;
+  text-transform: uppercase;
+  @extend %dms-bold;
+
+  &::after {
+    @include pseudo();
+    @include bg();
+    right: -55px;
+    top: 12px;
+    width: 40px;
+    height: 2px;
+    background-image: url("../images/src/def.svg");
+  }
+}
+
 .mixitup-control-active {
   color: $product-title;
 }
@@ -87,4 +106,47 @@ body {
   &-active button {
     opacity: 1;
   }
+}
+
+.irs--flat .irs-line {
+  top: 20px;
+  border-radius: 0;
+  height: 2px;
+  background-color: #c2d2db;
+}
+
+.irs--flat .irs-bar {
+  top: 19px;
+  height: 4px;
+  background-color: $btn-color;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-single,
+.irs--flat .irs-to {
+  display: none;
+}
+
+.irs--flat .irs-max,
+.irs--flat .irs-min {
+  display: none;
+}
+
+.irs--flat .irs-handle > i:first-child {
+  top: -9px;
+  width: 15px;
+  height: 15px;
+  background-color: $btn-color;
+  transition: background-color 0.6s;
+
+  &:hover,
+  &:focus {
+    background-color: $title-color;
+    cursor: pointer;
+  }
+}
+
+.star {
+  margin: 5px 0;
+  padding: 0;
 }

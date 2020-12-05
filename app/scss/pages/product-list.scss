@@ -1,0 +1,20 @@
+@import "../components/header";
+@import "../components/top";
+@import "../components/breadcrumbs";
+@import "../components/filter";
+.product-list {
+  margin: 120px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px 150px;
+  }
+}
+@import "../components/pagination";
+@import "../components/partners-min";
+@import "../components/footer";

@@ -1,0 +1,126 @@
+.filter {
+  margin: 0 30px 60px 0;
+  min-width: 270px;
+  color: $title-color;
+  @extend %rubik-regular;
+}
+
+.filter-category {
+  &__label {
+    position: relative;
+    display: block;
+    margin-bottom: 4px;
+    cursor: pointer;
+  }
+
+  &__input {
+    @extend %checkbox-hid;
+
+    &:checked + .filter-category__checkbox {
+      background-color: $btn-color;
+    }
+
+    &:checked + .filter-brand__checkbox {
+      background-color: $btn-color;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 10px 15px;
+    max-height: 60px;
+    &::after {
+      @include pseudo();
+      @include bg();
+      right: 22px;
+      top: 17px;
+      width: 10px;
+      height: 10px;
+      background-image: url("../images/src/our-arrow.svg");
+    }
+  }
+}
+
+.filter-price {
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__from,
+  &__to {
+    margin-left: -3px;
+  }
+}
+
+.filter-brand {
+  &__checkbox {
+    display: flex;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 10px 35px 10px 15px;
+    max-height: 60px;
+  }
+
+  &__num {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+}
+
+.filter-recent {
+  &__content {
+    margin: 5px 0 5px 15px;
+    color: #333;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 3px solid rgb(242, 242, 242);
+    min-width: 71px;
+    max-height: 71px;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+  }
+
+  &__name {
+    display: block;
+    overflow: hidden;
+    max-height: 40px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  &__name,
+  &__link {
+    transition: color 0.8s;
+    cursor: pointer;
+
+    &:hover {
+      color: $btn-color;
+    }
+  }
+
+  &__pic {
+    max-width: 68px;
+    max-height: 68px;
+    object-fit: contain;
+  }
+
+  &__price {
+    font-size: 15px;
+  }
+}

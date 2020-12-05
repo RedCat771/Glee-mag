@@ -30,3 +30,11 @@ $date-color: #222933;
   font-family: "Rubik-Medium", sans-serif;
   font-weight: 500;
 }
+
+%checkbox-hid {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
