@@ -1,5 +1,3 @@
-// Global styles
-
 html {
   box-sizing: border-box;
 }
@@ -7,8 +5,6 @@ html {
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
   box-sizing: inherit;
 }
 
@@ -39,20 +35,6 @@ body {
   max-width: 1800px;
 }
 
-.logo {
-  font-weight: 500;
-  transition: transform 0.6s;
-
-  &__pic {
-    max-width: 146px;
-    max-height: 39px;
-  }
-
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-
 .title-h1 {
   margin-bottom: 5px;
   font-weight: 300;
@@ -62,7 +44,109 @@ body {
 }
 
 .title {
+  overflow: hidden;
   margin-bottom: 17px;
+  max-height: 100px;
   font-size: 36px;
+  text-align: center;
   color: $product-title;
+}
+
+.filter__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+  font-size: 18px;
+  text-transform: uppercase;
+  @extend %dms-bold;
+
+  &::after {
+    @include pseudo();
+    @include bg();
+    right: -55px;
+    top: 12px;
+    width: 40px;
+    height: 2px;
+    background-image: url("../images/src/def.svg");
+  }
+}
+
+.mixitup-control-active {
+  color: $product-title;
+}
+
+.slick {
+  &-dots {
+    position: absolute;
+    bottom: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    & li + li {
+      margin-left: 10px;
+    }
+
+    & button {
+      border-radius: 50%;
+      min-width: 30px;
+      min-height: 30px;
+      background-color: #fff;
+      opacity: 0.4;
+      transition: opacity 0.4s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  &-active button {
+    opacity: 1;
+  }
+}
+
+.irs--flat .irs-line {
+  top: 20px;
+  border-radius: 0;
+  height: 2px;
+  background-color: #c2d2db;
+}
+
+.irs--flat .irs-bar {
+  top: 19px;
+  height: 4px;
+  background-color: $btn-color;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-single,
+.irs--flat .irs-to {
+  display: none;
+}
+
+.irs--flat .irs-max,
+.irs--flat .irs-min {
+  display: none;
+}
+
+.irs--flat .irs-handle > i:first-child {
+  top: -9px;
+  width: 15px;
+  height: 15px;
+  background-color: $btn-color;
+  transition: background-color 0.6s;
+
+  &:hover,
+  &:focus {
+    background-color: $title-color;
+    cursor: pointer;
+  }
+}
+
+.star {
+  margin: 5px 0;
+  padding: 0;
 }

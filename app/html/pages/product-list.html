@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../css/style.min.css">
+  <title>Product list</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="main">
+      @@include("html/components/_header.html")
+
+      <div class="top">
+        <h1 class="title-h1">
+          Product list 1
+        </h1>
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
+                Home
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
+                Product list 1
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="product-list">
+        <div class="container">
+          <div class="product-list__inner">
+            <aside class="product-list__filters">
+              <div class="filter filter-category">
+                <h3 class="filter__title">
+                  Category
+                </h3>
+                <form class="filter-category__form" action="#">
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <span class="filter-category__checkbox">
+                      Chair
+                    </span>
+                  </label>
+
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <span class="filter-category__checkbox">
+                      Table
+                    </span>
+                  </label>
+
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <span class="filter-category__checkbox">
+                      Lamp
+                    </span>
+                  </label>
+
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <span class="filter-category__checkbox">
+                      Watch
+                    </span>
+                  </label>
+
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <span class="filter-category__checkbox">
+                      Clock
+                    </span>
+                  </label>
+                </form>
+              </div>
+
+              <div class="filter filter-price">
+                <h3 class="filter__title">
+                  Price
+                </h3>
+                <form class="filter-price__form" action="#">
+                  <label class="filter-price__label">
+                    <input class="filter-price__input" type="text" data-min="0" data-max="1000" data-from="100"
+                      data-to="500">
+                  </label>
+                  <div class="filter-price__footer">
+                    <div class="filter-price__val">
+                      $
+                      <span class="filter-price__from"></span>
+                    </div>
+                    <div class="filter-price__val">
+                      $
+                      <span class="filter-price__to"></span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <div class="filter filter-category filter-brand">
+                <h3 class="filter__title">
+                  Brand
+                </h3>
+                <form class="filter-category__form" action="#">
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <span class="filter-brand__checkbox">
+                      RFL
+                    </span>
+                    <span class="filter-brand__num">(10)</span>
+                  </label>
+
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <span class="filter-brand__checkbox">
+                      Brothers
+                    </span>
+                    <span class="filter-brand__num">(21)</span>
+                  </label>
+
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <span class="filter-brand__checkbox">
+                      Regal
+                    </span>
+                    <span class="filter-brand__num">(3)</span>
+                  </label>
+
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <span class="filter-brand__checkbox">
+                      Nadia
+                    </span>
+                    <span class="filter-brand__num">(14)</span>
+                  </label>
+
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox">
+                    <span class="filter-brand__checkbox">
+                      Otobi
+                    </span>
+                    <span class="filter-brand__num">(6)</span>
+                  </label>
+                </form>
+              </div>
+
+              <div class="filter filter-recent">
+                <h3 class="filter__title">
+                  Recent products
+                </h3>
+                <ul class="filter-recent__list">
+                  <li class="filter-recent__item">
+                    <div class="filter-recent__img-wrapper">
+                      <a class="filter-recent__link">
+                        <img class="filter-recent__pic" src="images/src/prod-card-3.png" alt="товар">
+                      </a>
+                    </div>
+
+                    <div class="filter-recent__content">
+                      <a class="filter-recent__name" href="#">
+                        Pendant lamp
+                      </a>
+                      <div class="star" data-rateyo-rating="4"></div>
+                      <span class="filter-recent__price">$23</span>
+                    </div>
+                  </li>
+
+                  <li class="filter-recent__item">
+                    <div class="filter-recent__img-wrapper">
+                      <a class="filter-recent__link">
+                        <img class="filter-recent__pic" src="images/src/prod-card-1.png" alt="товар">
+                      </a>
+                    </div>
+
+                    <div class="filter-recent__content">
+                      <a class="filter-recent__name" href="#">
+                        Pendant lamp
+                      </a>
+                      <div class="star" data-rateyo-rating="4.5"></div>
+                      <span class="filter-recent__price">$23</span>
+                    </div>
+                  </li>
+
+                  <li class="filter-recent__item">
+                    <div class="filter-recent__img-wrapper">
+                      <a class="filter-recent__link">
+                        <img class="filter-recent__pic" src="images/src/prod-card-4.png" alt="товар">
+                      </a>
+                    </div>
+
+                    <div class="filter-recent__content">
+                      <a class="filter-recent__name" href="#">
+                        Pendant lamp
+                      </a>
+                      <div class="star" data-rateyo-rating="3.5"></div>
+                      <span class="filter-recent__price">$23</span>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+            </aside>
+
+            <div class="product-list__body">
+              <div class="mix category-a">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click">
+                      <img class="product__pic" src="images/src/products/prod-1.jpg" alt="продукт">
+                    </a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">Wooden radio</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mix category-c">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click"><img class="product__pic" src="images/src/products/prod-2.jpg"
+                        alt="продукт"></a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">Wooden chair</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mix category-a">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click"><img class="product__pic" src="images/src/products/prod-3.jpg"
+                        alt="продукт"></a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">White chair</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mix category-b">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click"><img class="product__pic" src="images/src/products/prod-4.jpg"
+                        alt="продукт"></a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">Retro table</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mix category-b">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click"><img class="product__pic" src="images/src/products/prod-5.jpg"
+                        alt="продукт"></a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">Wooden radio</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mix category-c">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click"><img class="product__pic" src="images/src/products/prod-6.jpg"
+                        alt="продукт"></a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">Wooden chair</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mix category-d">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click"><img class="product__pic" src="images/src/products/prod-7.jpg"
+                        alt="продукт"></a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">White chair</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+
+              <div class="mix category-d">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click"><img class="product__pic" src="images/src/products/prod-8.jpg"
+                        alt="продукт"></a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">Retro table</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+              <div class="mix category-d">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click"><img class="product__pic" src="images/src/products/prod-8.jpg"
+                        alt="продукт"></a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">Retro table</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+              <div class="mix category-d">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click"><img class="product__pic" src="images/src/products/prod-8.jpg"
+                        alt="продукт"></a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">Retro table</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+              <div class="mix category-d">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click"><img class="product__pic" src="images/src/products/prod-8.jpg"
+                        alt="продукт"></a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">Retro table</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+              <div class="mix category-d">
+                <article class="product">
+                  <div class="product__wrapper">
+                    <a class="product__click"><img class="product__pic" src="images/src/products/prod-8.jpg"
+                        alt="продукт"></a>
+                    <div class="product__menu">
+                      <a class="product__link product__link--circle" href="#">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#cart">
+                          </use>
+                        </svg>
+                      </button>
+                      <button class="product__btn product__btn--circle" type="button">
+                        <svg class="product__icon">
+                          <use xlink:href="images/src/sprite.svg#heart"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product__info">
+                    <h3 class="product__name">Retro table</h3>
+                    <span class="product__price">$29.00</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-pagination">
+            <div class="product-pagination__inner">
+              <ul class="product-pagination__list">
+                <li class="product-pagination__item">
+                  <a class="product-pagination__link" href="#">1</a>
+                </li>
+                <li class="product-pagination__item">
+                  <a class="product-pagination__link" href="#">2</a>
+                </li>
+                <li class="product-pagination__item">
+                  <a class="product-pagination__link" href="#">3</a>
+                </li>
+              </ul>
+              <a class="product-pagination__link" href="#">
+                next
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="partners-min">
+        <div class="container">
+          <div class="partners-min__wrapper">
+            <ul class="partners-min__list">
+              <li class="partners-min__item">
+                <img class="partners-min__pic" src="images/src/partners/partner-1.png" alt="партнер">
+              </li>
+              <li class="partners-min__item">
+                <img class="partners-min__pic" src="images/src/partners/partner-2.png" alt="партнер">
+              </li>
+              <li class="partners-min__item">
+                <img class="partners-min__pic" src="images/src/partners/partner-3.png" alt="партнер">
+              </li>
+              <li class="partners-min__item">
+                <img class="partners-min__pic" src="images/src/partners/partner-4.png" alt="партнер">
+              </li>
+              <li class="partners-min__item">
+                <img class="partners-min__pic" src="images/src/partners/partner-5.png" alt="партнер">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    @@include("html/components/_footer.html")
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

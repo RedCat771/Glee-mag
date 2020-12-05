@@ -5,35 +5,61 @@
   justify-content: space-between;
   margin: 0 15px 40px;
   padding: 30px 15px;
-  width: 100%;
-  min-height: 380px;
-  max-width: 270px;
+  min-width: 270px;
   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
   text-align: center;
-  transition: transform 0.6s;
+  transform: translateX(15px);
+  transition: box-shadow 0.6s;
 
   &:hover {
-    transform: translateY(-10px);
+    border-radius: 6px;
+    box-shadow: 0 6px 47px 3px $accent-color;
 
     .product__menu {
       transform: translateY(0);
     }
   }
 
-  &__picture-wrapper {
+  &__wrapper {
+    position: relative;
     overflow-y: hidden;
+    min-height: 237px;
+  }
+
+  &__click {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
   }
 
   &__pic {
-    display: inline-block;
-    margin: auto 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: 0 auto;
     object-fit: contain;
+    transform: translateY(-50%);
+  }
+
+  &__info {
+    margin-top: 30px;
+    line-height: 1;
   }
 
   &__name {
-    margin-bottom: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    max-height: 55px;
     font-weight: 500;
     color: $title-color;
+  }
+
+  &__star {
+    display: none;
   }
 
   &__price {
@@ -41,17 +67,34 @@
     @extend %dms-bold;
   }
 
-  &__link {
-    @include pseudo();
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
+  &__link,
+  &__btn {
+    &--circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      min-width: 45px;
+      min-height: 45px;
+      box-shadow: 0 0 1px 1px rgba(1, 0, 0, 0.41);
+      background-color: #fff;
+      transition: background-color 0.6s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $btn-color;
+
+        .product__icon {
+          fill: #fff;
+        }
+      }
+    }
   }
 
   &__menu {
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
     bottom: 60px;
     z-index: 2;
     display: flex;
@@ -63,29 +106,116 @@
     transition: 1s;
   }
 
-  &__menu-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    min-width: 45px;
-    min-height: 45px;
-    box-shadow: 0 0 1px 1px rgba(1, 0, 0, 0.41);
-    background-color: #fff;
-    transition: background-color 0.6s;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $btn-color;
-      .product__menu-pic {
-        fill: #fff;
-      }
-    }
-  }
-
-  &__menu-pic {
+  &__icon {
     max-width: 21px;
     max-height: 22px;
     fill: $btn-color;
+  }
+
+  &__btn-wrapper {
+    display: none;
+  }
+
+  &.product-second {
+    flex-direction: row;
+    justify-content: start;
+    min-width: 850px;
+    box-shadow: none;
+    text-align: left;
+    @extend %rubik-regular;
+
+    .product__wrapper {
+      position: static;
+      margin-right: 55px;
+      min-height: 500px;
+    }
+
+    .product__click {
+      position: static;
+      display: flex;
+      border: 2px solid #f2f2f2;
+      padding: 15px;
+      height: 100%;
+      min-width: 370px;
+    }
+
+    .product__pic {
+      position: static;
+      width: 80%;
+      object-fit: contain;
+      transform: none;
+    }
+
+    .product__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .product__name {
+      overflow: hidden;
+      margin-bottom: 20px;
+      max-width: 410px;
+      max-height: 80px;
+      font-size: 40px;
+      color: #333;
+    }
+
+    .product__star {
+      display: block;
+      margin-bottom: 30px;
+      padding: 0;
+    }
+
+    .product__price {
+      margin-bottom: 30px;
+      font-size: 30px;
+      color: #333;
+      @extend %rubik-regular;
+    }
+
+    .product__text {
+      overflow: hidden;
+      margin-bottom: 35px;
+      max-width: 410px;
+      max-height: 145px;
+      line-height: 1.5;
+      color: $title-color;
+    }
+
+    .product__btn-wrapper {
+      display: flex;
+      justify-content: space-between;
+      max-width: 110px;
+    }
+
+    .product__footer-btn {
+      width: 50px;
+      height: 50px;
+      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+      background-color: #fff;
+      transition: background-color 0.8s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $btn-color;
+
+        .product__img {
+          path {
+            fill: #fff;
+          }
+        }
+      }
+    }
+
+    .product__img {
+      max-width: 22px;
+      max-height: 21px;
+      transition: color 0.8s;
+    }
+
+    .product__menu {
+      display: none;
+    }
   }
 }

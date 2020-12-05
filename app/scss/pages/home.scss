@@ -1,9 +1,9 @@
 @import "../components/header";
 @import "../components/slider";
-@import "../components/about";
+@import "../components/service";
 
 .products {
-  margin-bottom: 90px;
+  margin-bottom: 100px;
 
   &__body {
     display: flex;
@@ -27,4 +27,6 @@
 @import "../components/design-card";
 @import "../components/video";
 @import "../components/our";
+@import "../components/news";
+@import "../components/partners";
 @import "../components/footer";

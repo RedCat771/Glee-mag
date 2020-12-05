@@ -5,13 +5,15 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding: 65px 0;
+    padding: 75px 0 60px;
   }
 
-  &__item--contact {
-    display: flex;
-    flex-direction: column;
-    min-width: 200px;
+  &__item {
+    &--contact {
+      display: flex;
+      flex-direction: column;
+      min-width: 200px;
+    }
   }
 
   &__address {
@@ -20,7 +22,7 @@
 
   &__address-row {
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 11px;
     text-transform: uppercase;
   }
 
@@ -67,7 +69,6 @@
   }
 
   &__input {
-    outline: $accent-color;
     border: none;
     padding: 15px 70px 15px 15px;
     width: 100%;
@@ -78,6 +79,10 @@
     &::placeholder {
       font-size: 12px;
       color: $title-color;
+    }
+
+    &:focus {
+      outline: 1px solid $btn-color;
     }
   }
 
@@ -120,17 +125,22 @@
   }
 
   &__nav-item {
-    & + & {
-      margin-left: 15px;
-      border-left: 1px solid $footer-color;
-      padding-left: 15px;
+    &:not(:last-child) {
+      margin-right: 15px;
+      border-right: 1px solid $footer-color;
+      padding-right: 15px;
     }
   }
 
-  &__address-link,
+  &__address__link,
   &__link,
   &__nav-link {
+    display: block;
+    overflow: hidden;
+    max-width: 230px;
+    max-height: 66px;
     transition: color 0.6s;
+
     &:hover {
       color: $bg-color;
     }

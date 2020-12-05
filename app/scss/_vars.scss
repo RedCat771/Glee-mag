@@ -3,6 +3,7 @@ $accent-color: #436372;
 $default-color: #585858;
 $title-color: #243f4d;
 $btn-color: #a3bbc8;
+$btn-op: rgba(163, 187, 200, 0.2);
 $bg-color: #fcd7b6;
 $bg-op: rgba(252, 215, 182, 0.2);
 $footer-color: #7b7b7b;
@@ -30,99 +31,10 @@ $date-color: #222933;
   font-weight: 500;
 }
 
-// @mixin font-source-sans(
-//   $size: false,
-//   $colour: false,
-//   $weight: false,
-//   $lh: false
-// ) {
-//   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-//   @if $size {
-//     font-size: $size;
-//   }
-//   @if $colour {
-//     color: $colour;
-//   }
-//   @if $weight {
-//     font-weight: $weight;
-//   }
-//   @if $lh {
-//     line-height: $lh;
-//   }
-// }
-
-@mixin pseudo($display: block, $pos: absolute, $content: "") {
-  content: $content;
-  position: $pos;
-  display: $display;
-}
-
-@mixin bg($bg-repeat: no-repeat, $bg-size: cover, $bg-position: center bottom) {
-  background-position: $bg-position;
-  background-size: $bg-size;
-  background-repeat: $bg-repeat;
-}
-
-@mixin centering($dir) {
+%checkbox-hid {
   position: absolute;
-
-  @if $dir==v {
-    top: 50%;
-    transform: translateY(-50%);
-  } @else if $dir==h {
-    left: 50%;
-    transform: translateX(-50%);
-  } @else {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-// @mixin btn_anim {
-//   transform-origin: center center;
-//   transition: all ease-out 240ms;
-
-//   &:hover {
-//     transform: scale(1.05);
-//   }
-
-//   &:focus {
-//     outline: transparent;
-//     transform: scale(1.05) trahslateY(-5%);
-//   }
-
-//   &:active {
-//     transform: scale(0.95);
-//   }
-// }
-
-$breakpoints: (
-  "400": 400px,
-  "480": 480px,
-  "560": 560px,
-  "640": 640px,
-  "768": 768px,
-  "1024": 1024px,
-  "1248": 1248px,
-  "1440": 1440px,
-);
-
-@mixin mq($width, $type: max) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
-    @if $type == max {
-      $width: $width - 1px;
-    }
-    @media only screen and (#{$type}-width: $width) {
-      @content;
-    }
-  }
-}
-
-@function max($numbers...) {
-  @return m#{a}x(#{$numbers});
-}
-@function min($numbers...) {
-  @return m#{i}n(#{$numbers});
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="../css/style.min.css">
   <title>Glee-About</title>
 </head>
 
@@ -16,9 +16,7 @@
     <div class="header__inner">
       <nav class="nav">
         <a class="logo" href="#">
-          <svg class="logo__pic">
-            <use xlink:href="images/src/sprite.svg#logo"></use>
-          </svg>
+          <img class="logo-pic" src="images/src/logo.png" alt="логотип">
         </a>
 
         <ul class="nav__list">
@@ -49,7 +47,9 @@
 
         <div class="add-menu">
           <form class="add-menu__form" action="" method="get">
-            <input class="add-menu__form-input" name="search" placeholder="Поиск" type="search">
+            <label>
+              <input class="add-menu__form-input" name="search" placeholder="Поиск" type="search">
+            </label>
             <button class="add-menu__form-btn" type="submit">
               <svg class="add-menu__form-pic">
                 <use xlink:href="images/src/sprite.svg#search"></use>
@@ -74,8 +74,8 @@
           </div>
 
           <button class="add-menu__btn">
-            <svg class="add-menu__pic">
-              <use xlink:href="images/src/sprite.svg#menu"></use>
+            <svg class="add-menu__pic">//FIXME поменяй цвет на белый
+              <use class="add-menu__square" xlink:href="images/src/sprite.svg#menu"></use>
             </svg>
           </button>
         </div>
@@ -83,29 +83,30 @@
     </div>
   </div>
 </header>
+
       <div class="top">
-  <h1 class="title-h1">
-    About Us
-  </h1>
-  <div class="crumbs">
-    <ul class="crumbs__list">
-      <li class="crumbs__item">
-        <a class="crumbs__link" href="#">
-          Home
-        </a>
-      </li>
-      <li class="crumbs__item">
-        <a class="crumbs__link" href="#">
+        <h1 class="title-h1">
           About Us
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
+        </h1>
+        <div class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
+                Home
+              </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">
+                About Us
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <section class="info">
         <div class="container">
-          <div class="info__inner" style="background-image: url( ../images/src/info-bg.jpg);">
+          <div class="info__inner" style="background-image: url(../images/src/info-bg.jpg);">
             <div class="info__content">
               <div class="info__top-area">
                 <span class="info__years">12</span>
@@ -175,42 +176,42 @@
       </section>
 
       <div class="advantages">
-  <div class="container">
-    <ul class="advantages__list">
-      <li class="advantages__item">
-        <svg class="advantages__img">
-          <use xlink:href="images/src/sprite.svg#monitor"></use>
-        </svg>
-        <span class="advantages__numbers">99%</span>
-        <p class="advantages__desc">Satisﬁed Clients Rate</p>
-      </li>
+        <div class="container">
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <svg class="advantages__img">
+                <use xlink:href="images/src/sprite.svg#monitor"></use>
+              </svg>
+              <span class="advantages__numbers">99%</span>
+              <p class="advantages__desc">Satisﬁed Clients Rate</p>
+            </li>
 
-      <li class="advantages__item advantages__item--bus">
-        <svg class="advantages__img">
-          <use xlink:href="images/src/sprite.svg#bus"></use>
-        </svg>
-        <span class="advantages__numbers">5020+</span>
-        <p class="advantages__desc">Products Delivered</p>
-      </li>
+            <li class="advantages__item advantages__item--bus">
+              <svg class="advantages__img">
+                <use xlink:href="images/src/sprite.svg#bus"></use>
+              </svg>
+              <span class="advantages__numbers">5020+</span>
+              <p class="advantages__desc">Products Delivered</p>
+            </li>
 
-      <li class="advantages__item">
-        <svg class="advantages__img">
-          <use xlink:href="images/src/sprite.svg#phone"></use>
-        </svg>
-        <span class="advantages__numbers">23hr</span>
-        <p class="advantages__desc">Daily Working Time</p>
-      </li>
+            <li class="advantages__item">
+              <svg class="advantages__img">
+                <use xlink:href="images/src/sprite.svg#phone"></use>
+              </svg>
+              <span class="advantages__numbers">23hr</span>
+              <p class="advantages__desc">Daily Working Time</p>
+            </li>
 
-      <li class="advantages__item">
-        <svg class="advantages__img">
-          <use xlink:href="images/src/sprite.svg#priz"></use>
-        </svg>
-        <span class="advantages__numbers">140+</span>
-        <p class="advantages__desc">Brands in Store</p>
-      </li>
-    </ul>
-  </div>
-</div>
+            <li class="advantages__item">
+              <svg class="advantages__img">
+                <use xlink:href="images/src/sprite.svg#priz"></use>
+              </svg>
+              <span class="advantages__numbers">140+</span>
+              <p class="advantages__desc">Brands in Store</p>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <section class="team">
         <div class="container">
@@ -359,117 +360,118 @@
       </section>
 
       <section class="our">
-  <div class="container">
-    <div class="our__top">
-      <h2 class="title">Our Insights & Articles</h2>
-      <a class="our__link" href="#">View All</a>
-    </div>
+        <div class="container">
+          <div class="our__top">
+            <h2 class="title">Our Insights & Articles</h2>
+            <a class="our__link" href="#">View All</a>
+          </div>
 
-    <div class="our__middle">
-      <article class="news">
-        <img class="news__pic" src="images/src/our/our-1.jpg" alt="новостное изображение">
-        <span class="news__tag">news</span>
-        <p class="news__text">
-          Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-        </p>
-        <a class="news__item-link" href="#"></a>
-        <div class="news__item-bottom">
-          <svg class="news__icon">
-            <use xlink:href="images/src/sprite.svg#calendar">
-            </use>
-          </svg>
-          <time class="news__date" datetime="2020-01-28">
-            28 JANUARY, 2020
-          </time>
-          <svg class="news__icon">
-            <use xlink:href="images/src/sprite.svg#user-icon">
-            </use>
-          </svg>
-          <span class="news__author">BY ADMIN</span>
+          <div class="our__middle">
+            <article class="news">
+              <img class="news__pic" src="images/src/our/our-1.jpg" alt="новостное изображение">
+              <span class="news__tag">news</span>
+              <p class="news__text">
+                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+              </p>
+              <a class="news__item-link" href="#"></a>
+              <div class="news__item-bottom">
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#calendar">
+                  </use>
+                </svg>
+                <time class="news__date" datetime="2020-01-28">
+                  28 JANUARY, 2020
+                </time>
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#user-icon">
+                  </use>
+                </svg>
+                <span class="news__author">BY ADMIN</span>
+              </div>
+            </article>
+
+            <article class="news">
+              <img class="news__pic" src="images/src/our/our-2.jpg" alt="новостное изображение">
+              <span class="news__tag">news</span>
+              <p class="news__text">
+                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+              </p>
+              <a class="news__item-link" href="#"></a>
+              <div class="news__item-bottom">
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#calendar">
+                  </use>
+                </svg>
+                <time class="news__date" datetime="2020-01-28">
+                  28 JANUARY, 2020
+                </time>
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#user-icon">
+                  </use>
+                </svg>
+                <span class="news__author">BY ADMIN</span>
+              </div>
+            </article>
+
+            <article class="news">
+              <img class="news__pic" src="images/src/our/our-3.jpg" alt="новостное изображение">
+              <span class="news__tag">news</span>
+              <p class="news__text">
+                Rncididunt ut labore et dolore magna aliqua. Ut enim
+              </p>
+              <a class="news__item-link" href="#"></a>
+              <div class="news__item-bottom">
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#calendar">
+                  </use>
+                </svg>
+                <time class="news__date" datetime="2020-01-28">
+                  28 JANUARY, 2020
+                </time>
+                <svg class="news__icon">
+                  <use xlink:href="images/src/sprite.svg#user-icon">
+                  </use>
+                </svg>
+                <span class="news__author">BY ADMIN</span>
+              </div>
+            </article>
+          </div>
         </div>
-      </article>
 
-      <article class="news">
-        <img class="news__pic" src="images/src/our/our-2.jpg" alt="новостное изображение">
-        <span class="news__tag">news</span>
-        <p class="news__text">
-          Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        </p>
-        <a class="news__item-link" href="#"></a>
-        <div class="news__item-bottom">
-          <svg class="news__icon">
-            <use xlink:href="images/src/sprite.svg#calendar">
-            </use>
-          </svg>
-          <time class="news__date" datetime="2020-01-28">
-            28 JANUARY, 2020
-          </time>
-          <svg class="news__icon">
-            <use xlink:href="images/src/sprite.svg#user-icon">
-            </use>
-          </svg>
-          <span class="news__author">BY ADMIN</span>
+        <div class="partners partners-min">
+          <div class="container">
+            <div class="partners__wrapper partners__wrapper--min">
+              <ul class="partners__list partners__list--min">
+                <li class="partners__item">
+                  <img class="partners__pic" src="images/src/partners/partner-1.png" alt="партнер">
+                </li>
+                <li class="partners__item">
+                  <img class="partners__pic" src="images/src/partners/partner-2.png" alt="партнер">
+                </li>
+                <li class="partners__item">
+                  <img class="partners__pic" src="images/src/partners/partner-3.png" alt="партнер">
+                </li>
+                <li class="partners__item">
+                  <img class="partners__pic" src="images/src/partners/partner-4.png" alt="партнер">
+                </li>
+                <li class="partners__item">
+                  <img class="partners__pic" src="images/src/partners/partner-5.png" alt="партнер">
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </article>
-
-      <article class="news">
-        <img class="news__pic" src="images/src/our/our-3.jpg" alt="новостное изображение">
-        <span class="news__tag">news</span>
-        <p class="news__text">
-          Rncididunt ut labore et dolore magna aliqua. Ut enim
-        </p>
-        <a class="news__item-link" href="#"></a>
-        <div class="news__item-bottom">
-          <svg class="news__icon">
-            <use xlink:href="images/src/sprite.svg#calendar">
-            </use>
-          </svg>
-          <time class="news__date" datetime="2020-01-28">
-            28 JANUARY, 2020
-          </time>
-          <svg class="news__icon">
-            <use xlink:href="images/src/sprite.svg#user-icon">
-            </use>
-          </svg>
-          <span class="news__author">BY ADMIN</span>
-        </div>
-      </article>
-    </div>
-  </div>
-
-  <div class="partners partners--min">
-  <div class="container">
-    <div class="partners__wrapper partners__wrapper--min">
-      <ul class="partners__list partners__list--min">
-        <li class="partners__item">
-          <img class="partners__pic" src="images/src/partners/partner-1.png" alt="партнер">
-        </li>
-        <li class="partners__item">
-          <img class="partners__pic" src="images/src/partners/partner-2.png" alt="партнер">
-        </li>
-        <li class="partners__item">
-          <img class="partners__pic" src="images/src/partners/partner-3.png" alt="партнер">
-        </li>
-        <li class="partners__item">
-          <img class="partners__pic" src="images/src/partners/partner-4.png" alt="партнер">
-        </li>
-        <li class="partners__item">
-          <img class="partners__pic" src="images/src/partners/partner-5.png" alt="партнер">
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-</section>
+      </section>
     </main>
+
     <footer class="footer">
   <div class="container">
     <div class="footer__inner">
       <div class="footer__item footer__item--contact">
         <a class="logo" href="#">
-          <svg class="logo__pic">
-            <use xlink:href="images/src/sprite.svg#logo"></use>
-          </svg>
+          <a class="logo" href="#">
+            <img class="logo-pic" src="images/src/logo.png" alt="логотип">
+          </a>
         </a>
 
         <address class="footer__address" href="#">
