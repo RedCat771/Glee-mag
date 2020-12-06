@@ -1,11 +1,5 @@
 // Определение констант Gulp
-const {
-  src,
-  dest,
-  parallel,
-  series,
-  watch
-} = require("gulp");
+const { src, dest, parallel, series, watch } = require("gulp");
 
 const browserSync = require("browser-sync").create();
 const concat = require("gulp-concat");
@@ -23,16 +17,17 @@ const fileinclude = require("gulp-file-include");
 const htmlmin = require("gulp-htmlmin");
 const rename = require("gulp-rename");
 const svgmin = require("gulp-svgmin");
-const svgsprite = require("gulp-svg-sprite");
+const svgstore = require("gulp-md-svgstore");
 
 function browsersync() {
   browserSync.init({
     server: {
       baseDir: "./app",
-      index: "home.html"
+      index: "index.html",
     }, // Папка сервера (Исходные файлы)
     notify: false,
     online: true,
+    open: false,
   });
 }
 
@@ -44,24 +39,26 @@ function html() {
         basepath: "app/",
       })
     )
-    .pipe(htmlmin({
-      collapseWhitespace: false
-    }))
+    .pipe(
+      htmlmin({
+        collapseWhitespace: false,
+      })
+    )
     .pipe(dest("app/"))
     .pipe(browserSync.stream());
 }
 
 function scripts() {
   return src([
-      "node_modules/jquery/dist/jquery.js",
-      "node_modules/slick-carousel/slick/slick.js",
-      "node_modules/mixitup/dist/mixitup.js",
-      "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
-      "node_modules/ion-rangeslider/js/ion.rangeSlider.js",
-      "node_modules/rateyo/src/jquery.rateyo.js",
-      "!app/js/main.min.js",
-      "app/js/main.js",
-    ])
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/slick-carousel/slick/slick.js",
+    "node_modules/mixitup/dist/mixitup.js",
+    "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
+    "node_modules/ion-rangeslider/js/ion.rangeSlider.js",
+    "node_modules/rateyo/src/jquery.rateyo.js",
+    "!app/js/main.min.js",
+    "app/js/main.js",
+  ])
     .pipe(concat("main.min.js"))
     .pipe(uglify()) // Сжатие JavaScript кода
     .pipe(dest("app/js/"))
@@ -69,12 +66,11 @@ function scripts() {
 }
 
 function styles() {
-  return (
-    src([
-      "node_modules/normalize.css/normalize.css",
-      "!app/scss/_*.scss",
-      "app/scss/style.scss",
-    ])
+  return src([
+    "node_modules/normalize.css/normalize.css",
+    "!app/scss/_*.scss",
+    "app/scss/style.scss",
+  ])
     .pipe(
       sass({
         outputStyle: "expanded", // "compressed"
@@ -107,14 +103,13 @@ function styles() {
       cleancss({
         level: {
           1: {
-            specialComments: 0
-          }
+            specialComments: 0,
+          },
         },
       })
-    ) // Минифицирует стили. format: "beautify",
+    ) // format: "beautify",
     .pipe(dest("app/css/"))
-    .pipe(browserSync.stream())
-  );
+    .pipe(browserSync.stream());
 }
 
 function images() {
@@ -133,16 +128,16 @@ function images() {
         imagemin.optipng(),
         imagemin.svgo(),
       ])
-    ) // Сжимаем и оптимизируем изображеня
+    )
     .pipe(dest("app/images/dest"));
 }
 
 function svg2sprite() {
-  return (
-    src("app/images/src/*.svg")
+  return src("app/images/src/icons/*.svg")
     .pipe(
       svgmin({
-        plugins: [{
+        plugins: [
+          {
             removeComments: true,
           },
           {
@@ -151,56 +146,40 @@ function svg2sprite() {
         ],
       })
     )
-    //FIXME что-то не понятно что оно делает , нужно поправить или удалить
     .pipe(
-      svgsprite({
-        shape: {
-          dimension: {
-            maxWidth: 32,
-            maxHeight: 32,
-          },
-          spacing: {
-            padding: 10,
-          },
-        },
-        mode: {
-          view: {
-            bust: false,
-            render: {
-              scss: true,
-            },
-          },
-          symbol: true,
-        },
+      svgstore({
+        outputFilename: "sprite.svg",
+        keepIds: true,
+        inlineSvg: true,
       })
     )
-    .pipe(dest("app/images/dest/"))
-  );
+    .pipe(dest("app/images/src"));
 }
 
 function cleanimg() {
   return del("app/images/dest/**/*", {
-    force: true
+    force: true,
   }); // Удаляем всё содержимое папки "app/images/#dest/"
 }
 
 function cleandist() {
   return del("dist/**/*", {
-    force: true
+    force: true,
   }); // Удаляем всё содержимое папки "dist"
 }
 
 function buildcopy() {
   return src(
-      [
-        "app/css/**/*.min.css",
-        "app/js/**/main.min.js",
-        "app/images/dest/**/*",
-        "app/html/pages/*.html",
-      ], {
-        base: "app"
-      }
-    ) // Сохраняем структуру app при копировании
+    [
+      "app/css/**/*.min.css",
+      "app/js/**/main.min.js",
+      "app/images/dest/**/*",
+      "app/*.html",
+    ],
+    {
+      base: "app",
+    }
+  ) // Сохраняем структуру app при копировании
     .pipe(dest("dist")); // Выгружаем финальную сборку в папку dist
 }
 
@@ -227,6 +206,8 @@ exports.images = images;
 exports.svg2sprite = svg2sprite;
 
 exports.cleandist = cleandist;
+
+exports.cleanimg = cleanimg;
 
 exports.build = series(cleandist, styles, scripts, images, buildcopy);
 
