@@ -20,6 +20,15 @@
     }
   }
 
+  &.product-related {
+    margin-left: -10px;
+
+    &:hover {
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+
   &__wrapper {
     position: relative;
     overflow-y: hidden;

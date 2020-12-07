@@ -32,6 +32,7 @@
     "imagemin-pngquant": "^9.0.1",
     "ion-rangeslider": "^2.3.1",
     "jquery": "^3.5.1",
+    "jquery-form-styler": "^2.0.2",
     "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
     "rateyo": "^2.3.2",
