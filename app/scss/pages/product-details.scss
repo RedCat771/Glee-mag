@@ -1,0 +1,165 @@
+@import "components/_related";
+
+.details {
+  &__inner {
+    display: flex;
+    margin: 120px 0 100px;
+  }
+
+  &__slider {
+    margin-right: 70px;
+  }
+
+  &__column {
+    float: left;
+    margin: -52px 25px 0 0;
+    max-width: 140px;
+    max-height: 530px;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    border: 1px solid #ececec;
+    max-width: 140px;
+    min-height: 160px;
+    cursor: pointer;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__slide {
+    float: left;
+    max-width: 385px;
+  }
+
+  &__pic-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ececec;
+    min-height: 530px;
+    max-width: 385px;
+  }
+
+  &__pic {
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 20px 0;
+    max-width: 540px;
+    color: $title-color;
+    @extend %rubik-regular;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: #333333;
+  }
+
+  &__price {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 30px;
+    color: #333333;
+  }
+
+  &__text {
+    overflow: hidden;
+    margin-bottom: 25px;
+    max-width: 540px;
+    max-height: 110px;
+  }
+
+  &__form {
+    margin-bottom: 50px;
+  }
+
+  &__input {
+    margin-right: 15px;
+    transition: background-color 0.6s;
+
+    &:hover {
+      background-color: $bg-op;
+    }
+  }
+
+  &__btn {
+    border-radius: 4px;
+    padding: 0 50px;
+    height: 53px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $btn-color;
+    transition: background-color 0.6s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $title-color;
+    }
+  }
+
+  &__tags {
+    min-height: 90px;
+  }
+
+  &__link {
+    color: $title-color;
+    transition: background-color 0.8s;
+    cursor: pointer;
+
+    &:hover {
+      color: $bg-color;
+    }
+  }
+
+  &__footer {
+    color: $title-color;
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    width: 240px;
+    height: 53px;
+    color: $title-color;
+    background-color: $btn-op;
+    transition: background-color 0.6s;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &--active {
+      color: #fff;
+      background-color: $btn-color;
+    }
+  }
+
+  &__description {
+    overflow: hidden;
+    max-height: 500px;
+    transform: translateX(-400%);
+    transition: transform 0.8s;
+
+    &.details__description--active {
+      transform: translateX(0);
+    }
+  }
+}
