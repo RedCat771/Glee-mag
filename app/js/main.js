@@ -1,11 +1,4 @@
 $(function () {
-  // $(".add-menu__search").on("click", function () {
-  //   $(".add-menu__search").toggleClass("add-menu__search--open");
-  //   $(".add-menu__input").on("click", function () {
-  //     $(this).preventDefault();
-  //   });
-  // });
-
   $(".add-menu__btn").on("click", function () {
     $(".nav__list").toggleClass("nav__list--active");
   });

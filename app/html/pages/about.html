@@ -13,287 +13,16 @@
     <main class="main">
       @@include("html/components/_header.html")
 
-      <div class="top">
-        <h1 class="title-h1">
-          About Us
-        </h1>
-        <div class="breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">
-                Home
-              </a>
-            </li>
-            <li class="breadcrumbs__item">
-              <span class="breadcrumbs__link" href="#">
-                About Us
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
+      @@loop('html/components/_top.html',[
+      {
+      "title":"About"
+      }])
 
-      <section class="creative">
-        <div class="container">
-          <div class="creative__inner">
-            <img class="creative__img" src="images/src/info-bg.jpg" alt="фото">
-            <div class="creative__content">
-              <div class="creative__top-area">
-                <span class="creative__years">12</span>
-                <ul class="creative__list">
-                  <li class="creative__item">Years</li>
-                  <li class="creative__item">Experience</li>
-                  <li class="creative__item">Working</li>
-                </ul>
-              </div>
+      @@include("html/components/_creative.html")
 
-              <div class="creative__text-area">
-                <h2 class="title about-title">
-                  Mission of our creative house
-                </h2>
-                <div class="creative__text-wrapper">
-                  <p class="creative__text">
-                    consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                    enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                    irure dolor in
-                    reprehenderit in voluptate velit esse cillum
-                  </p>
-                </div>
-              </div>
+      @@include("html/components/_advantages.html")
 
-              <ul class="creative__area">
-                <li class="creative__list">
-                  <div class="creative__icon">
-                    <svg class="creative__img">
-                      <use xlink:href="images/src/sprite.svg#list"></use>
-                    </svg>
-                  </div>
-
-                  <div class="creative__item">
-                    <span class="creative__numbers">520+</span>
-                    <span class="creative__desc">Projects</span>
-                  </div>
-                </li>
-
-                <li class="creative__list">
-                  <div class="creative__icon">
-                    <svg class="creative__img">
-                      <use xlink:href="images/src/sprite.svg#rupor"></use>
-                    </svg>
-                  </div>
-
-                  <div class="creative__item">
-                    <span class="creative__numbers">$4M</span>
-                    <span class="creative__desc">Revenue</span>
-                  </div>
-                </li>
-
-                <li class="creative__list">
-                  <div class="creative__icon">
-                    <svg class="creative__img">
-                      <use xlink:href="images/src/sprite.svg#nf"></use>
-                    </svg>
-                  </div>
-
-                  <div class="creative__item">
-                    <span class="creative__numbers">250</span>
-                    <span class="creative__desc">Awards</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="advantages">
-        <div class="container">
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <svg class="advantages__img">
-                <use xlink:href="images/src/sprite.svg#monitor"></use>
-              </svg>
-              <span class="advantages__numbers">99%</span>
-              <p class="advantages__desc">Satisﬁed Clients Rate</p>
-            </li>
-
-            <li class="advantages__item advantages__item--bus">
-              <svg class="advantages__img">
-                <use xlink:href="images/src/sprite.svg#bus"></use>
-              </svg>
-              <span class="advantages__numbers">5020+</span>
-              <p class="advantages__desc">Products Delivered</p>
-            </li>
-
-            <li class="advantages__item">
-              <svg class="advantages__img">
-                <use xlink:href="images/src/sprite.svg#phone"></use>
-              </svg>
-              <span class="advantages__numbers">23hr</span>
-              <p class="advantages__desc">Daily Working Time</p>
-            </li>
-
-            <li class="advantages__item">
-              <svg class="advantages__img">
-                <use xlink:href="images/src/sprite.svg#priz"></use>
-              </svg>
-              <span class="advantages__numbers">140+</span>
-              <p class="advantages__desc">Brands in Store</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <section class="team">
-        <div class="container">
-          <div class="team__inner">
-            <div class="team__text">
-              <h2 class="title team-title">Our Team</h2>
-              <div class="team__desc-wrapper">
-                <p class="team__desc">
-                  Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor inciLorem ipsum
-                  dolor
-                  sit amet,
-                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim
-                  ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
-              <a class="team__link" href="#">
-                Join With US
-              </a>
-            </div>
-
-            <div class="team__gallery">
-              <div class="person-card">
-                <img class="person-card__img" src="images/src/team/1.jpg" alt="команда">
-                <div class="person-card__bottom">
-                  <div class="person-card__info">
-                    <span class="person-card__name">
-                      Eliza Elliot
-                    </span>
-
-                    <span class="person-card__desc">
-                      Commodo tempor
-                    </span>
-                  </div>
-
-                  <ul class="person-card__list">
-                    <li class="person-card__item">
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#inst"></use>
-                        </svg>
-                      </a>
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#google"></use>
-                        </svg>
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-              </div>
-
-              <div class="person-card">
-                <img class="person-card__img" src="images/src/team/2.jpg" alt="команда">
-                <div class="person-card__bottom">
-                  <div class="person-card__info">
-                    <span class="person-card__name">
-                      Roscoe A.
-                    </span>
-
-                    <span class="person-card__desc">
-                      Commodo tempor
-                    </span>
-                  </div>
-
-                  <ul class="person-card__list">
-                    <li class="person-card__item">
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#inst"></use>
-                        </svg>
-                      </a>
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#google"></use>
-                        </svg>
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-              </div>
-
-              <div class="person-card">
-                <img class="person-card__img" src="images/src/team/3.jpg" alt="команда">
-                <div class="person-card__bottom">
-                  <div class="person-card__info">
-                    <span class="person-card__name">
-                      Ruby M.
-                    </span>
-
-                    <span class="person-card__desc">
-                      Commodo tempor
-                    </span>
-                  </div>
-
-                  <ul class="person-card__list">
-                    <li class="person-card__item">
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#inst"></use>
-                        </svg>
-                      </a>
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#google"></use>
-                        </svg>
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-              </div>
-
-              <div class="person-card">
-                <img class="person-card__img" src="images/src/team/4.jpg" alt="команда">
-                <div class="person-card__bottom">
-                  <div class="person-card__info">
-                    <span class="person-card__name">
-                      Marie F. Bloss
-                    </span>
-
-                    <p class="person-card__desc">
-                      Commodo tempor
-                    </p>
-                  </div>
-
-                  <ul class="person-card__list">
-                    <li class="person-card__item">
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#inst"></use>
-                        </svg>
-                      </a>
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#google"></use>
-                        </svg>
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      @@include("html/components/_team.html")
 
       <section class="our">
         <div class="container">
@@ -303,109 +32,26 @@
           </div>
 
           <div class="our__middle">
-            <article class="news">
-              <img class="news__pic" src="images/src/our/our-1.jpg" alt="новостное изображение">
-              <a class="news__tag">news</a>
-              <a class="news__text">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-              </a>
-              <footer class="news__footer">
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#calendar">
-                    </use>
-                  </svg>
-                  <time class="news__date" datetime="2020-01-28">
-                    28 JANUARY, 2020
-                  </time>
-                </div>
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#user-icon">
-                    </use>
-                  </svg>
-                  <span class="news__author">BY ADMIN</span>
-                </div>
-              </footer>
-            </article>
+            @@loop('html/components/_news.html',[
+            {"img":"our-1",
+            "text":"Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"}
+            ])
 
-            <article class="news">
-              <img class="news__pic" src="images/src/our/our-2.jpg" alt="новостное изображение">
-              <a class="news__tag">news</a>
-              <a class="news__text">
-                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              </a>
-              <footer class="news__footer">
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#calendar">
-                    </use>
-                  </svg>
-                  <time class="news__date" datetime="2020-01-28">
-                    28 JANUARY, 2020
-                  </time>
-                </div>
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#user-icon">
-                    </use>
-                  </svg>
-                  <span class="news__author">BY ADMIN</span>
-                </div>
-              </footer>
-            </article>
+            @@loop('html/components/_news.html',[
+            {"img":"our-2",
+            "text":"Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore"}
+            ])
 
-            <article class="news">
-              <img class="news__pic" src="images/src/our/our-3.jpg" alt="новостное изображение">
-              <a class="news__tag">news</a>
-              <a class="news__text">
-                Rncididunt ut labore et dolore magna aliqua. Ut enim
-              </a>
-              <footer class="news__footer">
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#calendar">
-                    </use>
-                  </svg>
-                  <time class="news__date" datetime="2020-01-28">
-                    28 JANUARY, 2020
-                  </time>
-                </div>
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#user-icon">
-                    </use>
-                  </svg>
-                  <span class="news__author">BY ADMIN</span>
-                </div>
-              </footer>
-            </article>
+            @@loop('html/components/_news.html',[
+            {"img":"our-3",
+            "text":"Rncididunt ut labore et dolore magna aliqua. Ut enim"}
+            ])
           </div>
         </div>
 
-        <div class="partners partners--min">
-          <div class="container">
-            <div class="partners__wrapper partners__wrapper--min">
-              <ul class="partners__list partners__list--min">
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-1.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-2.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-3.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-4.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-5.png" alt="партнер">
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        @@loop('html/components/_partners.html',[
+        {"class":"partners"}
+        ])
       </section>
     </main>
 

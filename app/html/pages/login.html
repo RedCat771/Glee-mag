@@ -13,76 +13,19 @@
     <main class="main">
       @@include("html/components/_header.html")
 
-      <div class="top">
-        <h1 class="title-h1">
-          Log in
-        </h1>
-        <div class="breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">
-                Home
-              </a>
-            </li>
-            <li class="breadcrumbs__item">
-              <span class="breadcrumbs__link" href="#">
-                Log in
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
+      @@loop('html/components/_top.html',[
+      {
+      "title":"Log in"
+      }])
 
-      <div class="form">
-        <form class="form__holder" action="#">
-          <label class="form__label">
-            User name or email address *
-            <input class="form__input" name="login[email]" type="text">
-          </label>
-          <label class="form__label">
-            Password *
-            <input class="form__input" name="login[password]" type="password" required>
-          </label>
-          <button class="form__btn form__btn--first" type="submit">Login</button>
-          <div class="form__bottom">
-            <label class="form__label">
-              <input class="form__checkbox" type="checkbox">
-              <span class="form__check"></span>
-              <span class="form__rem">Remember me</span>
-            </label>
-            <a class="form__forget" href="#">Lost your password?</a>
-          </div>
-        </form>
-        <p class="form__text">Not registered? No problem</p>
-        <a class="form__link" href="#">Create an account</a>
-      </div>
+      @@include("html/components/_form.html")
 
-      <div class="partners partners-min">
-        <div class="container">
-          <div class="partners__wrapper">
-            <ul class="partners__list">
-              <li class="partners__item">
-                <img class="partners__pic" src="images/src/partners/partner-1.png" alt="партнер">
-              </li>
-              <li class="partners__item">
-                <img class="partners__pic" src="images/src/partners/partner-2.png" alt="партнер">
-              </li>
-              <li class="partners__item">
-                <img class="partners__pic" src="images/src/partners/partner-3.png" alt="партнер">
-              </li>
-              <li class="partners__item">
-                <img class="partners__pic" src="images/src/partners/partner-4.png" alt="партнер">
-              </li>
-              <li class="partners__item">
-                <img class="partners__pic" src="images/src/partners/partner-5.png" alt="партнер">
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </main>
 
-    @@include("html/components/_footer.html")
+      @@loop('html/components/_partners.html',[
+      {"class":"partners partners-min"}
+      ])
+
+      @@include("html/components/_footer.html")
   </div>
 </body>
 
