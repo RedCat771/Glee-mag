@@ -1,0 +1,16 @@
+.products {
+  margin-bottom: 100px;
+  @include mq("1248") {
+    margin-bottom: 50px;
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -30px 150px;
+    @include mq("1248") {
+      margin: 0 auto 100px;
+      max-width: 600px;
+    }
+  }
+}

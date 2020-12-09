@@ -6,6 +6,9 @@
   justify-content: center;
   margin-bottom: 105px;
   min-height: 500px;
+  @include mq("1248") {
+    margin-bottom: 50px;
+  }
 
   &__play {
     display: flex;

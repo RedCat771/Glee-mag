@@ -16,7 +16,7 @@
     <div class="header__inner">
       <nav class="nav">
         <a class="logo" href="#">
-          <img class="logo-pic" src="images/src/logo.png" alt="логотип">
+          <img class="logo__pic" src="images/src/logo.png" alt="логотип">
         </a>
 
         <ul class="nav__list">
@@ -47,7 +47,7 @@
 
         <div class="add-menu">
           <form class="add-menu__form" action="" method="get">
-            <label>
+            <label class="add-menu__label">
               <input class="add-menu__form-input" name="search" placeholder="Поиск" type="search">
             </label>
             <button class="add-menu__form-btn" type="submit">
@@ -74,7 +74,7 @@
           </div>
 
           <button class="add-menu__btn">
-            <svg class="add-menu__pic">//FIXME поменяй цвет на белый
+            <svg class="add-menu__pic">
               <use class="add-menu__square" xlink:href="images/src/sprite.svg#menu"></use>
             </svg>
           </button>
@@ -85,279 +85,286 @@
 </header>
 
       <div class="top">
-        <h1 class="title-h1">
-          About Us
-        </h1>
-        <div class="breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">
-                Home
-              </a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">
-                About Us
-              </a>
-            </li>
+  <h1 class="title-h1">
+    About
+  </h1>
+  <div class="breadcrumbs">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">
+          Home
+        </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <span class="breadcrumbs__link" href="#">
+          About
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+      <section class="creative">
+  <div class="container">
+    <div class="creative__inner">
+      <img class="creative__img" src="images/src/info-bg.jpg" alt="фото">
+      <div class="creative__content">
+        <div class="creative__top-area">
+          <span class="creative__years">12</span>
+          <ul class="creative__list">
+            <li class="creative__item">Years</li>
+            <li class="creative__item">Experience</li>
+            <li class="creative__item">Working</li>
           </ul>
         </div>
-      </div>
 
-      <section class="info">
-        <div class="container">
-          <div class="info__inner" style="background-image: url(../images/src/info-bg.jpg);">
-            <div class="info__content">
-              <div class="info__top-area">
-                <span class="info__years">12</span>
-                <ul class="info__list">
-                  <li class="info__item">Years</li>
-                  <li class="info__item">Experience</li>
-                  <li class="info__item">Working</li>
-                </ul>
-              </div>
-
-              <div class="info__text-area">
-                <h2 class="title about-title">
-                  Mission of our creative house
-                </h2>
-                <p class="info__text">
-                  consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in
-                  reprehenderit in voluptate velit esse cillum
-                </p>
-              </div>
-
-              <div class="info__bottom-area">
-                <ul class="info__bottom-list">
-                  <li class="info__bottom-icon">
-                    <svg class="info__img">
-                      <use xlink:href="images/src/sprite.svg#list"></use>
-                    </svg>
-                  </li>
-
-                  <li class="info__bottom-item">
-                    <span class="info__numbers">520+</span>
-                    <p class="info__descript">Projects</p>
-                  </li>
-                </ul>
-
-                <ul class="info__bottom-list">
-                  <li class="info__bottom-icon">
-                    <svg class="info__img">
-                      <use xlink:href="images/src/sprite.svg#rupor"></use>
-                    </svg>
-                  </li>
-
-                  <li class="info__bottom-item">
-                    <span class="info__numbers">$4M</span>
-                    <p class="info__descript">Revenue</p>
-                  </li>
-                </ul>
-
-                <ul class="info__bottom-list">
-                  <li class="info__bottom-icon">
-                    <svg class="info__img">
-                      <use xlink:href="images/src/sprite.svg#nf"></use>
-                    </svg>
-                  </li>
-
-                  <li class="info__bottom-item">
-                    <span class="info__numbers">250</span>
-                    <p class="info__descript">Awards</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
+        <div class="creative__text-area">
+          <h2 class="title about-title">
+            Mission of our creative house
+          </h2>
+          <div class="creative__text-wrapper">
+            <p class="creative__text">
+              consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+              irure dolor in
+              reprehenderit in voluptate velit esse cillum
+            </p>
           </div>
         </div>
-      </section>
+
+        <ul class="creative__area">
+          <li class="creative__list">
+            <div class="creative__icon">
+              <svg class="creative__img">
+                <use xlink:href="images/src/sprite.svg#list"></use>
+              </svg>
+            </div>
+
+            <div class="creative__item">
+              <span class="creative__numbers">520+</span>
+              <span class="creative__desc">Projects</span>
+            </div>
+          </li>
+
+          <li class="creative__list">
+            <div class="creative__icon">
+              <svg class="creative__img">
+                <use xlink:href="images/src/sprite.svg#rupor"></use>
+              </svg>
+            </div>
+
+            <div class="creative__item">
+              <span class="creative__numbers">$4M</span>
+              <span class="creative__desc">Revenue</span>
+            </div>
+          </li>
+
+          <li class="creative__list">
+            <div class="creative__icon">
+              <svg class="creative__img">
+                <use xlink:href="images/src/sprite.svg#nf"></use>
+              </svg>
+            </div>
+
+            <div class="creative__item">
+              <span class="creative__numbers">250</span>
+              <span class="creative__desc">Awards</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
       <div class="advantages">
-        <div class="container">
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <svg class="advantages__img">
-                <use xlink:href="images/src/sprite.svg#monitor"></use>
-              </svg>
-              <span class="advantages__numbers">99%</span>
-              <p class="advantages__desc">Satisﬁed Clients Rate</p>
-            </li>
+  <div class="container">
+    <ul class="advantages__list">
+      <li class="advantages__item">
+        <svg class="advantages__img">
+          <use xlink:href="images/src/sprite.svg#monitor"></use>
+        </svg>
+        <span class="advantages__numbers">99%</span>
+        <p class="advantages__desc">Satisﬁed Clients Rate</p>
+      </li>
 
-            <li class="advantages__item advantages__item--bus">
-              <svg class="advantages__img">
-                <use xlink:href="images/src/sprite.svg#bus"></use>
-              </svg>
-              <span class="advantages__numbers">5020+</span>
-              <p class="advantages__desc">Products Delivered</p>
-            </li>
+      <li class="advantages__item advantages__item--bus">
+        <svg class="advantages__img">
+          <use xlink:href="images/src/sprite.svg#bus"></use>
+        </svg>
+        <span class="advantages__numbers">5020+</span>
+        <p class="advantages__desc">Products Delivered</p>
+      </li>
 
-            <li class="advantages__item">
-              <svg class="advantages__img">
-                <use xlink:href="images/src/sprite.svg#phone"></use>
-              </svg>
-              <span class="advantages__numbers">23hr</span>
-              <p class="advantages__desc">Daily Working Time</p>
-            </li>
+      <li class="advantages__item">
+        <svg class="advantages__img">
+          <use xlink:href="images/src/sprite.svg#phone"></use>
+        </svg>
+        <span class="advantages__numbers">23hr</span>
+        <p class="advantages__desc">Daily Working Time</p>
+      </li>
 
-            <li class="advantages__item">
-              <svg class="advantages__img">
-                <use xlink:href="images/src/sprite.svg#priz"></use>
-              </svg>
-              <span class="advantages__numbers">140+</span>
-              <p class="advantages__desc">Brands in Store</p>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <li class="advantages__item">
+        <svg class="advantages__img">
+          <use xlink:href="images/src/sprite.svg#priz"></use>
+        </svg>
+        <span class="advantages__numbers">140+</span>
+        <p class="advantages__desc">Brands in Store</p>
+      </li>
+    </ul>
+  </div>
+</div>
 
       <section class="team">
-        <div class="container">
-          <div class="team__inner">
-            <div class="team__text">
-              <h2 class="title team-title">Our Team</h2>
-              <p class="team__desc">
-                Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor inciLorem ipsum dolor
-                sit amet,
-                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <a class="team__link" href="#">
-                Join With US
-              </a>
+  <div class="container">
+    <div class="team__inner">
+      <div class="team__text">
+        <h2 class="title team-title">Our Team</h2>
+        <div class="team__desc-wrapper">
+          <p class="team__desc">
+            Lorem ipsum dolor sit amet, conse ctetur adipi sicing elit, sed do eiusmod tempor inciLorem ipsum
+            dolor
+            sit amet,
+            consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim
+            ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <a class="team__link" href="#">
+          Join With US
+        </a>
+      </div>
+
+      <div class="team__gallery">
+        <div class="person-card">
+          <img class="person-card__img" src="images/src/team/1.jpg" alt="команда">
+          <div class="person-card__bottom">
+            <div class="person-card__info">
+              <span class="person-card__name">
+                Eliza Elliot
+              </span>
+
+              <span class="person-card__desc">
+                Commodo tempor
+              </span>
             </div>
 
-            <div class="team__gallery">
-              <div class="person-card">
-                <img class="person-card__img" src="images/src/team/1.jpg" alt="команда">
-                <div class="person-card__bottom">
-                  <div class="person-card__info">
-                    <span class="person-card__name">
-                      Eliza Elliot
-                    </span>
+            <ul class="person-card__list">
+              <li class="person-card__item">
+                <a class="person-card__social-link" href="#">
+                  <svg class="person-card__icon">
+                    <use xlink:href="images/src/sprite.svg#inst"></use>
+                  </svg>
+                </a>
+                <a class="person-card__social-link" href="#">
+                  <svg class="person-card__icon">
+                    <use xlink:href="images/src/sprite.svg#google"></use>
+                  </svg>
+                </a>
+              </li>
 
-                    <p class="person-card__desc">
-                      Commodo tempor
-                    </p>
-                  </div>
-
-                  <ul class="person-card__list">
-                    <li class="person-card__item">
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#inst"></use>
-                        </svg>
-                      </a>
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#google"></use>
-                        </svg>
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-              </div>
-
-              <div class="person-card">
-                <img class="person-card__img" src="images/src/team/2.jpg" alt="команда">
-                <div class="person-card__bottom">
-                  <div class="person-card__info">
-                    <span class="person-card__name">
-                      Roscoe A.
-                    </span>
-
-                    <p class="person-card__desc">
-                      Commodo tempor
-                    </p>
-                  </div>
-
-                  <ul class="person-card__list">
-                    <li class="person-card__item">
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#inst"></use>
-                        </svg>
-                      </a>
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#google"></use>
-                        </svg>
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-              </div>
-
-              <div class="person-card">
-                <img class="person-card__img" src="images/src/team/3.jpg" alt="команда">
-                <div class="person-card__bottom">
-                  <div class="person-card__info">
-                    <span class="person-card__name">
-                      Ruby M.
-                    </span>
-
-                    <p class="person-card__desc">
-                      Commodo tempor
-                    </p>
-                  </div>
-
-                  <ul class="person-card__list">
-                    <li class="person-card__item">
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#inst"></use>
-                        </svg>
-                      </a>
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#google"></use>
-                        </svg>
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-              </div>
-
-              <div class="person-card">
-                <img class="person-card__img" src="images/src/team/4.jpg" alt="команда">
-                <div class="person-card__bottom">
-                  <div class="person-card__info">
-                    <span class="person-card__name">
-                      Marie F. Bloss
-                    </span>
-
-                    <p class="person-card__desc">
-                      Commodo tempor
-                    </p>
-                  </div>
-
-                  <ul class="person-card__list">
-                    <li class="person-card__item">
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#inst"></use>
-                        </svg>
-                      </a>
-                      <a class="person-card__social-link" href="#">
-                        <svg class="person-card__icon">
-                          <use xlink:href="images/src/sprite.svg#google"></use>
-                        </svg>
-                      </a>
-                    </li>
-
-                  </ul>
-                </div>
-              </div>
-            </div>
+            </ul>
           </div>
         </div>
-      </section>
+
+        <div class="person-card">
+          <img class="person-card__img" src="images/src/team/2.jpg" alt="команда">
+          <div class="person-card__bottom">
+            <div class="person-card__info">
+              <span class="person-card__name">
+                Roscoe A.
+              </span>
+
+              <span class="person-card__desc">
+                Commodo tempor
+              </span>
+            </div>
+
+            <ul class="person-card__list">
+              <li class="person-card__item">
+                <a class="person-card__social-link" href="#">
+                  <svg class="person-card__icon">
+                    <use xlink:href="images/src/sprite.svg#inst"></use>
+                  </svg>
+                </a>
+                <a class="person-card__social-link" href="#">
+                  <svg class="person-card__icon">
+                    <use xlink:href="images/src/sprite.svg#google"></use>
+                  </svg>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <img class="person-card__img" src="images/src/team/3.jpg" alt="команда">
+          <div class="person-card__bottom">
+            <div class="person-card__info">
+              <span class="person-card__name">
+                Ruby M.
+              </span>
+
+              <span class="person-card__desc">
+                Commodo tempor
+              </span>
+            </div>
+
+            <ul class="person-card__list">
+              <li class="person-card__item">
+                <a class="person-card__social-link" href="#">
+                  <svg class="person-card__icon">
+                    <use xlink:href="images/src/sprite.svg#inst"></use>
+                  </svg>
+                </a>
+                <a class="person-card__social-link" href="#">
+                  <svg class="person-card__icon">
+                    <use xlink:href="images/src/sprite.svg#google"></use>
+                  </svg>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="person-card">
+          <img class="person-card__img" src="images/src/team/4.jpg" alt="команда">
+          <div class="person-card__bottom">
+            <div class="person-card__info">
+              <span class="person-card__name">
+                Marie F. Bloss
+              </span>
+
+              <p class="person-card__desc">
+                Commodo tempor
+              </p>
+            </div>
+
+            <ul class="person-card__list">
+              <li class="person-card__item">
+                <a class="person-card__social-link" href="#">
+                  <svg class="person-card__icon">
+                    <use xlink:href="images/src/sprite.svg#inst"></use>
+                  </svg>
+                </a>
+                <a class="person-card__social-link" href="#">
+                  <svg class="person-card__icon">
+                    <use xlink:href="images/src/sprite.svg#google"></use>
+                  </svg>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section class="our">
         <div class="container">
@@ -368,108 +375,108 @@
 
           <div class="our__middle">
             <article class="news">
-              <img class="news__pic" src="images/src/our/our-1.jpg" alt="новостное изображение">
-              <a class="news__tag">news</a>
-              <a class="news__text">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-              </a>
-              <footer class="news__footer">
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#calendar">
-                    </use>
-                  </svg>
-                  <time class="news__date" datetime="2020-01-28">
-                    28 JANUARY, 2020
-                  </time>
-                </div>
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#user-icon">
-                    </use>
-                  </svg>
-                  <span class="news__author">BY ADMIN</span>
-                </div>
-              </footer>
-            </article>
+  <img class="news__pic" src="images/src/our/our-1.jpg" alt="новостное изображение">
+  <a class="news__tag">news</a>
+  <a class="news__text">
+    Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+  </a>
+  <footer class="news__footer">
+    <div class="news__info">
+      <svg class="news__icon">
+        <use xlink:href="images/src/sprite.svg#calendar">
+        </use>
+      </svg>
+      <time class="news__date" datetime="2020-01-28">
+        28 JANUARY, 2020
+      </time>
+    </div>
+    <div class="news__info">
+      <svg class="news__icon">
+        <use xlink:href="images/src/sprite.svg#user-icon">
+        </use>
+      </svg>
+      <span class="news__author">BY ADMIN</span>
+    </div>
+  </footer>
+</article>
 
             <article class="news">
-              <img class="news__pic" src="images/src/our/our-2.jpg" alt="новостное изображение">
-              <a class="news__tag">news</a>
-              <a class="news__text">
-                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              </a>
-              <footer class="news__footer">
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#calendar">
-                    </use>
-                  </svg>
-                  <time class="news__date" datetime="2020-01-28">
-                    28 JANUARY, 2020
-                  </time>
-                </div>
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#user-icon">
-                    </use>
-                  </svg>
-                  <span class="news__author">BY ADMIN</span>
-                </div>
-              </footer>
-            </article>
+  <img class="news__pic" src="images/src/our/our-2.jpg" alt="новостное изображение">
+  <a class="news__tag">news</a>
+  <a class="news__text">
+    Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+  </a>
+  <footer class="news__footer">
+    <div class="news__info">
+      <svg class="news__icon">
+        <use xlink:href="images/src/sprite.svg#calendar">
+        </use>
+      </svg>
+      <time class="news__date" datetime="2020-01-28">
+        28 JANUARY, 2020
+      </time>
+    </div>
+    <div class="news__info">
+      <svg class="news__icon">
+        <use xlink:href="images/src/sprite.svg#user-icon">
+        </use>
+      </svg>
+      <span class="news__author">BY ADMIN</span>
+    </div>
+  </footer>
+</article>
 
             <article class="news">
-              <img class="news__pic" src="images/src/our/our-3.jpg" alt="новостное изображение">
-              <a class="news__tag">news</a>
-              <a class="news__text">
-                Rncididunt ut labore et dolore magna aliqua. Ut enim
-              </a>
-              <footer class="news__footer">
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#calendar">
-                    </use>
-                  </svg>
-                  <time class="news__date" datetime="2020-01-28">
-                    28 JANUARY, 2020
-                  </time>
-                </div>
-                <div class="news__info">
-                  <svg class="news__icon">
-                    <use xlink:href="images/src/sprite.svg#user-icon">
-                    </use>
-                  </svg>
-                  <span class="news__author">BY ADMIN</span>
-                </div>
-              </footer>
-            </article>
+  <img class="news__pic" src="images/src/our/our-3.jpg" alt="новостное изображение">
+  <a class="news__tag">news</a>
+  <a class="news__text">
+    Rncididunt ut labore et dolore magna aliqua. Ut enim
+  </a>
+  <footer class="news__footer">
+    <div class="news__info">
+      <svg class="news__icon">
+        <use xlink:href="images/src/sprite.svg#calendar">
+        </use>
+      </svg>
+      <time class="news__date" datetime="2020-01-28">
+        28 JANUARY, 2020
+      </time>
+    </div>
+    <div class="news__info">
+      <svg class="news__icon">
+        <use xlink:href="images/src/sprite.svg#user-icon">
+        </use>
+      </svg>
+      <span class="news__author">BY ADMIN</span>
+    </div>
+  </footer>
+</article>
           </div>
         </div>
 
-        <div class="partners partners--min">
-          <div class="container">
-            <div class="partners__wrapper partners__wrapper--min">
-              <ul class="partners__list partners__list--min">
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-1.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-2.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-3.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-4.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-5.png" alt="партнер">
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <div class="partners">
+  <div class="container">
+    <div class="partners__wrapper">
+      <ul class="partners__list">
+        <li class="partners__item">
+          <img class="partners__pic" src="images/src/partners/partner-1.png" alt="партнер">
+        </li>
+        <li class="partners__item">
+          <img class="partners__pic" src="images/src/partners/partner-2.png" alt="партнер">
+        </li>
+        <li class="partners__item">
+          <img class="partners__pic" src="images/src/partners/partner-3.png" alt="партнер">
+        </li>
+        <li class="partners__item">
+          <img class="partners__pic" src="images/src/partners/partner-4.png" alt="партнер">
+        </li>
+        <li class="partners__item">
+          <img class="partners__pic" src="images/src/partners/partner-5.png" alt="партнер">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
       </section>
     </main>
 
@@ -479,7 +486,7 @@
       <div class="footer__item footer__item--contact">
         <a class="logo" href="#">
           <a class="logo" href="#">
-            <img class="logo-pic" src="images/src/logo.png" alt="логотип">
+            <img class="logo__pic" src="images/src/logo.png" alt="логотип">
           </a>
         </a>
 

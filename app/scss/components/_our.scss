@@ -1,9 +1,13 @@
 .our {
   position: relative;
   margin-bottom: 270px;
+  @include mq("1248") {
+    margin-bottom: 0;
+  }
 
   &__top {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 17px;
   }
@@ -27,6 +31,9 @@
       width: 7px;
       height: 15px;
       background-image: url("../images/src/our-arrow.svg");
+      @include mq("1248") {
+        display: none;
+      }
     }
 
     &:hover {
@@ -36,5 +43,11 @@
 
   &__middle {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    @include mq("1248") {
+      justify-content: space-around;
+      margin-bottom: 50px;
+    }
   }
 }

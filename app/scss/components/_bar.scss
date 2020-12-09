@@ -2,9 +2,13 @@
   margin-bottom: 72px;
   text-align: center;
   @extend %dms-bold;
+  @include mq("1248") {
+    margin-bottom: 50px;
+  }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 

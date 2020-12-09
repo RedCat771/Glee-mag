@@ -10,23 +10,22 @@
     max-width: 1260px;
   }
 
-  &__title {
+  & h2 {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 24px;
   }
 
-  &__list {
+  & ol {
     list-style: decimal-leading-zero;
     margin-bottom: 35px;
   }
 
-  &__item {
+  & li {
     margin: 0 0 22px 40px;
   }
 
-  &__punkt,
-  &__text {
+  & p {
     border-radius: 5px;
     line-height: 1.8;
     background-color: #fff;

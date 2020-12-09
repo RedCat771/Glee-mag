@@ -29,6 +29,7 @@
 
   &__link,
   &__name {
+    @include txt($lc: 2);
     margin-left: 40px;
     line-height: 1.2;
     @extend %dms-bold;
@@ -42,6 +43,7 @@
   }
 
   &__link {
+    @include txt($lc: 1);
     z-index: 3;
     padding-top: 100px;
     color: $btn-color;

@@ -1,6 +1,10 @@
 .merchandise {
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
+    @include mq("1920") {
+      justify-content: center;
+    }
   }
 
   &__item {
@@ -12,6 +16,19 @@
     min-width: 870px;
     min-height: 390px;
     background-color: $bg-op;
+    @include mq("1920") {
+      width: 1200px;
+      &:not(:last-child) {
+        margin: 0 0 120px 0;
+      }
+    }
+    @include mq("768") {
+      padding-right: 0;
+      min-width: 100%;
+    }
+    @include mq("560") {
+      justify-content: center;
+    }
 
     &:not(:last-child) {
       margin-right: 30px;
@@ -24,6 +41,13 @@
     bottom: 80px;
     max-width: 240px;
     object-fit: contain;
+    @include mq("768") {
+      left: 0;
+      max-width: 130px;
+    }
+    @include mq("560") {
+      display: none;
+    }
   }
 
   &__inner {
@@ -33,21 +57,22 @@
     &--wide {
       padding-left: 30px;
     }
+    @include mq("768") {
+      margin-right: 15px;
+    }
   }
 
   &__title {
-    overflow: hidden;
+    @include txt($lc: 1);
     margin-bottom: 22px;
-    max-height: 50px;
     font-size: 26px;
     line-height: 1;
     @extend %dms-bold;
   }
 
   &__desc {
-    overflow: hidden;
+    @include txt($lc: 5);
     margin-bottom: 30px;
-    max-height: 140px;
     @extend %rubik-regular;
   }
 

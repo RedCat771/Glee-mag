@@ -13,90 +13,12 @@
     <main class="main">
       @@include("html/components/_header.html")
 
-      <div class="top">
-        <h1 class="title-h1">
-          Terms & Conditions
-        </h1>
-        <div class="breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">
-                Home
-              </a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">
-                Terms & Conditions
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      @@loop('html/components/_top.html',[
+      {
+      "title":"Terms & Conditions"
+      }])
 
-      <div class="section terms">
-        <div class="terms__wrapper">
-          <ol class="terms__list" type="01">
-            <h2 class="terms__title">
-              Types of Personal Information We Collect
-            </h2>
-            <li class="terms__item">
-              <p class="terms__punkt">
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore
-              </p>
-            </li>
-            <li class="terms__item">
-              <p class="terms__punkt">
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in
-                reprehenderit in voluptate velit esse cillum dolore
-              </p>
-            </li>
-            <li class="terms__item">
-              <p class="terms__punkt">
-                Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-            </li>
-            <li class="terms__item">
-              <p class="terms__punkt">
-                Dagna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo
-                consequat.
-              </p>
-            </li>
-            <li class="terms__item">
-              <p class="terms__punkt">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              </p>
-            </li>
-          </ol>
-        </div>
-
-        <div class="container">
-          <div class="terms__content">
-            <h2 class="terms__title">How marketprosscom Uses Personal Information</h2>
-            <p class="terms__text">
-              consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-              aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            </p>
-          </div>
-          <div class="terms__content">
-            <h2 class="terms__title">How marketprosscom Uses Personal Information</h2>
-            <p class="terms__text">
-              consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-              aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            </p>
-          </div>
-        </div>
-      </div>
-
+      @@include("html/components/_terms.html")
 
       <section class="our">
         <div class="container">
@@ -106,100 +28,28 @@
           </div>
 
           <div class="our__middle">
-            <article class="news">
-              <img class="news__pic" src="images/src/our/our-1.jpg" alt="новостное изображение">
-              <span class="news__tag">news</span>
-              <p class="news__text">
-                Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-              </p>
-              <a class="news__item-link" href="#"></a>
-              <div class="news__item-bottom">
-                <svg class="news__icon">
-                  <use xlink:href="images/src/sprite.svg#calendar">
-                  </use>
-                </svg>
-                <time class="news__date" datetime="2020-01-28">
-                  28 JANUARY, 2020
-                </time>
-                <svg class="news__icon">
-                  <use xlink:href="images/src/sprite.svg#user-icon">
-                  </use>
-                </svg>
-                <span class="news__author">BY ADMIN</span>
-              </div>
-            </article>
+            @@loop('html/components/_news.html',[
+            {"img":"our-1",
+            "text":"Diusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"}
+            ])
 
-            <article class="news">
-              <img class="news__pic" src="images/src/our/our-2.jpg" alt="новостное изображение">
-              <span class="news__tag">news</span>
-              <p class="news__text">
-                Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              </p>
-              <a class="news__item-link" href="#"></a>
-              <div class="news__item-bottom">
-                <svg class="news__icon">
-                  <use xlink:href="images/src/sprite.svg#calendar">
-                  </use>
-                </svg>
-                <time class="news__date" datetime="2020-01-28">
-                  28 JANUARY, 2020
-                </time>
-                <svg class="news__icon">
-                  <use xlink:href="images/src/sprite.svg#user-icon">
-                  </use>
-                </svg>
-                <span class="news__author">BY ADMIN</span>
-              </div>
-            </article>
+            @@loop('html/components/_news.html',[
+            {"img":"our-2",
+            "text":"Aonsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore"}
+            ])
 
-            <article class="news">
-              <img class="news__pic" src="images/src/our/our-3.jpg" alt="новостное изображение">
-              <span class="news__tag">news</span>
-              <p class="news__text">
-                Rncididunt ut labore et dolore magna aliqua. Ut enim
-              </p>
-              <a class="news__item-link" href="#"></a>
-              <div class="news__item-bottom">
-                <svg class="news__icon">
-                  <use xlink:href="images/src/sprite.svg#calendar">
-                  </use>
-                </svg>
-                <time class="news__date" datetime="2020-01-28">
-                  28 JANUARY, 2020
-                </time>
-                <svg class="news__icon">
-                  <use xlink:href="images/src/sprite.svg#user-icon">
-                  </use>
-                </svg>
-                <span class="news__author">BY ADMIN</span>
-              </div>
-            </article>
+            @@loop('html/components/_news.html',[
+            {"img":"our-3",
+            "text":"Rncididunt ut labore et dolore magna aliqua. Ut enim"}
+            ])
           </div>
         </div>
 
-        <div class="partners partners--min">
-          <div class="container">
-            <div class="partners__wrapper partners__wrapper--min">
-              <ul class="partners__list partners__list--min">
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-1.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-2.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-3.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-4.png" alt="партнер">
-                </li>
-                <li class="partners__item">
-                  <img class="partners__pic" src="images/src/partners/partner-5.png" alt="партнер">
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+
+
+        @@loop('html/components/_partners.html',[
+        {"class":"partners"}
+        ])
       </section>
     </main>
 

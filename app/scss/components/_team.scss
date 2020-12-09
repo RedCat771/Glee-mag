@@ -1,0 +1,52 @@
+.team {
+  display: flex;
+  margin: 120px 0 70px;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__text {
+    max-width: 300px;
+  }
+
+  &__desc {
+    margin-bottom: 42px;
+    line-height: 1.9;
+    color: $title-color;
+    @extend %rubik-regular;
+  }
+
+  &__link {
+    position: relative;
+    border-radius: 3px;
+    padding: 15px 60px 15px 15px;
+    font-size: 15px;
+    line-height: 1;
+    color: #fff;
+    background-color: $btn-color;
+    transition: background-color 0.8s;
+    @extend %rubik-medium;
+
+    &::after {
+      @include pseudo();
+      @include bg();
+      right: 25px;
+      bottom: 18px;
+      width: 15px;
+      height: 10px;
+      background-image: url("../images/src/ar-btn.svg");
+    }
+
+    &:hover {
+      background-color: $title-color;
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 70px;
+    max-width: 830px;
+  }
+}

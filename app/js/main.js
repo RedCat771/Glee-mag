@@ -1,4 +1,8 @@
 $(function () {
+  $(".add-menu__btn").on("click", function () {
+    $(".nav__list").toggleClass("nav__list--active");
+  });
+
   $(".related__slides").slick({
     slidesToShow: 4,
     infinite: true,
@@ -86,6 +90,14 @@ $(function () {
   $(".trend-slider").slick({
     arrows: false,
     dots: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          dots: false,
+        },
+      },
+    ],
   });
 
   $(".details__input").styler();

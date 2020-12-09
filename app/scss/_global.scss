@@ -44,105 +44,31 @@ body {
 }
 
 .title {
-  overflow: hidden;
+  @include txt($lc: 2);
   margin-bottom: 17px;
-  max-height: 100px;
   font-size: 36px;
   text-align: center;
   color: $product-title;
 }
 
-.filter__title {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 25px;
-  font-size: 18px;
-  text-transform: uppercase;
-  @extend %dms-bold;
+.about-title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: $title-color;
+  @extend %dms-regular;
+}
 
-  &::after {
-    @include pseudo();
-    @include bg();
-    right: -55px;
-    top: 12px;
-    width: 40px;
-    height: 2px;
-    background-image: url("../images/src/def.svg");
+.team-title {
+  margin-bottom: 15px;
+}
+
+.logo {
+  &__pic {
+    max-height: 50px;
+    object-fit: cover;
   }
-}
-
-.mixitup-control-active {
-  color: $product-title;
-}
-
-.slick {
-  &-dots {
-    position: absolute;
-    bottom: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-
-    & li + li {
-      margin-left: 10px;
-    }
-
-    & button {
-      border-radius: 50%;
-      min-width: 30px;
-      min-height: 30px;
-      background-color: #fff;
-      opacity: 0.4;
-      transition: opacity 0.4s;
-      cursor: pointer;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-  }
-
-  &-active button {
-    opacity: 1;
-  }
-}
-
-.irs--flat .irs-line {
-  top: 20px;
-  border-radius: 0;
-  height: 2px;
-  background-color: #c2d2db;
-}
-
-.irs--flat .irs-bar {
-  top: 19px;
-  height: 4px;
-  background-color: $btn-color;
-}
-
-.irs--flat .irs-from,
-.irs--flat .irs-single,
-.irs--flat .irs-to {
-  display: none;
-}
-
-.irs--flat .irs-max,
-.irs--flat .irs-min {
-  display: none;
-}
-
-.irs--flat .irs-handle > i:first-child {
-  top: -9px;
-  width: 15px;
-  height: 15px;
-  background-color: $btn-color;
-  transition: background-color 0.6s;
-
-  &:hover,
-  &:focus {
-    background-color: $title-color;
-    cursor: pointer;
+  @include mq("768") {
+    margin: 0 auto 15px;
   }
 }
 
@@ -154,64 +80,4 @@ body {
 
 .details__star {
   margin-bottom: 30px;
-}
-
-.jq-number__field {
-  width: 150px;
-}
-
-.jq-number__field input {
-  outline: 0;
-  border: 1px solid $btn-color;
-  padding: 15px 0;
-  width: 100%;
-  font-size: 15px;
-  text-align: center;
-  color: #000;
-  background: 0 0;
-}
-
-.jq-number {
-  position: relative;
-  padding: 0;
-}
-
-.jq-number__spin {
-  position: absolute;
-  display: block;
-  padding: 26px 24px;
-  top: 50%;
-  width: 15px;
-  height: 15px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.jq-number__spin.minus {
-  left: 0;
-  border-right: 1px solid $btn-color;
-}
-.jq-number__spin.plus {
-  right: 0;
-  border-left: 1px solid $btn-color;
-}
-
-.jq-number__spin::after {
-  content: "";
-  position: absolute;
-  left: 21px;
-  top: 25px;
-  width: 9px;
-  height: 1px;
-  background-color: #000;
-}
-
-.jq-number__spin.plus::before {
-  content: "";
-  position: absolute;
-  left: 25px;
-  top: 21px;
-  width: 1px;
-  height: 9px;
-  background-color: #000;
 }
