@@ -3,6 +3,25 @@
   min-width: 270px;
   color: $title-color;
   @extend %rubik-regular;
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+    @extend %dms-bold;
+
+    &::after {
+      @include pseudo();
+      @include bg();
+      right: -55px;
+      top: 12px;
+      width: 40px;
+      height: 2px;
+      background-image: url("../images/src/def.svg");
+    }
+  }
 }
 
 .filter-category {
@@ -72,7 +91,25 @@
   }
 }
 
-.filter-recent {
+.recent {
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+    @extend %dms-bold;
+
+    &::after {
+      @include pseudo();
+      @include bg();
+      right: -55px;
+      top: 12px;
+      width: 40px;
+      height: 2px;
+      background-image: url("../images/src/def.svg");
+    }
+  }
   &__content {
     margin: 5px 0 5px 15px;
     color: #333;

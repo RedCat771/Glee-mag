@@ -7,6 +7,10 @@ node_modules/
 npm-debug.*
 *.fig
 *.psd
+*.png
+.stylelintrc
+.htmlhintrc
+.jshintrc
 package-lock.json
 dist/
 app/css/*

@@ -125,10 +125,8 @@
     display: none;
   }
 
-  &.product-second {
+  &.product__product-list {
     flex-direction: row;
-    justify-content: start;
-    min-width: 850px;
     box-shadow: none;
     text-align: left;
     @extend %rubik-regular;

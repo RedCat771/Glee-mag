@@ -21,4 +21,16 @@
   &__pic {
     max-height: 90px;
   }
+
+  &.partners-min {
+    position: static;
+
+    .partners__wrapper {
+      min-height: 250px;
+    }
+
+    .partners__list {
+      margin: auto 0;
+    }
+  }
 }

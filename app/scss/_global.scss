@@ -52,22 +52,20 @@ body {
   color: $product-title;
 }
 
-.filter__title {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 25px;
-  font-size: 18px;
-  text-transform: uppercase;
-  @extend %dms-bold;
+.about-title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: $title-color;
+  @extend %dms-regular;
+}
 
-  &::after {
-    @include pseudo();
-    @include bg();
-    right: -55px;
-    top: 12px;
-    width: 40px;
-    height: 2px;
-    background-image: url("../images/src/def.svg");
+.team-title {
+  margin-bottom: 15px;
+}
+
+.logo {
+  @include mq("768") {
+    margin: 0 auto 15px;
   }
 }
 

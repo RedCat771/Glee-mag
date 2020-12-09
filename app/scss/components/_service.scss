@@ -3,13 +3,25 @@
   align-items: center;
   margin-bottom: 69px;
   background-color: $bg-op;
+  @include mq("768") {
+    flex-wrap: wrap;
+  }
 
   &__item {
     margin: 0 auto;
     padding: 45px 0;
+    @include mq("768") {
+      margin: 0;
+    }
 
     &:not(:last-child) {
-      border-right: 2px solid #e8e4df;
+      border-right: 1px solid #e8e4df;
+      @include mq("768") {
+        border: none;
+      }
+    }
+    @include mq("1024") {
+      padding: 15px 0;
     }
   }
 
@@ -19,6 +31,9 @@
     min-height: 71px;
     max-width: 290px;
     transition: transform 0.6s;
+    @include mq("1248") {
+      margin: 0 10px;
+    }
 
     &:hover {
       transform: scale(1.05);

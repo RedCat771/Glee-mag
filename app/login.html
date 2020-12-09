@@ -47,7 +47,7 @@
 
         <div class="add-menu">
           <form class="add-menu__form" action="" method="get">
-            <label>
+            <label class="add-menu__label">
               <input class="add-menu__form-input" name="search" placeholder="Поиск" type="search">
             </label>
             <button class="add-menu__form-btn" type="submit">
@@ -96,9 +96,9 @@
               </a>
             </li>
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">
+              <span class="breadcrumbs__link" href="#">
                 Log in
-              </a>
+              </span>
             </li>
           </ul>
         </div>
@@ -108,7 +108,7 @@
         <form class="form__holder" action="#">
           <label class="form__label">
             User name or email address *
-            <input class="form__input" name="login[email]" type="email" required>
+            <input class="form__input" name="login[email]" type="text">
           </label>
           <label class="form__label">
             Password *
@@ -123,29 +123,29 @@
             </label>
             <a class="form__forget" href="#">Lost your password?</a>
           </div>
-          <p class="form__text">Not registered? No problem</p>
-          <button class="form__btn form__btn--second" type="submit">Create an account</button>
         </form>
+        <p class="form__text">Not registered? No problem</p>
+        <a class="form__link" href="#">Create an account</a>
       </div>
 
-      <div class="partners-min">
+      <div class="partners partners-min">
         <div class="container">
-          <div class="partners-min__wrapper">
-            <ul class="partners-min__list">
-              <li class="partners-min__item">
-                <img class="partners-min__pic" src="images/src/partners/partner-1.png" alt="партнер">
+          <div class="partners__wrapper">
+            <ul class="partners__list">
+              <li class="partners__item">
+                <img class="partners__pic" src="images/src/partners/partner-1.png" alt="партнер">
               </li>
-              <li class="partners-min__item">
-                <img class="partners-min__pic" src="images/src/partners/partner-2.png" alt="партнер">
+              <li class="partners__item">
+                <img class="partners__pic" src="images/src/partners/partner-2.png" alt="партнер">
               </li>
-              <li class="partners-min__item">
-                <img class="partners-min__pic" src="images/src/partners/partner-3.png" alt="партнер">
+              <li class="partners__item">
+                <img class="partners__pic" src="images/src/partners/partner-3.png" alt="партнер">
               </li>
-              <li class="partners-min__item">
-                <img class="partners-min__pic" src="images/src/partners/partner-4.png" alt="партнер">
+              <li class="partners__item">
+                <img class="partners__pic" src="images/src/partners/partner-4.png" alt="партнер">
               </li>
-              <li class="partners-min__item">
-                <img class="partners-min__pic" src="images/src/partners/partner-5.png" alt="партнер">
+              <li class="partners__item">
+                <img class="partners__pic" src="images/src/partners/partner-5.png" alt="партнер">
               </li>
             </ul>
           </div>
