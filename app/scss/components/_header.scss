@@ -96,6 +96,9 @@
     margin: 0 20px;
     border-radius: 40px;
     background-color: #fcd7b6;
+    @include mq("560") {
+      margin: 0 10px;
+    }
 
     &::after {
       @include pseudo($content: url("../images/src/vector.svg"));

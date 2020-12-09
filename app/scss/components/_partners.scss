@@ -3,11 +3,17 @@
   top: 318px;
   width: 100%;
   background-color: $bg-op;
+  @include mq("1248") {
+    position: static;
+  }
 
   &__wrapper {
     display: flex;
     align-items: flex-end;
-    min-height: 435px; //FIXME не нужно здезь мин хайт
+    min-height: 435px;
+    @include mq("1248") {
+      min-height: 220px;
+    }
   }
 
   &__list {
@@ -16,6 +22,17 @@
     justify-content: space-around;
     margin: auto 0 64px;
     width: 100%;
+    @include mq("1248") {
+      flex-wrap: wrap;
+      margin: 0 auto;
+      max-width: 300px;
+    }
+  }
+
+  &__item {
+    @include mq("1248") {
+      margin: 20px 15px 25px;
+    }
   }
 
   &__pic {

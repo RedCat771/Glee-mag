@@ -3,5 +3,9 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -30px 90px;
+    @include mq("1248") {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
   }
 }

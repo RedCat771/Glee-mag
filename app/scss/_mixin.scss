@@ -10,18 +10,18 @@
   background-repeat: $bg-repeat;
 }
 
-$breakpoints: ("400": 400px,
+$breakpoints: (
+  "400": 400px,
   "480": 480px,
   "560": 560px,
   "640": 640px,
   "768": 768px,
   "1024": 1024px,
   "1248": 1248px,
-  "1440": 1440px,
+  "1920": 1920px,
 );
 
 @mixin mq($width, $type: max) {
-
   @if map_has_key($breakpoints, $width) {
     $width: map_get($breakpoints, $width);
 
@@ -36,11 +36,9 @@ $breakpoints: ("400": 400px,
 }
 
 @function max($numbers...) {
-
   @return m#{a}x(#{$numbers});
 }
 
 @function min($numbers...) {
-
   @return m#{i}n(#{$numbers});
 }

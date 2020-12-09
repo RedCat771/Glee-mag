@@ -69,6 +69,15 @@ body {
   }
 }
 
+.mix {
+  @include mq("768") {
+    margin: 0 auto 20px;
+  }
+  @include mq("560") {
+    margin: 0 auto;
+  }
+}
+
 .mixitup-control-active {
   color: $product-title;
 }
