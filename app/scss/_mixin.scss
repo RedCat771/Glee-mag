@@ -10,6 +10,18 @@
   background-repeat: $bg-repeat;
 }
 
+@mixin txt($lc: 3) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: $lc;
+  -webkit-box-orient: vertical;
+  line-clamp: $lc;
+  box-orient: vertical;
+}
+
 $breakpoints: (
   "400": 400px,
   "480": 480px,

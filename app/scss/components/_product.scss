@@ -67,9 +67,8 @@
   }
 
   &__name {
-    overflow: hidden;
+    @include txt($lc: 2);
     margin-bottom: 15px;
-    max-height: 55px;
     font-weight: 500;
     color: $title-color;
   }
@@ -79,6 +78,7 @@
   }
 
   &__price {
+    @include txt($lc: 1);
     color: $btn-color;
     @extend %dms-bold;
   }
@@ -133,103 +133,105 @@
   }
 
   &.product__product-list {
-    flex-direction: row;
-    box-shadow: none;
-    text-align: left;
-    @extend %rubik-regular;
-
-    .product__wrapper {
-      position: static;
-      margin-right: 55px;
-      min-height: 500px;
-    }
-
-    .product__click {
-      position: static;
-      display: flex;
-      border: 2px solid #f2f2f2;
-      padding: 15px;
-      height: 100%;
-      min-width: 370px;
-    }
-
-    .product__pic {
-      position: static;
-      width: 80%;
-      object-fit: contain;
-      transform: none;
-    }
-
-    .product__info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .product__name {
-      overflow: hidden;
-      margin-bottom: 20px;
-      max-width: 410px;
-      max-height: 80px;
-      font-size: 40px;
-      color: #333;
-    }
-
-    .product__star {
-      display: block;
-      margin-bottom: 30px;
-      padding: 0;
-    }
-
-    .product__price {
-      margin-bottom: 30px;
-      font-size: 30px;
-      color: #333;
+    .product {
+      flex-direction: row;
+      box-shadow: none;
+      text-align: left;
       @extend %rubik-regular;
-    }
 
-    .product__text {
-      overflow: hidden;
-      margin-bottom: 35px;
-      max-width: 410px;
-      max-height: 145px;
-      line-height: 1.5;
-      color: $title-color;
-    }
+      &__wrapper {
+        position: static;
+        margin-right: 55px;
+        min-height: 500px;
+      }
 
-    .product__btn-wrapper {
-      display: flex;
-      justify-content: space-between;
-      max-width: 110px;
-    }
+      &__click {
+        position: static;
+        display: flex;
+        border: 2px solid #f2f2f2;
+        padding: 15px;
+        height: 100%;
+        min-width: 370px;
+      }
 
-    .product__footer-btn {
-      width: 50px;
-      height: 50px;
-      box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
-      background-color: #fff;
-      transition: background-color 0.8s;
-      cursor: pointer;
+      &__pic {
+        position: static;
+        width: 80%;
+        object-fit: contain;
+        transform: none;
+      }
 
-      &:hover {
-        background-color: $btn-color;
+      &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-        .product__img {
-          path {
-            fill: #fff;
+      &__name {
+        overflow: hidden;
+        margin-bottom: 20px;
+        max-width: 410px;
+        max-height: 80px;
+        font-size: 40px;
+        color: #333;
+      }
+
+      &__star {
+        display: block;
+        margin-bottom: 30px;
+        padding: 0;
+      }
+
+      &__price {
+        margin-bottom: 30px;
+        font-size: 30px;
+        color: #333;
+        @extend %rubik-regular;
+      }
+
+      &__text {
+        overflow: hidden;
+        margin-bottom: 35px;
+        max-width: 410px;
+        max-height: 145px;
+        line-height: 1.5;
+        color: $title-color;
+      }
+
+      &__btn-wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 110px;
+      }
+
+      &__footer-btn {
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+        background-color: #fff;
+        transition: background-color 0.8s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $btn-color;
+
+          .product__img {
+            path {
+              fill: #fff;
+            }
           }
         }
       }
-    }
 
-    .product__img {
-      max-width: 22px;
-      max-height: 21px;
-      transition: color 0.8s;
-    }
+      &__img {
+        max-width: 22px;
+        max-height: 21px;
+        transition: color 0.8s;
+      }
 
-    .product__menu {
-      display: none;
+      &__menu {
+        display: none;
+      }
     }
   }
 }

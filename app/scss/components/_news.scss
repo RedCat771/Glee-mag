@@ -30,6 +30,7 @@
   }
 
   &__tag {
+    @include txt($lc: 1);
     position: absolute;
     left: 30px;
     top: 235px;
@@ -55,6 +56,7 @@
   }
 
   &__text {
+    @include txt($lc: 6);
     flex-grow: 1;
     margin: 0 45px 15px 30px;
     font-weight: 500;

@@ -63,18 +63,16 @@
   }
 
   &__title {
-    overflow: hidden;
+    @include txt($lc: 1);
     margin-bottom: 22px;
-    max-height: 50px;
     font-size: 26px;
     line-height: 1;
     @extend %dms-bold;
   }
 
   &__desc {
-    overflow: hidden;
+    @include txt($lc: 5);
     margin-bottom: 30px;
-    max-height: 140px;
     @extend %rubik-regular;
   }
 

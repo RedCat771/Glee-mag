@@ -69,6 +69,7 @@
   }
 
   &__text {
+    @include txt($lc: 4);
     margin-bottom: 35px;
     width: 270px;
     line-height: 1.8;
