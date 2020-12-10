@@ -44,6 +44,43 @@
   }
 }
 
+.slick-next,
+.slick-prev {
+  position: absolute;
+  right: 0;
+  top: -110px;
+  border: 2px solid #ececec;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+  transition: border-color 0.6s;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $accent-color;
+  }
+
+  &:after {
+    @include pseudo();
+    @include bg($bg-size: contain);
+    left: 13px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 22px;
+    background-image: url("../images/src/rn.svg");
+  }
+}
+
+.slick-prev {
+  right: 70px;
+
+  &:after {
+    background-image: url("../images/src/rp.svg");
+  }
+}
+
 .irs--flat .irs-line {
   top: 20px;
   border-radius: 0;

@@ -85,193 +85,89 @@
 </header>
 
       <div class="top">
-        <h1 class="title-h1">
+  <h1 class="title-h1">
+    Product list 2
+  </h1>
+  <div class="breadcrumbs">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link" href="#">
+          Home
+        </a>
+      </li>
+      <li class="breadcrumbs__item">
+        <span class="breadcrumbs__link" href="#">
           Product list 2
-        </h1>
-        <div class="breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">
-                Home
-              </a>
-            </li>
-            <li class="breadcrumbs__item">
-              <span class="breadcrumbs__link" href="#">
-                Product list 2
-              </span>
-            </li>
-          </ul>
-        </div>
-      </div>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>
 
       <section class="product-list">
         <div class="container">
           <div class="product-list__inner">
             <div class="product-list__filters">
-              <div class="filter filter-category">
-                <span class="filter__title">
-                  Category
-                </span>
-                <form class="filter-category__form" action="#">
-                  <label class="filter-category__label">
-                    <input class="filter-category__input" type="checkbox">
-                    <span class="filter-category__checkbox">
-                      Chair
-                    </span>
-                  </label>
+              @@inclue("html/components/_filter-category.html")
 
-                  <label class="filter-category__label">
-                    <input class="filter-category__input" type="checkbox">
-                    <span class="filter-category__checkbox">
-                      Table
-                    </span>
-                  </label>
+              @@inclue("html/components/_filter-price.html")
 
-                  <label class="filter-category__label">
-                    <input class="filter-category__input" type="checkbox">
-                    <span class="filter-category__checkbox">
-                      Lamp
-                    </span>
-                  </label>
-
-                  <label class="filter-category__label">
-                    <input class="filter-category__input" type="checkbox">
-                    <span class="filter-category__checkbox">
-                      Watch
-                    </span>
-                  </label>
-
-                  <label class="filter-category__label">
-                    <input class="filter-category__input" type="checkbox">
-                    <span class="filter-category__checkbox">
-                      Clock
-                    </span>
-                  </label>
-                </form>
-              </div>
-
-              <div class="filter filter-price">
-                <span class="filter__title">
-                  Price
-                </span>
-                <form class="filter-price__form" action="#">
-                  <label class="filter-price__label">
-                    <input class="filter-price__input" type="text" data-min="0" data-max="1000" data-from="100" data-to="500">
-                  </label>
-                  <div class="filter-price__footer">
-                    <div class="filter-price__val">
-                      $
-                      <span class="filter-price__from"></span>
-                    </div>
-                    <div class="filter-price__val">
-                      $
-                      <span class="filter-price__to"></span>
-                    </div>
-                  </div>
-                </form>
-              </div>
-
-              <div class="filter filter-category filter-brand">
-                <span class="filter__title">
-                  Brand
-                </span>
-                <form class="filter-category__form" action="#">
-                  <label class="filter-category__label">
-                    <input class="filter-category__input" type="checkbox">
-                    <span class="filter-brand__checkbox">
-                      RFL
-                    </span>
-                    <span class="filter-brand__num">(10)</span>
-                  </label>
-
-                  <label class="filter-category__label">
-                    <input class="filter-category__input" type="checkbox">
-                    <span class="filter-brand__checkbox">
-                      Brothers
-                    </span>
-                    <span class="filter-brand__num">(21)</span>
-                  </label>
-
-                  <label class="filter-category__label">
-                    <input class="filter-category__input" type="checkbox">
-                    <span class="filter-brand__checkbox">
-                      Regal
-                    </span>
-                    <span class="filter-brand__num">(3)</span>
-                  </label>
-
-                  <label class="filter-category__label">
-                    <input class="filter-category__input" type="checkbox">
-                    <span class="filter-brand__checkbox">
-                      Nadia
-                    </span>
-                    <span class="filter-brand__num">(14)</span>
-                  </label>
-
-                  <label class="filter-category__label">
-                    <input class="filter-category__input" type="checkbox">
-                    <span class="filter-brand__checkbox">
-                      Otobi
-                    </span>
-                    <span class="filter-brand__num">(6)</span>
-                  </label>
-                </form>
-              </div>
+              @@inclue("html/components/_filter-brand.html")
 
               <div class="recent">
-                <span class="recent__title">
-                  Recent products
-                </span>
-                <ul class="recent__list">
-                  <li class="recent__item">
-                    <div class="recent__img-wrapper">
-                      <a class="recent__link">
-                        <img class="recent__pic" src="images/src/prod-card-3.png" alt="товар">
-                      </a>
-                    </div>
+  <span class="recent__title">
+    Recent products
+  </span>
+  <ul class="recent__list">
+    <li class="recent__item">
+      <div class="recent__img-wrapper">
+        <a class="recent__link">
+          <img class="recent__pic" src="images/src/prod-card-3.png" alt="товар">
+        </a>
+      </div>
 
-                    <div class="recent__content">
-                      <a class="recent__name" href="#">
-                        Pendant lamp
-                      </a>
-                      <div class="star" data-rateyo-rating="4"></div>
-                      <span class="recent__price">$23</span>
-                    </div>
-                  </li>
+      <div class="recent__content">
+        <a class="recent__name" href="#">
+          Pendant lamp
+        </a>
+        <div class="star" data-rateyo-rating="4"></div>
+        <span class="recent__price">$23</span>
+      </div>
+    </li>
 
-                  <li class="recent__item">
-                    <div class="recent__img-wrapper">
-                      <a class="recent__link">
-                        <img class="recent__pic" src="images/src/prod-card-1.png" alt="товар">
-                      </a>
-                    </div>
+    <li class="recent__item">
+      <div class="recent__img-wrapper">
+        <a class="recent__link">
+          <img class="recent__pic" src="images/src/prod-card-1.png" alt="товар">
+        </a>
+      </div>
 
-                    <div class="recent__content">
-                      <a class="recent__name" href="#">
-                        Pendant lamp
-                      </a>
-                      <div class="star" data-rateyo-rating="4.5"></div>
-                      <span class="recent__price">$23</span>
-                    </div>
-                  </li>
+      <div class="recent__content">
+        <a class="recent__name" href="#">
+          Pendant lamp
+        </a>
+        <div class="star" data-rateyo-rating="4.5"></div>
+        <span class="recent__price">$23</span>
+      </div>
+    </li>
 
-                  <li class="recent__item">
-                    <div class="recent__img-wrapper">
-                      <a class="recent__link">
-                        <img class="recent__pic" src="images/src/prod-card-4.png" alt="товар">
-                      </a>
-                    </div>
+    <li class="recent__item">
+      <div class="recent__img-wrapper">
+        <a class="recent__link">
+          <img class="recent__pic" src="images/src/prod-card-4.png" alt="товар">
+        </a>
+      </div>
 
-                    <div class="recent__content">
-                      <a class="recent__name" href="#">
-                        Pendant lamp
-                      </a>
-                      <div class="star" data-rateyo-rating="3.5"></div>
-                      <span class="recent__price">$23</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+      <div class="recent__content">
+        <a class="recent__name" href="#">
+          Pendant lamp
+        </a>
+        <div class="star" data-rateyo-rating="3.5"></div>
+        <span class="recent__price">$23</span>
+      </div>
+    </li>
+  </ul>
+</div>
             </div>
 
             <div class="product-list__body product-list__body--second">
@@ -485,49 +381,49 @@
           </div>
 
           <div class="product-pagination">
-            <div class="product-pagination__inner product-pagination__inner--second">
-              <ul class="product-pagination__list">
-                <li class="product-pagination__item">
-                  <a class="product-pagination__link" href="#">1</a>
-                </li>
-                <li class="product-pagination__item">
-                  <a class="product-pagination__link" href="#">2</a>
-                </li>
-                <li class="product-pagination__item">
-                  <a class="product-pagination__link" href="#">3</a>
-                </li>
-              </ul>
-              <a class="product-pagination__link" href="#">
-                next
-              </a>
-            </div>
-          </div>
+  <div class="product-pagination__inner">
+    <ul class="product-pagination__list">
+      <li class="product-pagination__item">
+        <a class="product-pagination__link" href="#">1</a>
+      </li>
+      <li class="product-pagination__item">
+        <a class="product-pagination__link" href="#">2</a>
+      </li>
+      <li class="product-pagination__item">
+        <a class="product-pagination__link" href="#">3</a>
+      </li>
+    </ul>
+    <a class="product-pagination__link" href="#">
+      next
+    </a>
+  </div>
+</div>
         </div>
       </section>
 
       <div class="partners partners-min">
-        <div class="container">
-          <div class="partners__wrapper">
-            <ul class="partners__list">
-              <li class="partners__item">
-                <img class="partners__pic" src="images/src/partners/partner-1.png" alt="партнер">
-              </li>
-              <li class="partners__item">
-                <img class="partners__pic" src="images/src/partners/partner-2.png" alt="партнер">
-              </li>
-              <li class="partners__item">
-                <img class="partners__pic" src="images/src/partners/partner-3.png" alt="партнер">
-              </li>
-              <li class="partners__item">
-                <img class="partners__pic" src="images/src/partners/partner-4.png" alt="партнер">
-              </li>
-              <li class="partners__item">
-                <img class="partners__pic" src="images/src/partners/partner-5.png" alt="партнер">
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <div class="container">
+    <div class="partners__wrapper">
+      <ul class="partners__list">
+        <li class="partners__item">
+          <img class="partners__pic" src="images/src/partners/partner-1.png" alt="партнер">
+        </li>
+        <li class="partners__item">
+          <img class="partners__pic" src="images/src/partners/partner-2.png" alt="партнер">
+        </li>
+        <li class="partners__item">
+          <img class="partners__pic" src="images/src/partners/partner-3.png" alt="партнер">
+        </li>
+        <li class="partners__item">
+          <img class="partners__pic" src="images/src/partners/partner-4.png" alt="партнер">
+        </li>
+        <li class="partners__item">
+          <img class="partners__pic" src="images/src/partners/partner-5.png" alt="партнер">
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
     </main>
 
