@@ -3,14 +3,6 @@ $(function () {
     $(".nav__list").toggleClass("nav__list--active");
   });
 
-  $(".related__slides").slick({
-    slidesToShow: 4,
-    infinite: true,
-    dots: false,
-    arrows: true,
-    draggable: true,
-  });
-
   $(".details__tab").on("click", function (e) {
     e.preventDefault();
     $(".details__tab").removeClass("details__tab--active");
@@ -98,6 +90,13 @@ $(function () {
         },
       },
     ],
+  });
+
+  $(".related__slides").slick({
+    infinite: true,
+    slidesToShow: 4,
+    dots: false,
+    arrows: true,
   });
 
   $(".details__input").styler();

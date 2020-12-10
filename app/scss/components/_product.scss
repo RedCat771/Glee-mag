@@ -27,6 +27,14 @@
     }
   }
 
+  &.product-related.product-shadow-non {
+    box-shadow: none;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
   &.product-related {
     margin-left: -10px;
 
