@@ -101,6 +101,6 @@ $(function () {
 
   $(".details__input").styler();
 
-  var mixer = mixitup(".products__body");
-  var mixer = mixitup(".design__body");
+  let products = mixitup(".products__body");
+  let design = mixitup(".design__body");
 });

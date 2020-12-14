@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="../css/style.min.css">
+  <title>Product Details</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="main">
+      @@include("html/components/_header.html")
+
+      @@loop('html/components/_top.html',[
+      {
+      "title":"Blog"
+      }])
+
+      <section class="blog">
+        <div class="container">
+          <div class="blog__inner">
+            <div class="blog__content">
+              @@loop('html/components/_post.html',[
+              {"img":"1",
+              "title":"Fonsectetur adipisicing eiusmod"}
+              ])
+
+              @@loop('html/components/_post.html',[
+              {"img":"2",
+              "title":"Fonsectetur adipisicing elit,"}
+              ])
+
+              @@loop('html/components/_post.html',[
+              {"img":"3",
+              "title":"Fsectetur adipisicing tempor incididunt"}
+              ])
+
+              @@loop('html/components/_post.html',[
+              {"img":"4",
+              "title":"vonsectetur adipisicing elit"}
+              ])
+            </div>
+
+            <div class="blog__filters">
+              @@include("html/components/_filter-search.html")
+              @@include("html/components/_filter-category.html")
+              @@include("html/components/_recent-posts.html")
+            </div>
+          </div>
+          @@loop('html/components/_pagination.html',[
+          {
+          "class":"product-pagination__inner--left"
+          }])
+        </div>
+      </section>
+
+      @@loop('html/components/_partners.html',[
+      {"class":"partners partners-min"}
+      ])
+
+      @@include("html/components/_footer.html")
+  </div>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

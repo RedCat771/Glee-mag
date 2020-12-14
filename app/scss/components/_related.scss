@@ -1,12 +1,12 @@
 .related {
   &__title {
     margin-bottom: 65px;
+    box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
     text-align: left;
     color: $title-color;
   }
 
   &__slide {
-    //TODO слайдер не работает из-за slidesToShow: 4, если его отключить то появляются стрелки и слайдер скроллится
     max-width: 376px;
 
     &:not(:last-child) {

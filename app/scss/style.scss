@@ -26,10 +26,14 @@
 @import "components/design";
 @import "components/products-home";
 @import "components/team";
+@import "components/filter-search";
+@import "components/recent-post";
 @import "components/news";
+@import "components/post";
 @import "components/partners";
 @import "components/pagination";
 @import "components/footer";
-@import "pages/terms.scss";
-@import "pages/product-list.scss";
-@import "pages/product-details.scss";
+@import "pages/blog";
+@import "pages/terms";
+@import "pages/product-list";
+@import "pages/product-details";

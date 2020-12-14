@@ -9,6 +9,11 @@
     &--second {
       margin-left: 0;
     }
+
+    &.product-pagination__inner--left {
+      justify-content: start;
+      margin-left: 0;
+    }
   }
 
   &__list {

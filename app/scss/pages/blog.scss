@@ -1,0 +1,15 @@
+.blog {
+  margin: 120px 0;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__filters {
+    max-width: 255px;
+  }
+
+  &__content {
+    margin-right: 68px;
+  }
+}
